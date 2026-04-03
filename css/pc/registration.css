@@ -1,0 +1,454 @@
+@CHARSET "UTF-8";
+body {
+    margin: 0;
+    background-color: black;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    white-space: nowrap;
+    font-family: 'Arial';
+    color: rgb(218, 218, 218);
+}
+
+#adminRegistration {
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    width: 800px;
+    height: 600px;
+}
+
+.admin_registration_main_class {
+    position: absolute;
+    top: 30px;
+    height: 600px;
+    width: 1400px;
+    border:1px solid;
+}
+
+.registration_warning {
+    position: absolute;
+    left: 1px;
+    top: 60px;
+    height: 571px;
+    width: 1399px;
+    background-color: rgb(0, 0, 0);
+    z-index: 1002;
+}
+
+.registration_admin_title {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 28px;
+    cursor: default;
+    font-size: 16px;
+    background-color: rgb(70, 70, 71);
+}
+
+.registration_admin_title > P {
+    position: absolute;
+    top: -10px;
+    left: 33px;
+}
+
+.registration_admin_title > * {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.registration_title {
+    position: absolute;
+    left: 520px;
+    top: 0px;
+    font-size: 20px;
+}
+
+#registration_mask {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1003;
+}
+
+/**
+ * Login
+ */
+.registration_set_input {
+    background-color: rgb(48, 48, 48);
+    color: rgb(202, 202, 202);
+    border: 1px rgb(70, 70, 71) double;
+    padding: 0px 0px 0px 5px;
+    width: 400px;
+    height: 35px;
+    display: block;
+}
+
+#id_txt_login {
+    position: absolute;
+    top: 517px;
+    left: 760px;
+}
+
+#id_txt_password {
+    position: absolute;
+    top: 569px;
+    left: 760px;
+}
+
+.registration_top {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 361px;
+    background-color: rgb(153, 14, 14);
+}
+
+.registration_top_system_name {
+    position: absolute;
+    top: 125px;
+    left: 420px;
+    width: 1080px;
+    height: 74px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: table;
+    font-size: 60px;
+}
+
+.registration_top_camera_name {
+    position: absolute;
+    top: 238px;
+    left: 838px;
+    width: 244px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: table;
+    font-size: 30px;
+}
+
+/**
+ * Login
+ * btn_login
+ */
+.btn_login {
+    position: absolute;
+    top: 665px;
+    left: 888px;
+    width: 144px;
+    height: 40px;
+    text-align: center;
+
+    display: table;
+    border: none;
+    outline: none;
+    color: rgb(217, 217, 217);
+    background: none;
+    background-image: url(parts/btn_login_top_normal.png);
+}
+
+.btn_login > * {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.btn_login:hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/btn_login_top_onMouse.png);
+}
+
+.btn_login:active {
+    color: rgb(217, 217, 217);
+    background-image: url(parts/btn_login_top_click.png);
+}
+
+.registration_password {
+    position: absolute;
+    top: 574px;
+    left: 658px;
+    width: 94px;
+    height: 24px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.registration_user_name {
+    position: absolute;
+    top: 522px;
+    left: 658px;
+    width: 94px;
+    height: 24px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.registration_user_password {
+    position: absolute;
+    top: 440px;
+    left: 804px;
+    width: 94px;
+    height: 24px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+
+}
+
+.registration_note_class {
+    left: 319px;
+    position: absolute;
+    top: 290px;
+    font-family: 'Arial';
+    font-size: 16px;
+}
+
+.txt_reg_user_name {
+    position: absolute;
+    top: 40px;
+    left: 33px;
+    width: 200px;
+    height: 28px;
+    display: table;
+    font-size: 16px;
+    text-align: left;
+}
+
+.txt_reg_user_password {
+    position: absolute;
+    top: 90px;
+    left: 33px;
+    width: 200px;
+    height: 28px;
+    display: table;
+    font-size: 16px;
+    text-align: left;
+}
+
+.txt_reg_user_repassword {
+    position: absolute;
+    top: 140px;
+    left: 33px;
+    width: 200px;
+    height: 28px;
+    display: table;
+    font-size: 16px;
+    text-align: left;
+}
+
+.txt_reg_warning_title {
+    position: absolute;
+    top: 30px;
+    left: 33px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: 16px;
+    text-align: left;
+}
+
+.txt_reg_warning_recommend {
+    position: absolute;
+    top: 80px;
+    left: 33px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: 16px;
+    text-align: left;
+}
+
+.txt_reg_warning_recommend_detail {
+    position: absolute;
+    top: 110px;
+    left: 33px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: 16px;
+    text-align: left;
+}
+
+.registration_complete_class {
+    position: absolute;
+    top: 110px;
+    left: 500px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+#reg_user_name {
+    position: absolute;
+    top: 50px;
+    left: 319px;
+    width: 260px;
+    height: 26px;
+    background-color: black;
+    border: 1px rgb(70,70,71) double;
+    color: rgb(191,191,191);
+}
+
+#reg_user_password {
+    position: absolute;
+    top: 100px;
+    left: 319px;
+    width: 260px;
+    height: 26px;
+    background-color: black;
+    border: 1px rgb(70,70,71) double;
+    color: rgb(191,191,191);
+}
+
+#reg_user_repassword {
+    position: absolute;
+    top: 150px;
+    left: 319px;
+    width: 260px;
+    height: 26px;
+    background-color: black;
+    border: 1px rgb(70,70,71) double;
+    color: rgb(191,191,191);
+}
+
+.btn_reg_admin_set {
+    position: absolute;
+    top: 220px;
+    left: 319px;
+    width: 142px;
+    height: 32px;
+    font-size: large;
+    border: none;
+    outline: none;
+    background: none;
+    display: table;
+    text-align: center;
+}
+
+.btn_direct_to_main {
+    position: absolute;
+    top: 200px;
+    left: 130px;
+    width: 50px;
+    height: 25px;
+    font-size: 8pt;
+    border: none;
+    outline: none;
+    background: none;
+    display: table;
+    text-align: center;
+}
+
+.btn_reg_admin_continue {
+    position: absolute;
+    top: 280px;
+    left: 30px;
+    width: 142px;
+    height: 32px;
+    font-size: large;
+    border: none;
+    outline: none;
+    background: none;
+    display: table;
+    text-align: center;
+    z-index: 9999;
+}
+
+.btn_reg_admin_back {
+    position: absolute;
+    top: 280px;
+    left: 230px;
+    width: 142px;
+    height: 32px;
+    font-size: large;
+    border: none;
+    outline: none;
+    background: none;
+    display: table;
+    text-align: center;
+    z-index: 9999;
+
+}
+
+.btn_direct_to_main > *,
+.btn_reg_admin_set > *,
+.btn_reg_admin_continue > *,
+.btn_reg_admin_back > * {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.btn_direct_to_main.on_hover,
+.btn_reg_admin_set.on_hover,
+.btn_reg_admin_continue.on_hover,
+.btn_reg_admin_back.on_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/btn_cameraController_slider_toggle_selected.png);
+    background-size: 100% 100%;
+}
+
+.btn_direct_to_main.on,
+.btn_reg_admin_set.on,
+.btn_reg_admin_continue.on,
+.btn_reg_admin_back.on {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/btn_cameraController_slider_toggle_selected.png);
+    background-size: 100% 100%;
+}
+
+.btn_direct_to_main.off_hover,
+.btn_reg_admin_set.off_hover,
+.btn_reg_admin_continue.off_hover,
+.btn_reg_admin_back.off_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/btn_cameraController_slider_toggle_onMouse.png);
+    background-size: 100% 100%;
+}
+
+.btn_direct_to_main.off,
+.btn_reg_admin_set.off,
+.btn_reg_admin_continue.off,
+.btn_reg_admin_back.off {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/btn_cameraController_slider_toggle_normal.png);
+    background-size: 100% 100%;
+}
+/*lines common*/
+/*Horizontal line: '-'*/
+.horizontal_line_common {
+    position: absolute;
+    height: 1px;
+    background: rgb(70, 70, 71);
+    z-index: 2;
+}
+.adminRegistrationMain_main{
+    top: 60px;
+    left: 0px;
+    height: 600px;
+    width: 300px;
+    background-color: rgb(29, 29, 31);
+}

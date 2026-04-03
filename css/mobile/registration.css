@@ -1,0 +1,522 @@
+@CHARSET "UTF-8";
+body {
+    margin: 0;
+    background-color: black;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    white-space: nowrap;
+    font-family: 'Arial';
+    color: rgb(218, 218, 218);
+}
+
+#adminRegistration {
+    position: absolute;
+    margin-left: 1px;
+    /*left: 5%;*/
+    /*top: 5%;*/
+    /*width: 90%;*/
+    /*height: 90%;*/
+    /*overflow: auto;*/
+}
+
+/*@media only screen and (orientation: portrait) {*/
+    /*.admin_registration_main_class {*/
+        /*position: absolute;*/
+        /*top: 20%;*/
+        /*height: 45%;*/
+        /*width: 95%;*/
+        /*border: 1px solid;*/
+    /*}*/
+/*}*/
+
+/*@media only screen and (orientation: landscape) {*/
+    .admin_registration_main_class {
+        position: absolute;
+        top: 5%;
+        height: 94%;
+        width: 99%;
+        border: 1px solid;
+    }
+/*}*/
+
+/*@media only screen and (orientation: portrait) {*/
+    /*.registration_warning {*/
+        /*position: absolute;*/
+        /*left: 1px;*/
+        /*top: 20%;*/
+        /*height: 89%;*/
+        /*width: 95%;*/
+        /*background-color: rgb(0, 0, 0);*/
+        /*z-index: 1002;*/
+    /*}*/
+
+/*}*/
+
+/*@media only screen and (orientation: landscape) {*/
+    .registration_warning {
+        position: absolute;
+        left: 0px;
+        top: 5.3%;
+        height: 89%;
+        width: 90%;
+        background-color: rgb(0, 0, 0);
+        z-index: 1002;
+    }
+/*}*/
+
+.registration_admin_title {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 8%;
+    cursor: default;
+    /*font-size: 16px;*/
+    background-color: rgb(70, 70, 71);
+}
+
+.registration_admin_title > P {
+    position: absolute;
+    /*top: -10px;*/
+    left: 3%;
+}
+
+.registration_admin_title > * {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+/*@media only screen and (orientation: portrait) {*/
+    /*.registration_title {*/
+        /*position: absolute;*/
+        /*left: 35%;*/
+        /*top: 18%;*/
+        /*font-size: 20px;*/
+    /*}*/
+/*}*/
+
+/*@media screen and (orientation: landscape) {*/
+    .registration_title {
+        position: absolute;
+        left: 35%;
+        top: 0px;
+        font-size: larger;
+    }
+/*}*/
+
+#registration_mask {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1003;
+}
+
+/**
+ * Login
+ */
+.registration_set_input {
+    background-color: rgb(48, 48, 48);
+    color: rgb(202, 202, 202);
+    border: 1px rgb(70, 70, 71) double;
+    padding: 0px 0px 0px 5px;
+    width: 400px;
+    height: 35px;
+    display: block;
+}
+
+#id_txt_login {
+    position: absolute;
+    top: 517px;
+    left: 760px;
+}
+
+#id_txt_password {
+    position: absolute;
+    top: 569px;
+    left: 760px;
+}
+
+.registration_top {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 361px;
+    background-color: rgb(153, 14, 14);
+}
+
+.registration_top_system_name {
+    position: absolute;
+    top: 125px;
+    left: 420px;
+    width: 1080px;
+    height: 74px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: table;
+    /*font-size: 60px;*/
+    font-size:xx-large;
+}
+
+.registration_top_camera_name {
+    position: absolute;
+    top: 238px;
+    left: 838px;
+    width: 244px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: table;
+    /*font-size: 30px;*/
+    font-size:larger;
+}
+
+
+.registration_password {
+    position: absolute;
+    top: 574px;
+    left: 658px;
+    width: 94px;
+    height: 24px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.registration_user_name {
+    position: absolute;
+    top: 522px;
+    left: 658px;
+    width: 94px;
+    height: 24px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.registration_user_password {
+    position: absolute;
+    top: 440px;
+    left: 804px;
+    width: 94px;
+    height: 24px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+
+}
+
+/*@media only screen and (orientation: portrait) {*/
+    /*.registration_note_class {*/
+        /*left: 20%;*/
+        /*position: absolute;*/
+        /*top: 60%;*/
+        /*height: 50%;*/
+        /*font-family: 'Arial';*/
+        /*font-size: 12px;*/
+    /*}*/
+
+/*}*/
+
+/*@media screen and (orientation: landscape) {*/
+    .registration_note_class {
+        left: 20%;
+        position: absolute;
+        top: 55%;
+        height: 50%;
+        font-family: 'Arial';
+        /*font-size: 12px;*/
+        font-size: smaller;
+    }
+/*}*/
+
+.txt_reg_user_name {
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    width: 20%;
+    height: 1%;
+    display: table;
+    /*font-size: 16px;*/
+    text-align: left;
+}
+
+.txt_reg_user_password {
+    position: absolute;
+    top: 21%;
+    left: 1%;
+    width: 20%;
+    height: 1%;
+    display: table;
+    /*font-size: 16px;*/
+    text-align: left;
+}
+
+.txt_reg_user_repassword {
+    position: absolute;
+    top: 34%;
+    left: 1%;
+    width: 20%;
+    height: 1%;
+    display: table;
+    /*font-size: 16px;*/
+    text-align: left;
+}
+
+.txt_reg_warning_title {
+    position: absolute;
+    top: 30px;
+    left: 33px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    /*font-size: 16px;*/
+    text-align: left;
+}
+
+.txt_reg_warning_recommend {
+    position: absolute;
+    top: 25%;
+    left: 33px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    /*font-size: 16px;*/
+    text-align: left;
+}
+
+.txt_reg_warning_recommend_detail {
+    position: absolute;
+    top: 35%;
+    left: 33px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    /*font-size: 16px;*/
+    text-align: left;
+}
+
+.registration_complete_class {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    width: 250px;
+    height: 28px;
+    display: table;
+    /*font-size: large;*/
+    text-align: left;
+}
+
+#reg_user_name {
+    position: absolute;
+    top: 10%;
+    left: 21%;
+    width: 40%;
+    height: 7%;
+    background-color: black;
+    border: 1px rgb(70, 70, 71) double;
+    color: rgb(191, 191, 191);
+}
+
+#reg_user_password {
+    position: absolute;
+    top: 23%;
+    left: 21%;
+    width: 40%;
+    height: 7%;
+    background-color: black;
+    border: 1px rgb(70, 70, 71) double;
+    color: rgb(191, 191, 191);
+}
+
+#reg_user_repassword {
+    position: absolute;
+    top: 36%;
+    left: 21%;
+    width: 40%;
+    height: 7%;
+    background-color: black;
+    border: 1px rgb(70, 70, 71) double;
+    color: rgb(191, 191, 191);
+}
+
+/*@media only screen and (orientation: portrait) {*/
+    /*.btn_reg_admin_set {*/
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*left: 21%;*/
+        /*width: 10%;*/
+        /*height: 5%;*/
+        /*font-size: large;*/
+        /*border: none;*/
+        /*outline: none;*/
+        /*background: none;*/
+        /*display: table;*/
+        /*text-align: center;*/
+    /*}*/
+/*}*/
+
+/*@media screen and (orientation: landscape) {*/
+    .btn_reg_admin_set {
+        position: absolute;
+        top: 50%;
+        left: 21%;
+        width: 10%;
+        height: 5%;
+        /*font-size: large;*/
+        border: none;
+        outline: none;
+        background: none;
+        display: table;
+        text-align: center;
+    }
+/*}*/
+
+.btn_direct_to_main {
+    position: absolute;
+    top: 200px;
+    left: 130px;
+    width: 50px;
+    height: 25px;
+    font-size: 8pt;
+    border: none;
+    outline: none;
+    background: none;
+    display: table;
+    text-align: center;
+}
+
+.btn_reg_admin_continue {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    width: 10%;
+    height: 5%;
+    /*font-size: large;*/
+    border: none;
+    outline: none;
+    background: none;
+    display: table;
+    text-align: center;
+    z-index: 9999;
+}
+
+.btn_reg_admin_back {
+    position: absolute;
+    top: 85%;
+    left: 20%;
+    width: 10%;
+    height: 5%;
+    /*font-size: large;*/
+    border: none;
+    outline: none;
+    background: none;
+    display: table;
+    text-align: center;
+    z-index: 9999;
+
+}
+
+.btn_direct_to_main > *,
+.btn_reg_admin_set > *,
+.btn_reg_admin_continue > *,
+.btn_reg_admin_back > * {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.btn_direct_to_main.on_hover,
+.btn_reg_admin_set.on_hover,
+.btn_reg_admin_continue.on_hover,
+.btn_reg_admin_back.on_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(/css/mobile/parts/tab4_O_selected.png);
+    background-size: 100% 100%;
+}
+
+.btn_direct_to_main.on,
+.btn_reg_admin_set.on,
+.btn_reg_admin_continue.on,
+.btn_reg_admin_back.on {
+    color: rgb(255, 255, 255);
+    background-image: url(/css/mobile/parts/tab4_O_selected.png);
+    background-size: 100% 100%;
+}
+
+.btn_direct_to_main.off_hover,
+.btn_reg_admin_set.off_hover,
+.btn_reg_admin_continue.off_hover,
+.btn_reg_admin_back.off_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(/css/mobile/parts/tab4_O_pressed.png);
+    background-size: 100% 100%;
+}
+
+.btn_direct_to_main.off,
+.btn_reg_admin_set.off,
+.btn_reg_admin_continue.off,
+.btn_reg_admin_back.off {
+    color: rgb(255, 255, 255);
+    background-image: url(/css/mobile/parts/tab4_O_pressed.png);
+    background-size: 100% 100%;
+}
+
+/*lines common*/
+/*Horizontal line: '-'*/
+.horizontal_line_common {
+    position: absolute;
+    height: 1px;
+    background: rgb(70, 70, 71);
+    z-index: 2;
+}
+
+/*@media only screen and (orientation: portrait) {*/
+    /*.adminRegistrationMain_main {*/
+        /*top: 20%;*/
+        /*left: 0;*/
+        /*height: 100%;*/
+        /*width: 20%;*/
+        /*background-color: rgb(29, 29, 31);*/
+    /*}*/
+/*}*/
+
+.adminRegistrationMain_main {
+    top: 20%;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background-color: rgb(29, 29, 31);
+}
+
+.userName_Line {
+    left: 1%;
+    top: 20%
+}
+
+.password_Line {
+    left: 1%;
+    top: 33%
+}
+
+.rePassword_Line {
+    left: 1%;
+    top: 46%
+}

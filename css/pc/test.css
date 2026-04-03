@@ -1,0 +1,2007 @@
+/*
+* detail begin
+*/
+/*-----------------detail start--------------------*/
+#detail_setting_area {
+    position: absolute;
+    width: 100%;
+    height: 1050px;
+    top: 0px;
+    left: 0px;
+    background: #000000;
+}
+#downcon_setting_area {
+    position: absolute;
+    width: 100%;
+    height: 2130px;
+    top: 1050px;
+    left: 0px;
+    background: #000000;
+}
+#skin_tone_detail_setting_area {
+    position: absolute;
+    width: 100%;
+    height: 780px;
+    top: 3180px;
+    left: 0px;
+    background: #000000;
+}
+
+
+#detail_title {
+    background-color: #464647;
+    margin: 0;
+    height: 33px;
+    line-height: 33px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-left: 20px;
+}
+#downcon_title {
+    background-color: #464647;
+    margin: 0;
+    height: 33px;
+    line-height: 33px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-left: 20px;
+}
+#skin_tone_detail_title {
+    background-color: #464647;
+    margin: 0;
+    height: 33px;
+    line-height: 33px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-left: 20px;
+}
+#setup_imageAdjust_detail_detail_main_scroll{
+    position: absolute;
+    z-index: 999;
+    width: 798px;
+    height: 4100px;
+}
+#setup_imageAdjust_detail_detail_main_scroll_div{
+    position: absolute;
+    z-index: 999;
+    width: 798px;
+    top: 0px;
+}
+.setup_imageAdjust_detail_setting_v_top_label_Line {
+    top: 33px;
+    left: 24px;
+    height: 39px;
+}
+.setup_imageAdjust_detail_setting_skin_tone_v_top_label_Line {
+    top: 33px;
+    left: 24px;
+    height: 39px;
+}
+.setup_imageAdjust_detail_setting_downcon_v_top_label_Line {
+    top: 33px;
+    left: 24px;
+    height: 257px;
+}
+.setup_imageAdjust_detail_setting_h_top_label_Line{
+    top: 72px;
+    left: 24px;
+    width: 30px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_top_label_Line{
+    top: 72px;
+    left: 24px;
+    width: 30px !important;
+}
+.setup_imageAdjust_detail_setting_v_label_Line {
+    top: 300px;
+    left: 67px;
+    height: 64px;
+}
+.setup_imageAdjust_detail_setting_downcon_detail_v_label_Line {
+    top: 364px;
+    left: 87px;
+    height: 1730px;
+}
+.setup_imageAdjust_detail_downcon_chroma_setting_v_label_Line {
+    top: 80px;
+    left: 67px;
+    height: 140px;
+}
+.setup_imageAdjust_detail_downcon_detail_setting_v_label_Line {
+    top: 300px;
+    left: 67px;
+    height: 64px;
+}
+.setup_imageAdjust_detail_setting_detail_v_label_Line {
+    top: 80px;
+    left: 67px;
+    height: 859px;
+}
+.setup_imageAdjust_detail_setting_skin_tone_v_label_Line {
+    top: 80px;
+    left: 67px;
+    height: 644px;
+}
+.setup_imageAdjust_detail_setting_h_label_Line {
+    top: 147px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label2_Line {
+    top: 219px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label3_Line {
+    top: 291px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_downcon_detail_h_label_Line {
+    top: 291px;
+    left: 24px;
+    width: 30px !important;
+}
+.setup_imageAdjust_detail_setting_h_label4_Line {
+    top: 363px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label5_Line {
+    top: 435px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label6_Line {
+    top: 507px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label7_Line {
+    top: 579px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label8_Line {
+    top: 651px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label9_Line {
+    top: 723px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label10_Line {
+    top: 795px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label11_Line {
+    top: 867px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label12_Line {
+    top: 939px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label13_Line {
+    top: 1011px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_h_label14_Line {
+    top: 1083px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label1_Line {
+    top: 147px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label2_Line {
+    top: 219px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label3_Line {
+    top: 291px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label4_Line {
+    top: 363px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label5_Line {
+    top: 435px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label6_Line {
+    top: 507px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label7_Line {
+    top: 579px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label8_Line {
+    top: 651px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label9_Line {
+    top: 723px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label10_Line {
+    top: 795px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_h_label11_Line {
+    top: 867px;
+    left: 67px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label5_Line {
+    top: 435px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label6_Line {
+    top: 507px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label7_Line {
+    top: 579px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label8_Line {
+    top: 651px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label9_Line {
+    top: 723px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label10_Line {
+    top: 795px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label11_Line {
+    top: 867px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label12_Line {
+    top: 939px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label13_Line {
+    top: 1011px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label14_Line {
+    top: 1083px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label15_Line {
+    top: 1155px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label16_Line {
+    top: 1227px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label17_Line {
+    top: 1299px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label18_Line {
+    top: 1371px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label19_Line {
+    top: 1443px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label20_Line {
+    top: 1515px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label21_Line {
+    top: 1587px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label22_Line {
+    top: 1659px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label23_Line {
+    top: 1731px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label24_Line {
+    top: 1803px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label25_Line {
+    top: 1875px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label26_Line {
+    top: 1947px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label27_Line {
+    top: 2019px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_detail_h_label28_Line {
+    top: 2091px;
+    left: 87px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_dark_h_label_Line{
+    top: 1011px;
+    left: 97px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_skin_tone_zebra_h_label_Line{
+    top: 290px;
+    left: 97px;
+    width: 20px !important;
+}
+.setup_imageAdjust_detail_setting_dark_v_label_Line{
+    top: 949px;
+    left: 97px;
+    height: 63px;
+}
+.setup_imageAdjust_detail_setting_skin_tone_zebra_v_label_Line{
+    top: 227px;
+    left: 97px;
+    height: 63px;
+}
+.setup_imageAdjust_detail_setting_detail_label {
+    position: absolute;
+    top: 47px;
+    left: 54px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_setting_detail_Off_label {
+    position: absolute;
+    top: 47px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_setting_detail_On_label {
+    position: absolute;
+    top: 47px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_setting_detail_Off_radio,
+.setup_imageAdjust_detail_setting_detail_On_radio {
+    position: absolute;
+    top: 56px;
+}
+
+.setup_imageAdjust_detail_setting_detail_Off_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_setting_detail_On_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_setting_master_detail_label{
+    position: absolute;
+    top: 119px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_setting_master_detail_slider{
+    top: 128px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_setting_peak_frequence_label{
+    position: absolute;
+    top: 191px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_peak_frequence_slider {
+    top: 208px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_crisp_label{
+    position: absolute;
+    top: 263px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_crisp_slider {
+    top: 280px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_gain_plus_label{
+    position: absolute;
+    top: 335px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_gain_plus_slider {
+    top: 352px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_gain_minus_label{
+    position: absolute;
+    top: 407px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_gain_minus_slider {
+    top: 424px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_clip_plus_label{
+    position: absolute;
+    top: 479px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_clip_plus_slider {
+    top: 496px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_clip_minus_label{
+    position: absolute;
+    top: 551px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_clip_minus_slider {
+    top: 568px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_knee_aperture_level_label{
+    position: absolute;
+    top: 623px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_knee_aperture_level_slider {
+    top: 640px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_knee_label{
+    position: absolute;
+    top: 695px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_knee_slider {
+    top: 712px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_level_dependent_switch_label{
+    position: absolute;
+    top: 767px;
+    left:87px;
+    width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_level_dependent_switch_Off_label {
+    position: absolute;
+    top: 767px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_level_dependent_switch_On_label {
+    position: absolute;
+    top: 767px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_level_dependent_switch_Off_radio,
+.setup_imageAdjust_detail_level_dependent_switch_On_radio {
+    position: absolute;
+    top: 779px;
+}
+
+.setup_imageAdjust_detail_level_dependent_switch_Off_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_level_dependent_switch_On_radio {
+    left: 420px;
+}
+.setup_imageAdjust_level_dependent_label{
+    position: absolute;
+    top: 839px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_level_dependent_slider {
+    top: 856px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_dark_detail_switch_label{
+    position: absolute;
+    top: 911px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_dark_detail_switch_Off_label {
+    position: absolute;
+    top: 911px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_dark_detail_switch_On_label {
+    position: absolute;
+    top: 911px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_dark_detail_switch_Off_radio,
+.setup_imageAdjust_detail_dark_detail_switch_On_radio {
+    position: absolute;
+    top: 923px;
+}
+
+.setup_imageAdjust_detail_dark_detail_switch_Off_radio {
+    left: 320px;
+}
+.setup_imageAdjust_detail_dark_detail_switch_On_radio {
+    left: 420px;
+}
+.setup_imageAdjust_detail_dark_detail_label{
+    position: absolute;
+    top: 983px;
+    left: 117px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_dark_detail_slider {
+    top: 1000px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_chroma_label{
+    position: absolute;
+    top: 47px;
+    left: 54px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_chroma_level_switch_label{
+    position: absolute;
+    top: 119px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_chroma_level_switch_Off_label {
+    position: absolute;
+    top: 119px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_chroma_level_switch_On_label {
+    position: absolute;
+    top: 119px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_chroma_level_switch_Off_radio,
+.setup_imageAdjust_detail_chroma_level_switch_On_radio {
+    position: absolute;
+    top: 129px;
+}
+
+.setup_imageAdjust_detail_chroma_level_switch_Off_radio {
+    left: 320px;
+}
+.setup_imageAdjust_detail_chroma_level_switch_On_radio {
+    left: 420px;
+}
+.setup_imageAdjust_detail_chroma_level_label{
+    position: absolute;
+    top: 191px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_chroma_level_slider {
+    top: 201px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_detail_setting_label{
+    position: absolute;
+    top: 263px;
+    left:54px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_detail_label{
+    position: absolute;
+    top: 335px;
+    left:87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_detail_Off_label {
+    position: absolute;
+    top: 335px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_detail_On_label {
+    position: absolute;
+    top: 335px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_detail_Off_radio,
+.setup_imageAdjust_detail_downcon_detail_On_radio {
+    position: absolute;
+    top: 345px;
+}
+
+.setup_imageAdjust_detail_downcon_detail_Off_radio {
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_detail_On_radio {
+    left: 420px;
+}
+.setup_imageAdjust_detail_master_detail_label{
+    position: absolute;
+    top: 407px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_master_detail_slider{
+    top: 417px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_h_detail_level_label{
+    position: absolute;
+    top: 479px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_h_detail_level_slider{
+    top: 489px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_v_detail_level_label{
+    position: absolute;
+    top: 551px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_v_detail_level_slider{
+    top: 561px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_peak_frequency_label{
+    position: absolute;
+    top: 623px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_peak_frequency_slider{
+    top: 633px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_v_detail_frequency_label{
+    position: absolute;
+    top: 695px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_v_detail_frequency_slider{
+    top: 705px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_crisp_label{
+    position: absolute;
+    top: 767px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_crisp_slider{
+    top: 777px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_clip_plus_label{
+    position: absolute;
+    top: 839px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_clip_plus_slider{
+    top: 849px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_clip_minus_label{
+    position: absolute;
+    top: 911px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_clip_minus_slider{
+    top: 921px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_knee_aperture_level_label{
+    position: absolute;
+    top: 983px;
+    left:107px;
+    width: 200px;
+    height: 28px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_knee_aperture_level_slider{
+    top: 993px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_knee_label{
+    position: absolute;
+    top: 1055px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_knee_slider{
+    top: 1065px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_level_dependent_switch_label{
+    position: absolute;
+    top: 1127px;
+    left:107px;
+    width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_level_dependent_switch_Off_label {
+    position: absolute;
+    top: 1127px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_level_dependent_switch_On_label {
+    position: absolute;
+    top: 1127px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_level_dependent_switch_Off_radio,
+.setup_imageAdjust_detail_downcon_level_dependent_switch_On_radio {
+    position: absolute;
+    top: 1137px;
+}
+
+.setup_imageAdjust_detail_downcon_level_dependent_switch_Off_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_downcon_level_dependent_switch_On_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_downcon_level_dependent_label{
+    position: absolute;
+    top: 1199px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left
+}
+.setup_imageAdjust_detail_downcon_level_dependent_slider{
+    top: 1209px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_dark_detail_switch_label{
+    position: absolute;
+    top: 1271px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_downcon_dark_detail_switch_Off_label {
+    position: absolute;
+    top: 1271px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_dark_detail_switch_On_label {
+    position: absolute;
+    top: 1271px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_dark_detail_switch_Off_radio,
+.setup_imageAdjust_detail_downcon_dark_detail_switch_On_radio {
+    position: absolute;
+    top: 1281px;
+}
+
+.setup_imageAdjust_detail_downcon_dark_detail_switch_Off_radio {
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_dark_detail_switch_On_radio {
+    left: 420px;
+}
+.setup_imageAdjust_detail_downcon_dark_detail_label{
+    position: absolute;
+    top: 1343px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left   
+}
+.setup_imageAdjust_detail_downcon_dark_detail_slider{
+    top: 1353px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_detail_label{
+    position: absolute;
+    top: 1415px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_downcon_skin_tone_detail_Off_label {
+    position: absolute;
+    top: 1415px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_detail_On_label {
+    position: absolute;
+    top: 1415px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_detail_Off_radio,
+.setup_imageAdjust_detail_downcon_skin_tone_detail_On_radio {
+    position: absolute;
+    top: 1425px;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_detail_Off_radio {
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_detail_On_radio {
+    left: 420px;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_memory_label{
+    position: absolute;
+    top: 1487px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_downcon_skin_tone_memory_A_label {
+    position: absolute;
+    top: 1487px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_memory_B_label {
+    position: absolute;
+    top: 1487px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_memory_C_label {
+    position: absolute;
+    top: 1487px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_memory_A_radio,
+.setup_imageAdjust_detail_downcon_skin_tone_memory_B_radio,
+.setup_imageAdjust_detail_downcon_skin_tone_memory_C_radio {
+    position: absolute;
+    top: 1497px;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_memory_A_radio {
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_memory_B_radio {
+    left: 420px;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_memory_C_radio {
+    left: 520px;
+}
+.setup_imageAdjust_detail_downcon_zebra_label{
+    position: absolute;
+    top: 1559px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left 
+}
+.setup_imageAdjust_detail_downcon_zebra_Off_label {
+    position: absolute;
+    top: 1559px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_On_label {
+    position: absolute;
+    top: 1559px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_Off_radio,
+.setup_imageAdjust_detail_downcon_zebra_On_radio {
+    position: absolute;
+    top: 1569px;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_Off_radio {
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_zebra_On_radio {
+    left: 420px;
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_label{
+    position: absolute;
+    top: 1631px;
+    left:107px;
+    width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left 
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A_label {
+    position: absolute;
+    top: 1631px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_B_label {
+    position: absolute;
+    top: 1631px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_C_label {
+    position: absolute;
+    top: 1631px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A\+B_label {
+    position: absolute;
+    top: 1631px;
+    left: 660px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A\+C_label {
+    position: absolute;
+    top: 1661px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_B\+C_label {
+    position: absolute;
+    top: 1661px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A\+B\+C_label {
+    position: absolute;
+    top: 1661px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A_radio,
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_B_radio,
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_C_radio,
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A\+B_radio {
+    position: absolute;
+    top: 1641px;
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A\+C_radio,
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_B\+C_radio,
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A\+B\+C_radio{
+    position: absolute;
+    top: 1671px;
+}
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_B_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_C_radio {
+    left: 520px;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A\+B_radio {
+    left: 620px;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A\+C_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_B\+C_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_downcon_zebra_effect_memory_A\+B\+C_radio {
+    left: 520px;
+}
+/*
+*
+*/
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_label{
+    position: absolute;
+    top: 1703px;
+    left:107px;
+    width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left 
+}
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A_label {
+    position: absolute;
+    top: 1703px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_B_label {
+    position: absolute;
+    top: 1703px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_C_label {
+    position: absolute;
+    top: 1703px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A\+B_label {
+    position: absolute;
+    top: 1703px;
+    left: 660px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A\+C_label {
+    position: absolute;
+    top: 1733px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_B\+C_label {
+    position: absolute;
+    top: 1733px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A\+B\+C_label {
+    position: absolute;
+    top: 1733px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A_radio,
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_B_radio,
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_C_radio,
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A\+B_radio {
+    position: absolute;
+    top: 1713px;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A\+C_radio,
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_B\+C_radio,
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A\+B\+C_radio {
+    position: absolute;
+    top: 1743px;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_B_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_C_radio {
+    left: 520px;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A\+B_radio {
+    left: 620px;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A\+C_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_B\+C_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_downcon_skin_tone_effect_memory_A\+B\+C_radio {
+    left: 520px;
+}
+.setup_imageAdjust_detail_downcon_skin_tone_crisp_label{
+    position: absolute;
+    top: 1775px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left 
+}
+.setup_imageAdjust_detail_downcon_skin_tone_crisp_slider{
+    top: 1785px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_i_center_label{
+    position: absolute;
+    top: 1847px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_downcon_i_center_slider{
+    top: 1857px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_i_width_label{
+    position: absolute;
+    top: 1919px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_downcon_i_width_slider{
+    top: 1929px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_q_width_label{
+    position: absolute;
+    top: 1991px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_downcon_q_width_slider{
+    top: 2001px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_downcon_q_phase_label{
+    position: absolute;
+    top: 2063px;
+    left:107px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_downcon_q_phase_slider{
+    top: 2073px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_skin_tone_detail_label {
+    position: absolute;
+    top: 47px;
+    left: 54px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_detail_Off_label {
+    position: absolute;
+    top: 47px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_skin_tone_detail_On_label {
+    position: absolute;
+    top: 47px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_skin_tone_detail_Off_radio,
+.setup_imageAdjust_detail_skin_tone_detail_On_radio {
+    position: absolute;
+    top: 56px;
+}
+
+.setup_imageAdjust_detail_skin_tone_detail_Off_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_skin_tone_detail_On_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_label{
+    position: absolute;
+    top: 119px;
+    left: 87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_A_label {
+    position: absolute;
+    top: 119px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_B_label {
+    position: absolute;
+    top: 119px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_C_label {
+    position: absolute;
+    top: 119px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_A_radio,
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_B_radio,
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_C_radio {
+    position: absolute;
+    top: 129px;
+}
+
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_A_radio {
+    left: 320px;
+}
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_B_radio {
+    left: 420px;
+}
+.setup_imageAdjust_detail_skin_tone_detail_memory_select_C_radio {
+    left: 520px;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_label{
+    position: absolute;
+    top: 191px;
+    left: 87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left 
+}
+.setup_imageAdjust_detail_skin_tone_zebra_Off_label {
+    position: absolute;
+    top: 191px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_On_label {
+    position: absolute;
+    top: 191px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_Off_radio,
+.setup_imageAdjust_detail_skin_tone_zebra_On_radio {
+    position: absolute;
+    top: 201px;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_Off_radio {
+    left: 320px;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_On_radio {
+    left: 420px;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_label{
+    position: absolute;
+    top: 263px;
+    left: 117px;
+    width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left 
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A_label {
+    position: absolute;
+    top: 263px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_B_label {
+    position: absolute;
+    top: 263px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_C_label {
+    position: absolute;
+    top: 263px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A\+B_label {
+    position: absolute;
+    top: 263px;
+    left: 660px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A\+C_label {
+    position: absolute;
+    top: 293px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_B\+C_label {
+    position: absolute;
+    top: 293px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A\+B\+C_label {
+    position: absolute;
+    top: 293px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A_radio,
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_B_radio,
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_C_radio,
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A\+B_radio {
+    position: absolute;
+    top: 273px;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A\+C_radio,
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_B\+C_radio,
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A\+B\+C_radio {
+    position: absolute;
+    top: 303px;
+}
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_B_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_C_radio {
+    left: 520px;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A\+B_radio {
+    left: 620px;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A\+C_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_B\+C_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_skin_tone_zebra_effect_memory_A\+B\+C_radio {
+    left: 520px;
+}
+
+
+/*
+*
+*/
+.setup_imageAdjust_detail_skin_tone_effect_memory_label{
+    position: absolute;
+    top: 335px;
+    left: 87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left 
+}
+.setup_imageAdjust_detail_skin_tone_effect_memory_A_label {
+    position: absolute;
+    top: 335px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_imageAdjust_detail_skin_tone_effect_memory_B_label {
+    position: absolute;
+    top: 335px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_effect_memory_C_label {
+    position: absolute;
+    top: 335px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_effect_memory_A\+B_label {
+    position: absolute;
+    top: 335px;
+    left: 660px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_effect_memory_A\+C_label {
+    position: absolute;
+    top: 365px;
+    left: 360px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_effect_memory_B\+C_label {
+    position: absolute;
+    top: 365px;
+    left: 460px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_effect_memory_A\+B\+C_label {
+    position: absolute;
+    top: 365px;
+    left: 560px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_imageAdjust_detail_skin_tone_effect_memory_A_radio,
+.setup_imageAdjust_detail_skin_tone_effect_memory_B_radio,
+.setup_imageAdjust_detail_skin_tone_effect_memory_C_radio,
+.setup_imageAdjust_detail_skin_tone_effect_memory_A\+B_radio {
+    position: absolute;
+    top: 345px;
+}
+.setup_imageAdjust_detail_skin_tone_effect_memory_A\+C_radio,
+.setup_imageAdjust_detail_skin_tone_effect_memory_B\+C_radio,
+.setup_imageAdjust_detail_skin_tone_effect_memory_A\+B\+C_radio {
+    position: absolute;
+    top: 375px;
+}
+.setup_imageAdjust_detail_skin_tone_effect_memory_A_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_skin_tone_effect_memory_B_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_skin_tone_effect_memory_C_radio {
+    left: 520px;
+}
+
+.setup_imageAdjust_detail_skin_tone_effect_memory_A\+B_radio {
+    left: 620px;
+}
+
+.setup_imageAdjust_detail_skin_tone_effect_memory_A\+C_radio {
+    left: 320px;
+}
+
+.setup_imageAdjust_detail_skin_tone_effect_memory_B\+C_radio {
+    left: 420px;
+}
+
+.setup_imageAdjust_detail_skin_tone_effect_memory_A\+B\+C_radio {
+    left: 520px;
+}
+.setup_imageAdjust_detail_skin_tone_crisp_label{
+    position: absolute;
+    top: 407px;
+    left: 87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left 
+}
+.setup_imageAdjust_detail_skin_tone_crisp_slider{
+    top: 417px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_skin_tone_i_center_label{
+    position: absolute;
+    top: 479px;
+    left: 87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_skin_tone_i_center_slider{
+    top: 489px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_skin_tone_i_width_label{
+    position: absolute;
+    top: 551px;
+    left: 87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_skin_tone_i_width_slider{
+    top: 561px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_skin_tone_q_width_label{
+    position: absolute;
+    top: 623px;
+    left: 87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_skin_tone_q_width_slider{
+    top: 633px;
+    left: 320px;
+}
+.setup_imageAdjust_detail_skin_tone_q_phase_label{
+    position: absolute;
+    top: 695px;
+    left: 87px;
+    width: 250px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left  
+}
+.setup_imageAdjust_detail_skin_tone_q_phase_slider{
+    top: 705px;
+    left: 320px;
+}
+/* detail end***/

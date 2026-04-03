@@ -1,0 +1,126 @@
+@CHARSET "UTF-8";
+body {
+    margin: 0;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    white-space: nowrap;
+    font-family: 'Arial';
+    background: rgb(29, 29, 31);
+}
+
+.capture_img{
+    top: 0px;
+    left: 0px;
+}
+
+.btn_capture_save {
+    position: absolute;
+    left: 20px;
+    top: 340px;
+    width: 122px;
+    height: 32px;
+    font-size: small;
+    text-align: center;
+    display: table;
+}
+
+.btn_capture_print {
+    position: absolute;
+    left: 156px;
+    top: 340px;
+    width: 122px;
+    height: 32px;
+    font-size: small;
+    text-align: center;
+    display: table;
+}
+
+.btn_capture_close {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 92px;
+    height: 32px;
+    font-size: small;
+    text-align: center;
+    display: table;
+    margin-left:-46px;
+}
+
+.btn_capture_save > *,
+.btn_capture_print > *,
+.btn_capture_close > * {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.btn_capture_save.off,
+.btn_capture_print.off {
+    color: rgb(217, 217, 217);
+    background-image: url(parts/live_popup_btn_01_normal.png);
+    background-size: 100% 100%;
+}
+
+.btn_capture_save.on,
+.btn_capture_print.on {
+    color: rgb(217, 217, 217);
+    background-image: url(parts/live_popup_btn_01_pressed.png);
+    background-size: 100% 100%;
+}
+
+.btn_capture_save.disable,
+.btn_capture_print.disable {
+    color: rgb(102, 102, 102);
+    background-image: url(parts/live_popup_btn_01_disable.png);
+    background-size: 100% 100%;
+}
+
+.btn_capture_save.on_hover,
+.btn_capture_print.on_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/live_popup_btn_01_pressed.png);
+    background-size: 100% 100%;
+}
+
+.btn_capture_save.off_hover,
+.btn_capture_print.off_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/live_popup_btn_01_onmouse.png);
+    background-size: 100% 100%;
+}
+
+.btn_capture_close.off {
+    color: rgb(217, 217, 217);
+    background-image: url(parts/live_popup_btn_02_normal.png);
+    background-size: 100% 100%;
+}
+
+.btn_capture_close.on {
+    color: rgb(217, 217, 217);
+    background-image: url(parts/live_popup_btn_02_pressed.png);
+    background-size: 100% 100%;
+}
+
+.btn_capture_close.disable {
+    color: rgb(102, 102, 102);
+    background-image: url(parts/live_popup_btn_02_disable.png);
+    background-size: 100% 100%;
+}
+
+.btn_capture_close.on_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/live_popup_btn_02_pressed.png);
+    background-size: 100% 100%;
+}
+
+.btn_capture_close.off_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/live_popup_btn_02_onmouse.png);
+    background-size: 100% 100%;
+}

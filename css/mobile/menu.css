@@ -1,0 +1,543 @@
+.menuBtnText.off{
+    position: absolute;
+    display: block;
+    text-align: center;
+    color: #A4A4A4;
+    /*font-size: 1.5vw;*/
+    top: 22%;
+    height: 45%;
+    width: 100%;
+}
+.menuBtnText{
+    position: absolute;
+    display: block;
+    text-align: center;
+    color: #A4A4A4;
+    /*font-size: 1.5vw;*/
+    top: 22%;
+    height: 45%;
+    width: 100%;
+}
+.menuBtnText2.off{
+    margin-top: 1%;
+    position: absolute;
+    display: block;
+    text-align: center;
+    color: #A4A4A4;
+    /*font-size: 1.5vw;*/
+    height: 45%;
+    width: 100%;
+    white-space:pre-wrap;
+    line-height: 100%;
+}
+.menuBtnText.on{
+    position: absolute;
+    display: block;
+    text-align: center;
+    color: #000000;
+    /*font-size: 1.5vw;*/
+    top: 22%;
+    height: 45%;
+    width: 100%;
+}
+.menuBtnText2.on{
+    margin-top: 1%;
+    position: absolute;
+    display: block;
+    text-align: center;
+    color: #000000;
+    /*font-size: 1.5vw;*/
+    height: 45%;
+    width: 100%;
+    white-space:pre-wrap;
+    line-height: 100%;
+}
+.TITLE_9_BTN_0,
+.TITLE_1_BTN_0,
+.TITLE_O_BTN_0{
+    position: absolute;
+    display: block;
+    right: 21.2%;
+    top: 25%;
+    height: 50%;
+    width: 18%;
+}
+
+.TITLE_TOUCH_PT{
+    position: absolute;
+    display: table;
+    right: 42.2%;
+    top: 25%;
+    height: 50%;
+    width: 18%;
+    vertical-align: middle;
+    cursor: default;
+    color: #A4A4A4;
+}
+
+.TITLE_TOUCH_PT > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.TITLE_TOUCH_OFF{
+    position: absolute;;
+    display: table;
+    right: 60%;
+    top: 25%;
+    height: 50%;
+    width: 18%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: default;
+    color: #A4A4A4;
+}
+
+.TITLE_TOUCH_OFF > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.TITLE_9_BTN_1,
+.TITLE_1_BTN_1,
+.TITLE_O_BTN_1{
+    position: absolute;
+    display: block;
+    right: 3%;
+    top: 25%;
+    height: 50%;
+    width: 18%;
+}
+
+.TITLE_TOUCH_AF{
+    position: absolute;
+    display: table;
+    right: 22.2%;
+    top: 25%;
+    height: 50%;
+    width: 20%;
+    cursor: default;
+    color: #A4A4A4;
+}
+
+.TITLE_TOUCH_AF > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.TITLE_2_BTN_0{
+    position: absolute;
+    display: block;
+    right: 30%;
+    top: 25%;
+    height: 50%;
+    width: 9%;
+}
+.TITLE_2_BTN_1{
+    position: absolute;
+    display: block;
+    right: 21%;
+    top: 25%;
+    height: 50%;
+    width: 9%;
+}
+
+.TITLE_5_BTN_1{
+    position: absolute;
+    display: block;
+    right: 21%;
+    top: 25%;
+    height: 50%;
+    width: 9%;
+}
+
+.TITLE_2_BTN_2{
+    position: absolute;
+    display: block;
+    right: 12%;
+    top: 25%;
+    height: 50%;
+    width: 9%;
+}
+.TITLE_5_BTN_2{
+    position: absolute;
+    display: block;
+    right: 12%;
+    top: 25%;
+    height: 50%;
+    width: 9%;
+}
+.TITLE_2_BTN_3{
+    position: absolute;
+    display: block;
+    right: 3%;
+    top: 25%;
+    height: 50%;
+    width: 9%;
+}
+.TITLE_4_BTN_0,
+.TITLE_3_BTN_0{
+    position: absolute;
+    display: block;
+    right: 27%;
+    top: 25%;
+    height: 50%;
+    width: 12%;
+}
+.TITLE_4_BTN_1,
+.TITLE_3_BTN_1{
+    position: absolute;
+    display: block;
+    right: 15%;
+    top: 25%;
+    height: 50%;
+    width: 12%;
+}
+.TITLE_4_BTN_2,
+.TITLE_3_BTN_2{
+    position: absolute;
+    display: block;
+    right: 3%;
+    top: 25%;
+    height: 50%;
+    width: 12%;
+}
+
+.TITLE_5_BTN{
+    position: absolute;
+    display: block;
+    right: 3%;
+    top: 25%;
+    height: 50%;
+    width: 12%;
+    background-image: url(/css/mobile/parts/btn_stream_start_stop_pressed.png);
+    background-size: 100% 100%;
+    text-align: center;
+    color: #A4A4A4;
+    /*font-size: 1.5vw;*/
+    /*line-height: 2.5;*/
+}
+
+.TITLE_5_BTN.off{
+    background-image: url(/css/mobile/parts/btn_stream_start_stop_normal.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_5_BTN.on{
+    background-image: url(/css/mobile/parts/btn_stream_start_stop_pressed.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_7_SWITCH{
+    position: absolute;
+    display: block;
+    right: 3%;
+    top: 27.5%;
+    height: 45%;
+    width: 9%;
+}
+
+
+.TITLE_8_SWITCH{
+    position: absolute;
+    display: block;
+    right: 3%;
+    top: 27.5%;
+    height: 45%;
+    width: 9%;
+}
+
+
+/*两个按钮左off*/
+.TITLE_9_BTN_0.off,
+.TITLE_O_BTN_0.off,
+.TITLE_1_BTN_0.off{
+    background-image: url(/css/mobile/parts/tab2_L_normal.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮左off*/
+.TITLE_TOUCH_PT.off{
+    color: rgb(191, 191, 191);
+    background-image: url(/css/mobile/parts/tab3_M_normal.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮左off*/
+.TITLE_TOUCH_OFF.off{
+    vertical-align: middle;
+    color: rgb(191, 191, 191);
+    background-image: url(/css/mobile/parts/tab3_L_normal.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮左off*/
+.TITLE_TOUCH_AF.off{
+    color: rgb(191, 191, 191);
+    background-image: url(/css/mobile/parts/tab3_R_normal.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮左on*/
+.TITLE_9_BTN_0.on,
+.TITLE_1_BTN_0.on,
+.TITLE_O_BTN_0.on{
+    background-image: url(/css/mobile/parts/tab2_L_selected.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮左on*/
+.TITLE_TOUCH_PT.on{
+    color: rgb(0, 0, 0);
+    background-image: url(/css/mobile/parts/tab3_M_selected.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮左on*/
+.TITLE_TOUCH_OFF.on{
+    vertical-align: middle;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-image: url(/css/mobile/parts/tab3_L_selected.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_9_BTN_0.disable {
+    background-image: url(/css/mobile/parts/tab2_L_disable.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_9_BTN_1.disable {
+    background-image: url(/css/mobile/parts/tab2_R_disable.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_TOUCH_AF.disable {
+    background-image: url(/css/mobile/parts/tab3_R_disable.png);
+    background-size: 100% 100%;
+}
+.TITLE_TOUCH_PT.disable {
+    background-image: url(/css/mobile/parts/tab3_M_disable.png);
+    background-size: 100% 100%;
+}
+.disable {
+    color: rgb(102, 102, 102);
+}
+
+/*两个按钮右on*/
+.TITLE_9_BTN_1.on,
+.TITLE_1_BTN_1.on,
+.TITLE_O_BTN_1.on{
+    background-image: url(/css/mobile/parts/tab4_O_selected.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮右on*/
+.TITLE_9_BTN_1.on,
+.TITLE_O_BTN_1.on{
+    background-image: url(/css/mobile/parts/tab2_R_selected.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮右on*/
+.TITLE_TOUCH_AF.on{
+    color: rgb(0, 0, 0);
+    background-image: url(/css/mobile/parts/tab3_R_selected.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮右off*/
+.TITLE_1_BTN_1.off{
+    background-image: url(/css/mobile/parts/tab4_O_selected.png);
+    background-size: 100% 100%;
+}
+
+/*两个按钮右off*/
+.TITLE_9_BTN_1.off,
+.TITLE_O_BTN_1.off {
+    background-image: url(/css/mobile/parts/tab2_R_normal.png);
+    background-size: 100% 100%;
+}
+
+/*四个按钮on*/
+.TITLE_2_BTN_0.on{
+    background-image: url(/css/mobile/parts/tab4_L_selected.png);
+    background-size: 100% 100%;
+}
+.TITLE_2_BTN_1.on{
+    background-image: url(/css/mobile/parts/tab4_M_selected.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_5_BTN_1.on{
+    background-image: url(/css/mobile/parts/tab4_M_selected.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_2_BTN_2.on{
+    background-image: url(/css/mobile/parts/tab4_R_selected.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_5_BTN_2.on{
+    background-image: url(/css/mobile/parts/tab4_M_selected.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_2_BTN_3.on{
+    background-image: url(/css/mobile/parts/tab4_R_selected.png);
+    background-size: 100% 100%;
+}
+
+/*四个按钮off*/
+.TITLE_2_BTN_0.off{
+    background-image: url(/css/mobile/parts/tab4_L_normal.png);
+    background-size: 100% 100%;
+}
+.TITLE_2_BTN_1.off{
+     background-image: url(/css/mobile/parts/tab4_M_normal.png);
+     background-size: 100% 100%;
+ }
+
+.TITLE_5_BTN_1.off{
+    background-image: url(/css/mobile/parts/tab4_M_normal.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_2_BTN_2.off{
+     background-image: url(/css/mobile/parts/tab4_R_normal.png);
+     background-size: 100% 100%;
+ }
+
+.TITLE_5_BTN_2.off{
+    background-image: url(/css/mobile/parts/tab4_M_normal.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_2_BTN_3.off{
+    background-image: url(/css/mobile/parts/tab4_R_normal.png);
+    background-size: 100% 100%;
+}
+
+
+/*三个按钮on*/
+.TITLE_4_BTN_0.on,
+.TITLE_3_BTN_0.on{
+    background-image: url(/css/mobile/parts/tab3_L_selected.png);
+    background-size: 100% 100%;
+}
+.TITLE_4_BTN_1.on,
+.TITLE_3_BTN_1.on{
+    background-image: url(/css/mobile/parts/tab3_M_selected.png);
+    background-size: 100% 100%;
+}
+.TITLE_4_BTN_2.on,
+.TITLE_3_BTN_2.on{
+    background-image: url(/css/mobile/parts/tab3_R_selected.png);
+    background-size: 100% 100%;
+}
+/*三个按钮off*/
+.TITLE_4_BTN_0.off,
+.TITLE_3_BTN_0.off{
+    background-image: url(/css/mobile/parts/tab3_L_normal.png);
+    background-size: 100% 100%;
+}
+.TITLE_4_BTN_1.off,
+.TITLE_3_BTN_1.off{
+    background-image: url(/css/mobile/parts/tab3_M_normal.png);
+    background-size: 100% 100%;
+}
+.TITLE_4_BTN_2.off,
+.TITLE_3_BTN_2.off{
+    background-image: url(/css/mobile/parts/tab3_R_normal.png);
+    background-size: 100% 100%;
+}
+
+
+
+
+.TITLE_7_SWITCH.off{
+    background-image: url(/css/mobile/parts/btnOff.png);
+    background-size: 100% 100%;
+}
+.TITLE_7_SWITCH.on{
+    background-image: url(/css/mobile/parts/btnOn.png);
+    background-size: 100% 100%;
+}
+
+.TITLE_7_SWITCH.disable{
+    background-image: url(/css/mobile/parts/btnOff.png);
+    background-size: 100% 100%;
+}
+
+
+.TITLE_8_SWITCH.off{
+    background-image: url(/css/mobile/parts/btnOff.png);
+    background-size: 100% 100%;
+}
+
+
+.TITLE_8_SWITCH.on{
+    background-image: url(/css/mobile/parts/btnOn.png);
+    background-size: 100% 100%;
+}
+
+/********************Live新加按钮样弁E**********************/
+.Start{
+    position: absolute;
+    width: 30%;
+    left: 85%;
+    top: 77%;
+    height: 18%;
+    text-align: center;
+    display: table;
+    z-index: 99;
+    background-size: 100% 100%;
+}
+
+.Start.off{
+    background-image: url(/css/mobile/parts/btn_stream_start_stop_normal.png);
+    background-size: 100% 100%;
+}
+
+.Start.on{
+    background-image: url(/css/mobile/parts/btn_stream_start_stop_selected.png);
+    background-size: 100% 100%;
+}
+.Start > * {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+    color: #A4A4A4;
+}
+.StartStream{
+    position: absolute;
+    width: 12%;
+    left: 10%;
+    top: 65%;
+    height: 30%;
+    text-align: center;
+    display: table;
+    background-size: 100% 100%;
+}
+
+.StartStream.off{
+    background-image: url(/css/mobile/parts/btn_stream_start_stop_normal.png);
+    background-size: 100% 100%;
+}
+
+.StartStream.on{
+    background-image: url(/css/mobile/parts/btn_stream_start_stop_selected.png);
+    background-size: 100% 100%;
+}
+.StartStream > * {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+    color: #A4A4A4;
+}
+
+.TITLE_5_BTN.disable {
+    background-image: url(/css/mobile/parts/btn_excute_disable.png);
+    background-size: 100% 100%;
+}

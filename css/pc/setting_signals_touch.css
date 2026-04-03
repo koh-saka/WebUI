@@ -1,0 +1,2521 @@
+#setup_signals input {
+    background-color: rgb(0, 0, 0);
+    color: rgb(191, 191, 191);
+    border: 1px rgb(70, 70, 71) double;
+    padding: 0px 0px 0px 5px;
+}
+
+#setup_signals > * {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+.div_signals{
+    position: absolute;
+    left: 300px;
+    top: 0px;
+    width: 2020px;
+    height: 2100px;
+    overflow:hidden;
+}
+#setup_output_main {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+#setup_output_main {
+    display: none;
+}
+
+/*Output page*/
+.setup_outPut_title {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    line-height: 28px;
+    width: 100%;
+    background-color: rgb(70, 70, 71);
+    font-size:  large;
+}
+.setup_outPut_title >p{
+    position: absolute;
+    top: -18px;
+    left: 33px;
+}
+.setup_outPut_title_2 {
+    position: absolute;
+    top: 0px;
+    left: 1210px;
+    height: 28px;
+    line-height: 28px;
+    width: 398px;
+    background-color: rgb(70, 70, 71);
+}
+
+.setup_output_labels {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 3034px;
+    width: 300px;
+    background-color: rgb(29, 29, 31);
+}
+
+.setup_outPut_form {
+    position: absolute;
+    top: 29px;
+    left: 300px;
+    height: 850px;
+    width: 1210px;
+}
+
+.setup_outPut_btn_set_area {
+    position: absolute;
+    top: 180px;
+    height: 40px;
+    width: 10px;
+}
+/*return page*/
+.setup_ip_signal_title {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    line-height: 28px;
+    width: 100%;
+    background-color: rgb(70, 70, 71);
+    font-size:  large;
+}
+.setup_ip_signal_title >p{
+    position: absolute;
+    top: -18px;
+    left: 33px;
+}
+.setup_ip_signal_title_2 {
+    position: absolute;
+    top: 0px;
+    left: 1210px;
+    height: 28px;
+    line-height: 28px;
+    width: 398px;
+    background-color: rgb(70, 70, 71);
+}
+
+.setup_ip_signal_labels {
+    position: absolute;
+    top: 29px;
+    left: 0px;
+    height: 1120px;
+    width: 300px;
+    background-color: rgb(29, 29, 31);
+}
+
+.setup_ip_signal_form {
+    position: absolute;
+    top: 29px;
+    left: 300px;
+    height: 850px;
+    width: 1210px;
+}
+
+.setup_ip_signal_btn_set_area {
+    position: absolute;
+    top: 180px;
+    height: 40px;
+    width: 10px;
+}
+/*return page*/
+.setup_return_title {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    line-height: 28px;
+    width: 100%;
+    background-color: rgb(70, 70, 71);
+    font-size:  large;
+}
+.setup_return_title >p{
+    position: absolute;
+    top: -18px;
+    left: 33px;
+}
+.setup_return_title_2 {
+    position: absolute;
+    top: 0px;
+    left: 1210px;
+    height: 28px;
+    line-height: 28px;
+    width: 398px;
+    background-color: rgb(70, 70, 71);
+}
+#setup_signal_output_scroll_div{
+    top: 29px;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 1057px;
+    border-bottom: 1px solid rgb(70, 70, 71);
+}
+.setup_signal_output_inner{
+    position: absolute;
+    width: 100%;
+    height: 3034px;
+    left: 0px;
+    border-bottom: 1px solid rgb(70, 70, 71);
+    overflow: hidden;
+}
+.setup_return_labels {
+    position: absolute;
+    top: 29px;
+    left: 0px;
+    height: 1120px;
+    width: 300px;
+    background-color: rgb(29, 29, 31);
+}
+
+.setup_return_form {
+    position: absolute;
+    top: 29px;
+    left: 300px;
+    height: 850px;
+    width: 1210px;
+}
+
+.setup_return_btn_set_area {
+    position: absolute;
+    top: 180px;
+    height: 40px;
+    width: 10px;
+}
+.txt_12g_sdi_out_sfp{
+    position: absolute;
+    top: 0px;
+    left: 33px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_return1_id{
+    position: absolute;
+    top: 48px;
+    left: 51px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_format_select {
+    position: absolute;
+    top: 69px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_3g_out1_format_select {
+    position: absolute;
+    top: 771px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.txt_output_item{
+    position: absolute;
+    top: 371px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setup_output_fomat_select {
+    position: absolute;
+    top: 74px;
+    left: 319px;
+    z-index: 2;
+    font-size: large;
+    width: 200px;
+}
+.setup_output_3g_out1_fomat_select {
+    position: absolute;
+    top: 774px;
+    left: 319px;
+    z-index: 2;
+    font-size: large;
+    width: 200px;
+}
+.txt_hdr_output_select {
+    position: absolute;
+    top: 171px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+/**
+    3g_out1 ⇊
+**/
+.txt_3g_sdi_out1{
+    position: absolute;
+    top: 671px;
+    left: 33px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setup_output_3g_out1_fomat_select {
+    position: absolute;
+    top: 774px;
+    left: 319px;
+    z-index: 2;
+    font-size: large;
+    width: 200px;
+}
+.txt_3g_out1_hdr_output_select {
+    position: absolute;
+    top: 877px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_3g_out1_hdr_vlog_output_select {
+    position: absolute;
+    top: 977px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_hdmi_hdr_vlog_output_select {
+    position: absolute;
+    top: 2493px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_hdmi_hdr_vlog_output_select.isUE163 {
+    position: absolute;
+    top: 2396px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_hdr_vlog_output_select {
+    position: absolute;
+    top: 281px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_char_select {
+    position: absolute;
+    top: 471px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_3g_sdi_select{
+    position: absolute;
+    top: 571px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+
+.setting_output_itemStatus_label {
+    position: absolute;
+    top: 390px;
+    left: 549px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_output_itemMenu_Only_label {
+    position: absolute;
+    top: 390px;
+    left: 377px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_output_itemMenu_Only_label>*,
+.setting_output_itemStatus_label>*
+ {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_output_itemMenu_Only_radio {
+    position: absolute;
+    top: 376px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_output_itemStatus_radio {
+    position: absolute;
+    top: 376px;
+    left: 490px;
+    z-index: 2;
+}
+
+.setting_hdr_ouput_selectHDR\(709\)_label {
+    position: absolute;
+    top: 192px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdr_ouput_selectSDR\(709\)_label {
+    position: absolute;
+    top: 192px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdr_ouput_selectHDR\(2020\)_label {
+    position: absolute;
+    top: 192px;
+    left: 694px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdr_ouput_selectSDR\(709\)_label>*,
+.setting_hdr_ouput_selectHDR\(709\)_label>*,
+.setting_hdr_ouput_selectHDR\(2020\)_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_hdr_ouput_selectHDR\(709\)_radio {
+    position: absolute;
+    top: 179px;
+    left: 490px;
+    z-index: 2;
+}
+
+.setting_hdr_ouput_selectSDR\(709\)_radio {
+    position: absolute;
+    top: 179px;
+    left: 319px;
+    z-index: 2;
+}
+
+
+.setting_hdr_ouput_selectHDR\(2020\)_radio {
+    position: absolute;
+    top: 179px;
+    left: 638px;
+    z-index: 2;
+}
+.setting_vlog_ouput_selectV-LOG_label{
+    position: absolute;
+    top: 297px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_vlog_ouput_selectV-709_label{
+    position: absolute;
+    top: 297px;
+    left: 552px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_vlog_ouput_selectV-LOG_label>*,
+.setting_vlog_ouput_selectV-709_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_vlog_ouput_selectV-LOG_radio {
+    position: absolute;
+    top: 281px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_vlog_ouput_selectV-709_radio {
+    position: absolute;
+    top: 281px;
+    left: 490px;
+    z-index: 2;
+}
+
+.setting_char_selectOff_label{
+    position: absolute;
+    top: 490px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_char_selectOn_label{
+    position: absolute;
+    top: 490px;
+    left: 552px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_char_selectOff_label>*,
+.setting_char_selectOn_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_char_selectOff_radio {
+    position: absolute;
+    top: 476px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_char_selectOn_radio {
+    position: absolute;
+    top: 476px;
+    left: 490px;
+    z-index: 2;
+}
+
+
+.setting_3g_sdi_selectLEVEL-A_label{
+    position: absolute;
+    top: 590px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_sdi_selectLEVEL-B_label{
+    position: absolute;
+    top: 590px;
+    left: 552px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_sdi_selectLEVEL-A_label>*,
+.setting_3g_sdi_selectLEVEL-B_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_sdi_selectLEVEL-A_radio {
+    position: absolute;
+    top: 576px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_3g_sdi_selectLEVEL-B_radio {
+    position: absolute;
+    top: 576px;
+    left: 490px;
+    z-index: 2;
+}
+
+
+.setting_3g_out1_hdr_ouput_selectHDR\(709\)_label {
+    position: absolute;
+    top: 889px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out1_hdr_ouput_selectSDR\(709\)_label {
+    position: absolute;
+    top: 889px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out1_hdr_ouput_selectHDR\(2020\)_label {
+    position: absolute;
+    top: 889px;
+    left: 694px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out1_hdr_ouput_selectSDR\(709\)_label>*,
+.setting_3g_out1_hdr_ouput_selectHDR\(709\)_label>*,
+.setting_3g_out1_hdr_ouput_selectHDR\(2020\)_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out1_hdr_ouput_selectHDR\(709\)_radio {
+    position: absolute;
+    top: 877px;
+    left: 490px;
+    z-index: 2;
+}
+
+.setting_3g_out1_hdr_ouput_selectSDR\(709\)_radio {
+    position: absolute;
+    top: 877px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out1_hdr_ouput_selectHDR\(2020\)_radio {
+    position: absolute;
+    top: 877px;
+    left: 638px;
+    z-index: 2;
+} 
+
+.txt_3g_out1_output_item{
+    position: absolute;
+    top: 1096px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setting_3g_out1_output_itemStatus_label {
+    position: absolute;
+    top: 1096px;
+    left: 549px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out1_output_itemMenu_Only_label {
+    position: absolute;
+    top: 1096px;
+    left: 377px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out1_output_item>*,
+.setting_3g_out1_output_itemMenu_Only_label>*,
+.setting_3g_out1_output_itemStatus_label>*
+ {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out1_output_itemMenu_Only_radio {
+    position: absolute;
+    top: 1081px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_3g_out1_output_itemStatus_radio {
+    position: absolute;
+    top: 1081px;
+    left: 490px;
+    z-index: 2;
+}
+.setup_signal_return_id1_input {
+    position: absolute;
+    top: 80px;
+    left: 334px;
+    width: 180px;
+}
+
+.setting_3g_out1_vlog_ouput_selectV-LOG_label{
+    position: absolute;
+    top: 990px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out1_vlog_ouput_selectV-709_label{
+    position: absolute;
+    top: 990px;
+    left: 552px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out1_vlog_ouput_selectV-LOG_label>*,
+.setting_3g_out1_vlog_ouput_selectV-709_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out1_vlog_ouput_selectV-LOG_radio {
+    position: absolute;
+    top: 977px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out1_vlog_ouput_selectV-709_radio {
+    position: absolute;
+    top: 977px;
+    left: 490px;
+    z-index: 2;
+}
+
+.txt_3g_out1_char_select {
+    position: absolute;
+    top: 1190px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_3g_out1_char_selectOff_label{
+    position: absolute;
+    top: 1190px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out1_char_selectOn_label{
+    position: absolute;
+    top: 1190px;
+    left: 552px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out1_char_select>*,
+.setting_3g_out1_char_selectOff_label>*,
+.setting_3g_out1_char_selectOn_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out1_char_selectOff_radio {
+    position: absolute;
+    top: 1177px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out1_char_selectOn_radio {
+    position: absolute;
+    top: 1177px;
+    left: 490px;
+    z-index: 2;
+}
+.txt_3g_out1_monitor_assist_select{
+    position: absolute;
+    top: 1291px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_3g_out1_monitor_assist_selectOff_label{
+    position: absolute;
+    top: 1291px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out1_monitor_assist_selectOn_label{
+    position: absolute;
+    top: 1291px;
+    left: 552px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out1_monitor_assist_select >*,
+.setting_3g_out1_monitor_assist_selectOff_label>*,
+.setting_3g_out1_monitor_assist_selectOn_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out1_monitor_assist_selectOff_radio {
+    position: absolute;
+    top: 1277px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_3g_out1_monitor_assist_selectOn_radio {
+    position: absolute;
+    top: 1277px;
+    left: 490px;
+    z-index: 2;
+}
+.txt_3g_out1_3g_sdi_select{
+    position: absolute;
+    top: 1291px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_3g_out1_3g_sdi_selectLEVEL-A_label{
+    position: absolute;
+    top: 1291px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out1_3g_sdi_selectLEVEL-B_label{
+    position: absolute;
+    top: 1291px;
+    left: 552px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out1_3g_sdi_select >*,
+.setting_3g_out1_3g_sdi_selectLEVEL-A_label>*,
+.setting_3g_out1_3g_sdi_selectLEVEL-B_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out1_3g_sdi_selectLEVEL-A_radio {
+    position: absolute;
+    top: 1277px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_3g_out1_3g_sdi_selectLEVEL-B_radio {
+    position: absolute;
+    top: 1277px;
+    left: 490px;
+    z-index: 2;
+}
+
+.btn_return_set {
+    position: absolute;
+    left: 319px;
+    top: 224px;
+    width:142px;
+    height: 44px;
+    font-size: large;
+    text-align: center;
+    display: table;
+}
+
+/**
+    3g_out2 ⇊
+**/
+.txt_3g_sdi_out2{
+    position: absolute;
+    top: 1390px;
+    left: 33px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_3g_out2_format_select {
+    position: absolute;
+    top: 1495px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_output_3g_out2_fomat_select {
+    position: absolute;
+    top: 1480px;
+    left: 319px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+
+.txt_3g_out2_output_select {
+    position: absolute;
+    top: 1591px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_3g_out2_ouput_selectCAM_label{
+    position: absolute;
+    top: 1591px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_ouput_selectRETURN_label{
+    position: absolute;
+    top: 1591px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out2_output_select>*,
+.setting_3g_out2_ouput_selectCAM_label>*,
+.setting_3g_out2_ouput_selectRETURN_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out2_ouput_selectCAM_radio {
+    position: absolute;
+    top: 1580px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_3g_out2_ouput_selectRETURN_radio {
+    position: absolute;
+    top: 1580px;
+    left: 490px;
+    z-index: 2;
+}
+
+.txt_3g_out2_hdr_output_select {
+    position: absolute;
+    top: 1695px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_3g_out2_hdr_output_select.isUE163 {
+    position: absolute;
+    top: 1598px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_3g_out2_hdr_ouput_selectHDR\(709\)_label {
+    position: absolute;
+    top: 1695px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_hdr_ouput_selectHDR\(709\)_label.isUE163 {
+    position: absolute;
+    top: 1598px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_hdr_ouput_selectSDR\(709\)_label {
+    position: absolute;
+    top: 1695px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_hdr_ouput_selectSDR\(709\)_label.isUE163 {
+    position: absolute;
+    top: 1598px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_hdr_ouput_selectHDR\(2020\)_label {
+    position: absolute;
+    top: 1695px;
+    left: 694px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_hdr_ouput_selectHDR\(2020\)_label.isUE163 {
+    position: absolute;
+    top: 1598px;
+    left: 694px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_sdi_out2>*,
+.txt_3g_out2_format_select>*,
+.txt_3g_out2_hdr_output_select >*,
+.setting_3g_out2_hdr_ouput_selectSDR\(709\)_label>*,
+.setting_3g_out2_hdr_ouput_selectHDR\(709\)_label>*,
+.setting_3g_out2_hdr_ouput_selectHDR\(2020\)_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out2_hdr_ouput_selectHDR\(709\)_radio {
+    position: absolute;
+    top: 1684px;
+    left: 490px;
+    z-index: 2;
+}
+.setting_3g_out2_hdr_ouput_selectHDR\(709\)_radio.isUE163 {
+    position: absolute;
+    top: 1587px;
+    left: 490px;
+    z-index: 2;
+}
+
+.setting_3g_out2_hdr_ouput_selectSDR\(709\)_radio {
+    position: absolute;
+    top: 1684px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out2_hdr_ouput_selectSDR\(709\)_radio.isUE163 {
+    position: absolute;
+    top: 1587px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out2_hdr_ouput_selectHDR\(2020\)_radio {
+    position: absolute;
+    top: 1684px;
+    left: 638px;
+    z-index: 2;
+}
+.setting_3g_out2_hdr_ouput_selectHDR\(2020\)_radio.isUE163 {
+    position: absolute;
+    top: 1587px;
+    left: 638px;
+    z-index: 2;
+}
+
+
+.setup_signal_return_id1_input {
+    position: absolute;
+    top: 67px;
+    left: 339px;
+    width: 180px;
+}
+.txt_3g_out2_hdr_vlog_output_select {
+    position: absolute;
+    top: 1794px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_3g_out2_hdr_vlog_output_select.isUE163 {
+    position: absolute;
+    top: 1697px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_3g_out2_vlog_ouput_selectV-LOG_label{
+    position: absolute;
+    top: 1794px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_vlog_ouput_selectV-LOG_label.isUE163{
+    position: absolute;
+    top: 1697px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_vlog_ouput_selectV-709_label{
+    position: absolute;
+    top: 1794px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_vlog_ouput_selectV-709_label.isUE163{
+    position: absolute;
+    top: 1697px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out2_hdr_vlog_output_select>*,
+.setting_3g_out2_vlog_ouput_selectV-LOG_label>*,
+.setting_3g_out2_vlog_ouput_selectV-709_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out2_vlog_ouput_selectV-LOG_radio {
+    position: absolute;
+    top: 1781px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out2_vlog_ouput_selectV-LOG_radio.isUE163 {
+    position: absolute;
+    top: 1684px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_3g_out2_vlog_ouput_selectV-709_radio {
+    position: absolute;
+    top: 1781px;
+    left: 490px;
+    z-index: 2;
+}
+.setting_3g_out2_vlog_ouput_selectV-709_radio.isUE163 {
+    position: absolute;
+    top: 1684px;
+    left: 490px;
+    z-index: 2;
+}
+
+.txt_3g_out2_output_item{
+    position: absolute;
+    top: 1894px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_3g_out2_output_item.isUE163{
+    position: absolute;
+    top: 1797px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.setting_3g_out2_output_itemStatus_label {
+    position: absolute;
+    top: 1894px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_output_itemStatus_label.isUE163 {
+    position: absolute;
+    top: 1797px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_output_itemMenu_Only_label {
+    position: absolute;
+    top: 1894px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_output_itemMenu_Only_label.isUE163 {
+    position: absolute;
+    top: 1797px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out2_output_item>*,
+.setting_3g_out2_output_itemMenu_Only_label>*,
+.setting_3g_out2_output_itemStatus_label>*
+ {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out2_output_itemMenu_Only_radio {
+    position: absolute;
+    top: 1881px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out2_output_itemMenu_Only_radio.isUE163 {
+    position: absolute;
+    top: 1784px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_3g_out2_output_itemStatus_radio {
+    position: absolute;
+    top: 1881px;
+    left: 490px;
+    z-index: 2;
+}
+.setting_3g_out2_output_itemStatus_radio.isUE163 {
+    position: absolute;
+    top: 1784px;
+    left: 490px;
+    z-index: 2;
+}
+
+.txt_3g_out2_char_select {
+    position: absolute;
+    top: 1998px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_3g_out2_char_select.isUE163 {
+    position: absolute;
+    top: 1901px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_3g_out2_char_selectOff_label{
+    position: absolute;
+    top: 1998px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_char_selectOff_label.isUE163{
+    position: absolute;
+    top: 1901px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_char_selectOn_label{
+    position: absolute;
+    top: 1998px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_char_selectOn_label.isUE163{
+    position: absolute;
+    top: 1901px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out2_char_select>*,
+.setting_3g_out2_char_selectOff_label>*,
+.setting_3g_out2_char_selectOn_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out2_char_selectOff_radio {
+    position: absolute;
+    top: 1985px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out2_char_selectOff_radio.isUE163 {
+    position: absolute;
+    top: 1888px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_3g_out2_char_selectOn_radio {
+    position: absolute;
+    top: 1985px;
+    left: 490px;
+    z-index: 2;
+}
+.setting_3g_out2_char_selectOn_radio.isUE163 {
+    position: absolute;
+    top: 1888px;
+    left: 490px;
+    z-index: 2;
+}
+.txt_3g_out2_monitor_assist_select{
+    position: absolute;
+    top: 2097px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_3g_out2_monitor_assist_selectOff_label{
+    position: absolute;
+    top: 2097px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_monitor_assist_selectOn_label{
+    position: absolute;
+    top: 2097px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out2_monitor_assist_select >*,
+.setting_3g_out2_monitor_assist_selectOff_label>*,
+.setting_3g_out2_monitor_assist_selectOn_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out2_monitor_assist_selectOff_radio {
+    position: absolute;
+    top: 2084px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_3g_out2_monitor_assist_selectOn_radio {
+    position: absolute;
+    top: 2084px;
+    left: 490px;
+    z-index: 2;
+}
+.txt_3g_out2_3g_sdi_select{
+    position: absolute;
+    top: 2098px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_3g_out2_3g_sdi_select.isUE163{
+    position: absolute;
+    top: 2001px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_3g_out2_3g_sdi_selectLEVEL-A_label{
+    position: absolute;
+    top: 2098px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_3g_sdi_selectLEVEL-A_label.isUE163{
+    position: absolute;
+    top: 2001px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_3g_sdi_selectLEVEL-B_label{
+    position: absolute;
+    top: 2098px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_3g_out2_3g_sdi_selectLEVEL-B_label.isUE163{
+    position: absolute;
+    top: 2001px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_out2_3g_sdi_select >*,
+.setting_3g_out2_3g_sdi_selectLEVEL-A_label>*,
+.setting_3g_out2_3g_sdi_selectLEVEL-B_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_3g_out2_3g_sdi_selectLEVEL-A_radio {
+    position: absolute;
+    top: 2085px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out2_3g_sdi_selectLEVEL-A_radio.isUE163 {
+    position: absolute;
+    top: 1988px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_3g_out2_3g_sdi_selectLEVEL-B_radio {
+    position: absolute;
+    top: 2085px;
+    left: 490px;
+    z-index: 2;
+}
+.setting_3g_out2_3g_sdi_selectLEVEL-B_radio.isUE163 {
+    position: absolute;
+    top: 1988px;
+    left: 490px;
+    z-index: 2;
+}
+/**
+    3g_out2 ⇈
+**/
+/**
+    hdmi ⇊
+**/
+.txt_hdmi{
+    position: absolute;
+    top: 2175px;
+    left: 33px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_hdmi.isUE163{
+    position: absolute;
+    top: 2078px;
+    left: 33px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_hdmi_format_select {
+    position: absolute;
+    top: 2293px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_hdmi_format_select.isUE163 {
+    position: absolute;
+    top: 2196px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_output_hdmi_fomat_select {
+    position: absolute;
+    top: 2279px;
+    left: 319px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setup_output_hdmi_fomat_select.isUE163 {
+    position: absolute;
+    top: 2182px;
+    left: 319px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_hdmi_hdr_output_select {
+    position: absolute;
+    top: 2393px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_hdmi_hdr_output_select.isUE163 {
+    position: absolute;
+    top: 2296px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_hdmi_hdr_ouput_selectHDR\(709\)_label {
+    position: absolute;
+    top: 2393px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_hdr_ouput_selectHDR\(709\)_label.isUE163 {
+    position: absolute;
+    top: 2296px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_hdr_ouput_selectSDR\(709\)_label {
+    position: absolute;
+    top: 2393px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_hdr_ouput_selectSDR\(709\)_label.isUE163 {
+    position: absolute;
+    top: 2296px;
+    left: 376px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_hdr_ouput_selectHDR\(2020\)_label {
+    position: absolute;
+    top: 2393px;
+    left: 694px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_hdr_ouput_selectHDR\(2020\)_label.isUE163 {
+    position: absolute;
+    top: 2296px;
+    left: 694px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_3g_sdi_out2>*,
+.txt_hdmi_format_select>*,
+.txt_hdmi_hdr_output_select >*,
+.setting_hdmi_hdr_ouput_selectSDR\(709\)_label>*,
+.setting_hdmi_hdr_ouput_selectHDR\(709\)_label>*,
+.setting_hdmi_hdr_ouput_selectHDR\(2020\)_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_hdmi_hdr_ouput_selectHDR\(709\)_radio {
+    position: absolute;
+    top: 2383px;
+    left: 490px;
+    z-index: 2;
+}
+.setting_hdmi_hdr_ouput_selectHDR\(709\)_radio.isUE163 {
+    position: absolute;
+    top: 2286px;
+    left: 490px;
+    z-index: 2;
+}
+
+.setting_hdmi_hdr_ouput_selectSDR\(709\)_radio {
+    position: absolute;
+    top: 2383px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_hdmi_hdr_ouput_selectSDR\(709\)_radio.isUE163 {
+    position: absolute;
+    top: 2286px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_hdmi_hdr_ouput_selectHDR\(2020\)_radio {
+    position: absolute;
+    top: 2383px;
+    left: 638px;
+    z-index: 2;
+}
+.setting_hdmi_hdr_ouput_selectHDR\(2020\)_radio.isUE163 {
+    position: absolute;
+    top: 2286px;
+    left: 638px;
+    z-index: 2;
+}
+
+
+.setup_signal_return_id1_input {
+    position: absolute;
+    top: 67px;
+    left: 339px;
+    width: 180px;
+}
+.txt_hdmi_video_sampling_select {
+    position: absolute;
+    top: 2595px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_hdmi_video_sampling_select.isUE163 {
+    position: absolute;
+    top: 2498px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_hdmi_video_sampling_select4\:2\:2_10bit_label{
+    position: absolute;
+    top: 2595px;
+    left: 377px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_video_sampling_select4\:2\:2_10bit_label.isUE163{
+    position: absolute;
+    top: 2498px;
+    left: 377px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_video_sampling_select4\:2\:0_8bit_label{
+    position: absolute;
+    top: 2595px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_video_sampling_select4\:2\:0_8bit_label.isUE163{
+    position: absolute;
+    top: 2498px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_hdmi_hdr_vlog_output_select>*,
+.setting_hdmi_video_sampling_select4\:2\:2_10bit_label>*,
+.setting_hdmi_video_sampling_select4\:2\:0_8bit_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_hdmi_video_sampling_select4\:2\:2_10bit_radio {
+    position: absolute;
+    top: 2585px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_hdmi_video_sampling_select4\:2\:2_10bit_radio.isUE163 {
+    position: absolute;
+    top: 2488px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_hdmi_video_sampling_select4\:2\:0_8bit_radio {
+    position: absolute;
+    top: 2585px;
+    left: 490px;
+    z-index: 2;
+}
+.setting_hdmi_video_sampling_select4\:2\:0_8bit_radio.isUE163 {
+    position: absolute;
+    top: 2488px;
+    left: 490px;
+    z-index: 2;
+}
+/* .txt_hdmi_video_sampling_select {
+    position: absolute;
+    top: 2595px;
+    left: 33px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+} */
+.setting_hdmi_vlog_ouput_selectV-LOG_label{
+    position: absolute;
+    top: 2493px;
+    left: 377px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_vlog_ouput_selectV-LOG_label.isUE163{
+    position: absolute;
+    top: 2396px;
+    left: 377px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_vlog_ouput_selectV-709_label{
+    position: absolute;
+    top: 2493px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_vlog_ouput_selectV-709_label.isUE163{
+    position: absolute;
+    top: 2396px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_hdmi_video_sampling_select>*,
+.setting_hdmi_vlog_ouput_selectV-LOG_label>*,
+.setting_hdmi_vlog_ouput_selectV-709_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_hdmi_vlog_ouput_selectV-LOG_radio {
+    position: absolute;
+    top: 2484px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_hdmi_vlog_ouput_selectV-LOG_radio.isUE163 {
+    position: absolute;
+    top: 2387px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_hdmi_vlog_ouput_selectV-709_radio {
+    position: absolute;
+    top: 2484px;
+    left: 490px;
+    z-index: 2;
+}
+.setting_hdmi_vlog_ouput_selectV-709_radio.isUE163 {
+    position: absolute;
+    top: 2387px;
+    left: 490px;
+    z-index: 2;
+}
+.txt_hdmi_char_select {
+    position: absolute;
+    top: 2695px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.txt_hdmi_char_select.isUE163 {
+    position: absolute;
+    top: 2598px;
+    left: 57px;
+    z-index: 2;
+    font-size:  large;
+    width: 200px;
+}
+.setting_ip_signals_ip_char_selectOff_label{
+    position: absolute;
+    top: 476px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_ip_signals_ip_char_selectOn_label{
+    position: absolute;
+    top: 476px;
+    left: 548px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_hdmi_char_select>*,
+.setting_ip_signals_ip_char_selectOff_label>*,
+.setting_ip_signals_ip_char_selectOn_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_ip_signals_ip_char_selectOff_radio {
+    position: absolute;
+    top: 462px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_ip_signals_ip_char_selectOn_radio {
+    position: absolute;
+    top: 462px;
+    left: 490px;
+    z-index: 2;
+}
+.btn_return_set > * {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.btn_return_set.off {
+    color: rgb(217, 217, 217);
+    background-image: url(parts/setup_menu_btn_set_normal.png);
+    background-size: 100% 100%;
+}
+
+.btn_return_set.on {
+    color: rgb(217, 217, 217);
+    background-image: url(parts/setup_menu_btn_set_pressed.png);
+    background-size: 100% 100%;
+}
+
+
+.btn_return_set.disable {
+    color: rgb(102, 102, 102);
+    background-image: url(parts/btn_cameraController_slider_none_disable.png);
+    background-size: 100% 100%;
+}
+.btn_return_set.on_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/setup_menu_btn_set_pressed.png);
+    background-size: 100% 100%;
+}
+
+.btn_return_set.off_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/setup_menu_btn_set_onmouse.png);
+    background-size: 100% 100%;
+}
+
+/* // ip signal */
+.txt_Signals_ndi{
+    position: absolute;
+    top: 0px;
+    left: 33px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_ndi_format{
+    position: absolute;
+    top: 78px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_ndi_format_value{
+    position: absolute;
+    top: 78px;
+    left: 330px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_ndi_output_item{
+    position: absolute;
+    top: 143px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_ndi_char{
+    position: absolute;
+    top: 205px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_ip_output_item{
+    position: absolute;
+    top: 308px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_ip_char{
+    position: absolute;
+    top: 427px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_ip_h264_h265{
+    position: absolute;
+    top: 186px;
+    left: 33px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_st_2110{
+    position: absolute;
+    top: 521px;
+    left: 33px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_st_2110_moip_mode{
+    position: absolute;
+    top: 601px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_st_2110_main_video_tx{
+    position: absolute;
+    top: 677px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_st_2110_main_video_tx_format{
+    position: absolute;
+    top: 758px;
+    left: 122px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_st_2110_corp_video_tx{
+    position: absolute;
+    top: 843px;
+    left: 57px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.setup_ip_signals_ndi_output_itemStatus_label {
+    position: absolute;
+    top: 176px;
+    left: 544px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setup_ip_signals_ndi_output_itemMenu_Only_label {
+    position: absolute;
+    top: 176px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_Signals_ndi_output_item>*,
+.setup_ip_signals_ndi_output_itemMenu_Only_label>*,
+.setup_ip_signals_ndi_output_itemStatus_label>*
+ {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setup_ip_signals_ndi_output_itemMenu_Only_radio {
+    position: absolute;
+    top: 162px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setup_ip_signals_ndi_output_itemStatus_radio {
+    position: absolute;
+    top: 162px;
+    left: 490px;
+    z-index: 2;
+}
+
+.setting_ip_signals_ndi_char_selectOff_label{
+    position: absolute;
+    top: 254px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_ip_signals_ndi_char_selectOn_label{
+    position: absolute;
+    top: 254px;
+    left: 548px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_hdmi_char_select>*,
+.setting_ip_signals_ndi_char_selectOff_label>*,
+.setting_ip_signals_ndi_char_selectOn_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_ip_signals_ndi_char_selectOff_radio {
+    position: absolute;
+    top: 240px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_ip_signals_ndi_char_selectOn_radio {
+    position: absolute;
+    top: 240px;
+    left: 490px;
+    z-index: 2;
+}
+.setup_ip_signals_ip_itemStatus_label {
+    position: absolute;
+    top: 352px;
+    left: 548px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setup_ip_signals_ip_itemMenu_Only_label {
+    position: absolute;
+    top: 352px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_Signals_ip_item>*,
+.setup_ip_signals_ip_itemMenu_Only_label>*,
+.setup_ip_signals_ip_itemStatus_label>*
+ {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setup_ip_signals_ip_itemMenu_Only_radio {
+    position: absolute;
+    top: 338px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setup_ip_signals_ip_itemStatus_radio {
+    position: absolute;
+    top: 338px;
+    left: 490px;
+    z-index: 2;
+}
+
+.setting_hdmi_char_selectOff_label{
+    position: absolute;
+    top: 2695px;
+    left: 377px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_char_selectOff_label.isUE163{
+    position: absolute;
+    top: 2598px;
+    left: 377px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+
+.setting_hdmi_char_selectOn_label{
+    position: absolute;
+    top: 2695px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_hdmi_char_selectOn_label.isUE163{
+    position: absolute;
+    top: 2598px;
+    left: 545px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_hdmi_char_select>*,
+.setting_hdmi_char_selectOff_label>*,
+.setting_hdmi_char_selectOn_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_hdmi_char_selectOff_radio {
+    position: absolute;
+    top: 2686px;
+    left: 319px;
+    z-index: 2;
+}
+.setting_hdmi_char_selectOff_radio.isUE163 {
+    position: absolute;
+    top: 2589px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_hdmi_char_selectOn_radio {
+    position: absolute;
+    top: 2686px;
+    left: 490px;
+    z-index: 2;
+}
+.setting_hdmi_char_selectOn_radio.isUE163 {
+    position: absolute;
+    top: 2589px;
+    left: 490px;
+    z-index: 2;
+}
+
+.setting_ip_signals_st_2110_moip_mode_selectOff_label{
+    position: absolute;
+    top:  649px;
+    left: 374px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.setting_ip_signals_st_2110_moip_mode_selectOn_label{
+    position: absolute;
+    top:  649px;
+    left: 548px;
+    height: 28px;
+    cursor: default;
+    font-size: large;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 2;
+}
+.txt_hdmi_char_select>*,
+.setting_ip_signals_st_2110_moip_mode_selectOff_label>*,
+.setting_ip_signals_st_2110_moip_mode_selectOn_label>* {
+    vertical-align: middle;
+    display: table-cell;
+}
+.setting_ip_signals_st_2110_moip_mode_selectOff_radio {
+    position: absolute;
+    top:  632px;
+    left: 319px;
+    z-index: 2;
+}
+
+.setting_ip_signals_st_2110_moip_mode_selectOn_radio {
+    position: absolute;
+    top:  632px;
+    left: 490px;
+    z-index: 2;
+}
+.txt_Signals_st_2110_corp_video_tx_format{
+    position: absolute;
+    top: 926px;
+    left: 122px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_st_2110_main_video_tx_format_value{
+    position: absolute;
+    top: 759px;
+    left: 330px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+.txt_Signals_st_2110_corp_video_tx_format_value{
+    position: absolute;
+    top: 926px;
+    left: 330px;
+    width: 50px;
+    height: 28px;
+    display: table;
+    font-size: large;
+    text-align: left;
+}
+
+.systemDivInnerLine2_ver_12gsdi {
+    top: 50px;
+    left: 41px;
+    height: 602px;
+}
+
+.systemDivInnerLine2_ver_3gsdi1 {
+    top: 750px;
+    left: 41px;
+    height: 600px;
+}
+
+.systemDivInnerLine2_ver_3gsdi2 {
+    top: 1450px;
+    left: 41px;
+    height: 700px;
+}
+
+.systemDivInnerLine2_ver_3gsdi2_ue163 {
+    top: 1450px;
+    left: 41px;
+    height: 600px;
+}
+
+.systemDivInnerLine2_ver_hdmi {
+    top: 2251px;
+    left: 41px;
+    height: 502px;
+}
+.systemDivInnerLine2_ver_hdmi_ue163 {
+    top: 2151px;
+    left: 41px;
+    height: 502px;
+}
+
+
+/*-------------------Ip Singal-------------------------*/
+.systemDivInnerLine2_ver_ndi {
+    top: 73px;
+    left: 41px;
+    height: 119px;
+}
+
+.systemDivInnerLine2_ver_h264 {
+    top: 284px;
+    left: 41px;
+    height: 255px;
+}
+
+.systemDivInnerLine2_ver_main_video {
+    top: 615px;
+    left: 41px;
+    height: 407px;
+}
+
+.systemDivInnerLine2_ver_main_video_tx {
+    top: 777px;
+    left: 111px;
+    height: 68px;
+}
+
+.systemDivInnerLine2_ver_crop_video_tx {
+    top: 939px;
+    left: 111px;
+    height: 68px;
+}
+
+.systemDivInnerLine_signals_ip_singal_0 {
+    left: 52px;
+    top: 75px;
+}
+
+.systemDivInnerLine_signals_ip_singal_1 {
+    left: 52px;
+    top: 190px;
+}
+
+.systemDivInnerLine_signals_ip_singal_2 {
+    left: 52px;
+    top: 220px;
+}
+
+.systemDivInnerLine_signals_ip_singal_3 {
+    left: 52px;
+    top: 305px;
+}
+
+.systemDivInnerLine_signals_ip_singal_4 {
+    left: 52px;
+    top: 305px;
+}
+
+.systemDivInnerLine_signals_ip_singal_5 {
+    left: 52px;
+    top: 420px;
+}
+
+.systemDivInnerLine_signals_ip_singal_6 {
+    left: 52px;
+    top: 535px;
+}
+
+.systemDivInnerLine_signals_ip_singal_7 {
+    left: 52px;
+    top: 615px;
+}
+
+.systemDivInnerLine_signals_ip_singal_8 {
+    left: 52px;
+    top: 696px;
+}
+
+.systemDivInnerLine_signals_ip_singal_9 {
+    left: 122px;
+    top: 777px;
+}
+
+.systemDivInnerLine_signals_ip_singal_10 {
+    left: 52px;
+    top: 858px;
+}
+
+.systemDivInnerLine_signals_ip_singal_11 {
+    left: 122px;
+    top: 939px;
+}
+
+.systemDivInnerLine_signals_ip_singal_12 {
+    left: 52px;
+    top:1020px;
+}

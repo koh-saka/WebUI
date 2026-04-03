@@ -1,0 +1,185 @@
+@CHARSET "UTF-8";
+body {
+    margin: 0;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    white-space: nowrap;
+    font-family: 'Arial';
+    color: rgb(45, 45, 48);
+}
+
+.btn_ok {
+    position: absolute;
+    left: 152px;
+    top: 242px;
+    width: 122px;
+    height: 32px;
+    font-size: small;
+    text-align: center;
+    display: table;
+}
+
+.btn_cancel {
+    position: absolute;
+    left: 299px;
+    top: 242px;
+    width: 122px;
+    height: 32px;
+    font-size: small;
+    text-align: center;
+    display: table;
+}
+
+.btn_ok > *,
+.btn_cancel > * {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.btn_ok.off,
+.btn_cancel.off {
+    color: rgb(217, 217, 217);
+    background-image: url(parts/live_popup_btn_01_normal.png);
+    background-size: 100% 100%;
+}
+
+.btn_ok.on,
+.btn_cancel.on {
+    color: rgb(217, 217, 217);
+    background-image: url(parts/live_popup_btn_01_pressed.png);
+    background-size: 100% 100%;
+}
+
+.btn_ok.disable,
+.btn_cancel.disable {
+    color: rgb(102, 102, 102);
+    background-image: url(parts/live_popup_btn_01_disable.png);
+    background-size: 100% 100%;
+}
+
+.btn_ok.on_hover,
+.btn_cancel.on_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/live_popup_btn_01_pressed.png);
+    background-size: 100% 100%;
+}
+
+.btn_ok.off_hover,
+.btn_cancel.off_hover {
+    color: rgb(255, 255, 255);
+    background-image: url(parts/live_popup_btn_01_onmouse.png);
+    background-size: 100% 100%;
+}
+
+/****************TXT************************/
+.txt_server {
+    position: absolute;
+    display: table;
+    left: 45px;
+    top: 72px;
+    cursor: default;
+    text-align: center;
+    font-size: small;
+    color: rgb(217, 217, 217);
+}
+
+.txt_server_rul {
+    position: absolute;
+    display: table;
+    left: 45px;
+    top: 127px;
+    cursor: default;
+    text-align: center;
+    font-size: small;
+    color: rgb(217, 217, 217);
+}
+
+.txt_stream_key {
+    position: absolute;
+    display: table;
+    left: 45px;
+    top: 180px;
+    cursor: default;
+    text-align: center;
+    font-size: small;
+    color: rgb(217, 217, 217);
+}
+
+#div_distribution_title {
+    position: absolute;
+    display: table;
+    left: 0px;
+    top: 0px;
+    height: 33px;
+    width: 542px;
+    cursor: default;
+    text-align: center;
+    font-size: large;
+    background: rgb(0, 0, 0);
+    color: rgb(217, 217, 217);
+}
+
+.txt_stream_key > *,
+.txt_server_rul > *,
+.txt_server > * {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.div_distribution{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 532px;
+    height: 310px;
+}
+
+.liveDistributionForm{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width:542px;
+    height: 310px;
+    background: rgb(29, 29, 31);
+}
+
+.liveDistributionServer{
+    position: absolute;
+    left: 152px;
+    top:67px;
+    width: 220px;
+    height: 32px;
+    background: black;
+    border: 1px solid rgb(70, 70, 71);
+    color: rgb(217, 217, 217);
+}
+.liveDistributionServerUrl{
+    position: absolute;
+    left: 152px;
+    top:122px;
+    width: 322px;
+    height: 30px;
+    background: black;
+    border: 1px solid rgb(70, 70, 71);
+    color: rgb(217, 217, 217);
+}
+.liveDistributionStreamKey{
+    position: absolute;
+    left: 152px;
+    top:176px;
+    width: 322px;
+    height: 30px;
+    background: black;
+    border: 1px solid rgb(70, 70, 71);
+    color: rgb(217, 217, 217);
+}
+
+body {
+    background: black;
+}
