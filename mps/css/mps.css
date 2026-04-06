@@ -186,12 +186,22 @@ body {
 #mps_root #mps_panel {
     display: flex;
     flex-direction: column;
-    width: 320px;
-    min-width: 320px;
-    max-width: 320px;
+
+    width: 512px;
+    flex-shrink: 0;
+
+    height: 100%;
     min-height: 0;
-    background-color: #202020;
-    border-left: 1px solid #333;
+
+    padding: 8px 24px 0;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    line-height: 150%;
+    user-select: none;
+    color: white;
+
+    position: relative;
 }
 
 /* パネル上部 */
