@@ -77,6 +77,61 @@ body {
     border-bottom: 1px solid #333;
 }
 
+/* --- mps_view_top 内 --- */
+/* =========================
+   live view container
+========================= */
+#mps_root .mps_live_view_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* 上帯 */
+#mps_root .mps_live_view_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 48px;
+    height: 32px;
+    min-height: 32px;
+}
+
+/* 本体 */
+#mps_root .mps_live_view_body {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 48px;
+    bottom: 10px;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* 下帯 */
+#mps_root .mps_live_view_split {
+    position: absolute;
+    left: 0;
+    right: 48px;
+    bottom: 0;
+    height: 10px;
+    min-height: 10px;
+}
+
+/* 右縦帯 */
+#mps_root .mps_live_view_side_controls {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    bottom: 10px;
+    width: 48px;
+    min-width: 48px;
+}
+
 /* 下：下部UI領域 */
 #mps_root #mps_view_bottom {
     flex: 1;
@@ -84,6 +139,45 @@ body {
     padding: 8px;
     background-color: #151515;
     overflow: auto;
+}
+
+/* --- mps_view_bottom 内 --- */
+#mps_root .mps_preset_container {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#mps_root .mps_preset_toolbar {
+    height: 36px;
+    min-height: 36px;
+}
+
+#mps_root .mps_preset_body {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+}
+
+#mps_root .mps_preset_list_container {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+}
+
+#mps_root .mps_preset_center_line {
+    width: 8px;
+    min-width: 8px;
+}
+
+#mps_root .mps_target_frame_container {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
 }
 
 /* =========================
@@ -119,6 +213,25 @@ body {
     overflow-y: auto;
     background-color: #202020;
 }
+
+/* --- mps_panel_body 内 --- */
+#mps_root .mps_manual_control_container,
+#mps_root .mps_limitation_container,
+#mps_root .mps_track_adjust_tabs_container,
+#mps_root .mps_auto_framing_container,
+#mps_root .mps_image_adjust_container {
+    width: 100%;
+    min-height: 56px;
+    margin-bottom: 8px;
+}
+
+/* 色を少し変えて見分けやすくする */
+#mps_root .mps_manual_control_container { background-color: rgba(233, 30, 99, 0.05); }
+#mps_root .mps_limitation_container { background-color: rgba(233, 30, 99, 0.08); }
+#mps_root .mps_track_adjust_tabs_container { background-color: rgba(233, 30, 99, 0.11); }
+#mps_root .mps_auto_framing_container { background-color: rgba(233, 30, 99, 0.14); }
+#mps_root .mps_image_adjust_container { background-color: rgba(233, 30, 99, 0.17); }
+
 
 /* =========================
    7. TITLE
@@ -185,27 +298,6 @@ body {
 }
 
 /* =========================
-   9. PLACEHOLDER
-========================= */
-#mps_root .mps_view_placeholder,
-#mps_root .mps_panel_placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    border: 1px dashed #444;
-    color: #777;
-    font-size: 14px;
-}
-
-#mps_root .mps_view_placeholder p,
-#mps_root .mps_panel_placeholder p {
-    margin: 0;
-    color: inherit;
-}
-
-/* =========================
    10. STATUS
 ========================= */
 #mps_root .mps_status {
@@ -222,35 +314,38 @@ body {
 /* =========================
    11. DEBUG
 ========================= */
+/* =========================
+   DEBUG VIEW
+========================= */
+
 #mps_root .debug-box {
-    border: 2px solid;
+    outline: 2px solid rgba(255,255,255,0.25);
+    outline-offset: -1px;
+}
+
+#mps_root .debug-label {
     position: relative;
 }
 
-#mps_root .debug-view {
-    border-color: #4CAF50;
-}
-
-#mps_root .debug-live {
-    border-color: #03A9F4;
-}
-
-#mps_root .debug-preset {
-    border-color: #FFC107;
-}
-
-#mps_root .debug-panel {
-    border-color: #E91E63;
-}
-
-#mps_root .debug-box::before {
+#mps_root .debug-label::before {
     content: attr(data-name);
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 10;
     font-size: 10px;
-    background: rgba(0,0,0,0.7);
-    padding: 2px 4px;
+    line-height: 1.2;
     color: #fff;
-    z-index: 1;
+    background: rgba(0,0,0,0.75);
+    padding: 2px 4px;
+    pointer-events: none;
+    white-space: nowrap;
 }
+
+#mps_root .debug-root   { outline-color: rgba(255,255,255,0.55); }
+#mps_root .debug-header { outline-color: rgba(156,39,176,0.9); }
+#mps_root .debug-main   { outline-color: rgba(96,125,139,0.9); }
+#mps_root .debug-view   { outline-color: rgba(76,175,80,0.9); }
+#mps_root .debug-live   { outline-color: rgba(3,169,244,0.9); }
+#mps_root .debug-preset { outline-color: rgba(255,193,7,0.9); }
+#mps_root .debug-panel  { outline-color: rgba(233,30,99,0.9); }

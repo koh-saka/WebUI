@@ -8,18 +8,48 @@
 </head>
 <body>
 
-<div id="mps_root">
-    <div id="mps_header"></div>
+<div id="mps_root" class="debug-box debug-root" data-name="mps_root">
+    <div id="mps_header" class="debug-box debug-label debug-header" data-name="mps_header"></div>
 
-    <div id="mps_main">
-        <div id="mps_view">
-            <div id="mps_view_top"></div>
-            <div id="mps_view_bottom"></div>
+    <div id="mps_main" class="debug-box debug-main" data-name="mps_main">
+        <div id="mps_view" class="debug-box debug-view" data-name="mps_view">
+            <div id="mps_view_top" class=" debug-box debug-live" data-name="mps_view_top">
+
+                <div class="mps_live_view_container debug-box debug-live" data-name="mps_live_view_container">
+                    <div class="mps_live_view_header debug-box debug-live" data-name="mps_live_view_header"></div>
+                    <div class="mps_live_view_body debug-box debug-live" data-name="mps_live_view_body"></div>
+                    <div class="mps_live_view_split debug-box debug-live" data-name="mps_live_view_split"></div>
+                    <div class="mps_live_view_side_controls debug-box debug-labrl debug-live" data-name="mps_live_view_side_controls"></div>
+                </div>
+
+            </div>
+            <div id="mps_view_bottom" class="debug-box debug-preset" data-name="mps_view_bottom">
+
+                <div class="mps_preset_container debug-box debug-preset" data-name="mps_preset_container">
+                    <div class="mps_preset_toolbar debug-box debug-label debug-preset" data-name="mps_preset_toolbar"></div>
+
+                    <div class="mps_preset_body debug-box debug-label debug-preset" data-name="mps_preset_body">
+                        <div class="mps_preset_list_container debug-box debug-preset" data-name="mps_preset_list_container"></div>
+                        <div class="mps_preset_center_line debug-box debug-preset" data-name="mps_preset_center_line"></div>
+                        <div class="mps_target_frame_container debug-box debug-preset" data-name="mps_target_frame_container"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <div id="mps_panel">
-            <div id="mps_panel_header"></div>
-            <div id="mps_panel_body"></div>
+        <div id="mps_panel" class="debug-box debug-panel" data-name="mps_panel">
+            <div id="mps_panel_header" class="debug-box debug-label debug-panel" data-name="mps_panel_header"></div>
+
+            <div id="mps_panel_body" class="debug-box debug-label debug-panel" data-name="mps_panel_body">
+
+                <div class="mps_manual_control_container debug-box debug-panel" data-name="mps_manual_control_container"></div>
+                <div class="mps_limitation_container debug-box debug-panel" data-name="mps_limitation_container"></div>
+                <div class="mps_track_adjust_tabs_container debug-box debug-panel" data-name="mps_track_adjust_tabs_container"></div>
+                <div class="mps_auto_framing_container debug-box debug-panel" data-name="mps_auto_framing_container"></div>
+                <div class="mps_image_adjust_container debug-box debug-panel" data-name="mps_image_adjust_container"></div>
+                
+            </div>
         </div>
     </div>
 </div>
