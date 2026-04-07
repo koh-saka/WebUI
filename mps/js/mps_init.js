@@ -35,7 +35,7 @@ var MpsApp = (function () {
         ui.title = TextCtrl("mps_header", "mps_title", state.title);
         ui.backBtn = ButtonCtrl("mps_header", "mps_back_btn", "Back", callbackBack);
 
-        ui.status = TextCtrl("mps_panel_body", "mps_status", state.message);
+        ui.status = TextCtrl("mps_panel", "mps_status", state.message);
     }
 
     function bindEvents() {
@@ -99,6 +99,7 @@ var MpsApp = (function () {
             ".mps_manual_control_container",
             ".mps_limitation_container",
             ".mps_track_adjust_tabs_container",
+            ".mps_track_adjust_content_container",
             ".mps_auto_framing_container",
             ".mps_image_adjust_container"
         ];

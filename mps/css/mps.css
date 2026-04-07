@@ -228,20 +228,55 @@ body {
 #mps_root .mps_manual_control_container,
 #mps_root .mps_limitation_container,
 #mps_root .mps_track_adjust_tabs_container,
+#mps_root .mps_track_adjust_content_container {
+    width: 100%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+/* 個別の仮高さ（A-003-2-3時点） */
+#mps_root .mps_manual_control_container {
+    min-height: 180px;
+    background-color: rgba(233, 30, 99, 0.05);
+}
+
+#mps_root .mps_limitation_container {
+    min-height: 120px;
+    background-color: rgba(233, 30, 99, 0.08);
+}
+
+#mps_root .mps_track_adjust_tabs_container {
+    min-height: 48px;
+    background-color: rgba(233, 30, 99, 0.11);
+}
+
+#mps_root .mps_track_adjust_content_container {
+    position: relative;
+    min-height: 240px;
+    background-color: rgba(233, 30, 99, 0.14);
+    overflow: hidden;
+}
+
+/* 切替対象コンテナ */
 #mps_root .mps_auto_framing_container,
 #mps_root .mps_image_adjust_container {
     width: 100%;
-    min-height: 56px;
-    margin-bottom: 8px;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-/* 色を少し変えて見分けやすくする */
-#mps_root .mps_manual_control_container { background-color: rgba(233, 30, 99, 0.05); }
-#mps_root .mps_limitation_container { background-color: rgba(233, 30, 99, 0.08); }
-#mps_root .mps_track_adjust_tabs_container { background-color: rgba(233, 30, 99, 0.11); }
-#mps_root .mps_auto_framing_container { background-color: rgba(233, 30, 99, 0.14); }
-#mps_root .mps_image_adjust_container { background-color: rgba(233, 30, 99, 0.17); }
+/* 初期表示は Auto Framing を表示 */
+#mps_root .mps_auto_framing_container {
+    display: block;
+    min-height: 240px;
+    background-color: rgba(233, 30, 99, 0.16);
+}
 
+#mps_root .mps_image_adjust_container {
+    display: none;
+    min-height: 240px;
+    background-color: rgba(233, 30, 99, 0.20);
+}
 
 /* =========================
    7. TITLE
@@ -311,14 +346,25 @@ body {
    10. STATUS
 ========================= */
 #mps_root .mps_status {
-    margin-top: 12px;
-    padding: 8px 10px;
+    /* レイアウト安定化 */
+    flex-shrink: 0;
+
+    /* 高さ固定（重要） */
+    min-height: 36px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 6px 10px;
+
     font-size: 13px;
     line-height: 1.4;
     color: #cfd8dc;
+
     background-color: #1e1e1e;
-    border: 1px solid #333;
-    border-radius: 4px;
+
+    /* フッターとして一体化 */
+    border-top: 1px solid #333;
 }
 
 /* =========================
@@ -329,8 +375,7 @@ body {
 ========================= */
 
 #mps_root .debug-box {
-    outline: 2px solid rgba(255,255,255,0.25);
-    outline-offset: -1px;
+    outline: 1px dashed rgba(255,255,255,0.3);
 }
 
 #mps_root .debug-label {
