@@ -187,7 +187,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    width: 512px;
+    width: 560px;
     flex-shrink: 0;
 
     height: 100%;
@@ -204,7 +204,6 @@ body {
     position: relative;
 }
 
-/* パネル上部 */
 #mps_root #mps_panel_header {
     height: 40px;
     min-height: 40px;
@@ -215,12 +214,12 @@ body {
     background-color: #1a1a1a;
 }
 
-/* パネル本文 */
 #mps_root #mps_panel_body {
     flex: 1;
     min-height: 0;
     padding: 8px;
     overflow-y: auto;
+    overflow-x: hidden;
     background-color: #202020;
 }
 
@@ -234,25 +233,25 @@ body {
     box-sizing: border-box;
 }
 
-/* 個別の仮高さ（A-003-2-3時点） */
 #mps_root .mps_manual_control_container {
-    min-height: 180px;
+    min-height: 0;
+    padding: 8px 0 0;
     background-color: rgba(233, 30, 99, 0.05);
 }
 
 #mps_root .mps_limitation_container {
-    min-height: 120px;
+    min-height: 96px;
     background-color: rgba(233, 30, 99, 0.08);
 }
 
 #mps_root .mps_track_adjust_tabs_container {
-    min-height: 48px;
+    min-height: 40px;
     background-color: rgba(233, 30, 99, 0.11);
 }
 
 #mps_root .mps_track_adjust_content_container {
     position: relative;
-    min-height: 240px;
+    min-height: 200px;
     background-color: rgba(233, 30, 99, 0.14);
     overflow: hidden;
 }
@@ -265,19 +264,361 @@ body {
     box-sizing: border-box;
 }
 
-/* 初期表示は Auto Framing を表示 */
 #mps_root .mps_auto_framing_container {
     display: block;
-    min-height: 240px;
+    min-height: 200px;
     background-color: rgba(233, 30, 99, 0.16);
 }
 
 #mps_root .mps_image_adjust_container {
     display: none;
-    min-height: 240px;
+    min-height: 200px;
     background-color: rgba(233, 30, 99, 0.20);
 }
 
+/* =========================
+   6.x MANUAL CONTROL
+========================= */
+#mps_root .mps_manual_frame_adjust_tabs {
+    display: inline-flex;
+    align-items: stretch;
+    margin: 0 0 10px 58px;
+}
+
+#mps_root .mps_manual_tab {
+    min-width: 124px;
+    height: 28px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #3a3a3a;
+    color: #d0d0d0;
+    background: #1e1e1e;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+#mps_root .mps_manual_tab + .mps_manual_tab {
+    margin-left: -1px;
+}
+
+#mps_root .mps_manual_tab.mps_is_active {
+    color: #000;
+    background: #18a8ee;
+    border-color: #18a8ee;
+}
+
+#mps_root .mps_manual_tab.mps_is_disabled {
+    color: #6a6a6a;
+}
+
+#mps_root .mps_manual_control_line_1 {
+    position: relative;
+    height: 12px;
+    margin-bottom: 8px;
+}
+
+#mps_root .mps_manual_control_line_2,
+#mps_root .mps_manual_control_line_4,
+#mps_root .mps_manual_control_line_5 {
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background: #666;
+    transform: translateY(-50%);
+}
+
+#mps_root .mps_manual_control_line_2 {
+    left: 0;
+    width: 64px;
+}
+
+#mps_root .mps_manual_control_line_4 {
+    left: 300px;
+    width: 14px;
+}
+
+#mps_root .mps_manual_control_line_5 {
+    left: 408px;
+    width: 14px;
+}
+
+#mps_root .mps_manual_control_main {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    min-width: 0;
+    width: 100%;
+}
+
+#mps_root .mps_manual_ptz_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 212px;
+    flex: 0 0 212px;
+}
+
+#mps_root .mps_camera_ptz_ctrl {
+    width: 212px;
+    height: 212px;
+}
+
+#mps_root .mps_control_ptz {
+    display: block;
+    width: 212px;
+    height: 212px;
+}
+
+#mps_root .mps_manual_control {
+    position: relative;
+    width: 212px;
+    height: 212px;
+    flex-shrink: 0;
+}
+
+#mps_root .mps_manual_control > div {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+#mps_root .mps_manual_ctrl_center {
+    top: 76px;
+    left: 76px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #6a6a6a;
+    background: #4a4a4a;
+}
+
+#mps_root .mps_manual_control_up {
+    top: 0;
+    left: 76px;
+    width: 60px;
+    height: 76px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.08);
+}
+
+#mps_root .mps_manual_control_top_right {
+    top: 12px;
+    right: 12px;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.08);
+}
+
+#mps_root .mps_manual_control_right {
+    top: 76px;
+    right: 0;
+    width: 76px;
+    height: 60px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.08);
+}
+
+#mps_root .mps_manual_control_bottom_right {
+    right: 12px;
+    bottom: 12px;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.08);
+}
+
+#mps_root .mps_manual_control_down {
+    left: 76px;
+    bottom: 0;
+    width: 60px;
+    height: 76px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.08);
+}
+
+#mps_root .mps_manual_control_bottom_left {
+    left: 12px;
+    bottom: 12px;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.08);
+}
+
+#mps_root .mps_manual_control_left {
+    top: 76px;
+    left: 0;
+    width: 76px;
+    height: 60px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.08);
+}
+
+#mps_root .mps_manual_control_top_left {
+    top: 12px;
+    left: 12px;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.08);
+}
+
+#mps_root .mps_lock_part {
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2px;
+}
+
+#mps_root .mps_ptz_lock {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#mps_root .mps_ptz_lock_btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #8a8a8a;
+    border-radius: 4px;
+    background: transparent;
+}
+
+#mps_root .mps_view_content {
+    width: 60px;
+    flex: 0 0 60px;
+    min-width: 60px;
+}
+
+#mps_root .mps_slider_view_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mps_root .mps_slider_title {
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+#mps_root .mps_slider_btn {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7d7d7d;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.14);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#mps_root .mps_slider_btn.mps_is_disabled {
+    opacity: 0.4;
+}
+
+#mps_root .mps_slider_vertical_container {
+    position: relative;
+    width: 24px;
+    height: 112px;
+    margin: 8px 0;
+}
+
+#mps_root .mps_slider_top,
+#mps_root .mps_slider_bottom {
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    transform: translateX(-50%);
+}
+
+#mps_root .mps_slider_top {
+    top: 0;
+    bottom: 0;
+    background: #5d5d5d;
+}
+
+#mps_root .mps_slider_bottom {
+    bottom: 0;
+    background: #0bb7f0;
+}
+
+#mps_root .mps_slider_handle {
+    position: absolute;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border: 4px solid #0bb7f0;
+    border-radius: 50%;
+    background: #2e2e2e;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#mps_root .mps_slider_bottom_speed {
+    height: 46px;
+}
+
+#mps_root .mps_speed_slider .mps_slider_handle {
+    bottom: 37px;
+}
+
+#mps_root .mps_slider_bottom_zoom {
+    height: 0;
+}
+
+#mps_root .mps_zoom_slider .mps_slider_handle {
+    bottom: -1px;
+}
+
+#mps_root .mps_slider_bottom_focus {
+    height: 84px;
+}
+
+#mps_root .mps_focus_slider .mps_slider_handle {
+    bottom: 75px;
+}
+
+#mps_root .mps_slider_vertical_container.mps_is_disabled {
+    opacity: 0.55;
+}
+
+#mps_root .mps_auto_btn {
+    width: 55px;
+    min-height: 30px;
+    margin: 10px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7d7d7d;
+    border-radius: 16px;
+    color: #7d7d7d;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#mps_root .mps_auto_btn.mps_is_disabled {
+    opacity: 0.35;
+}
+
+#mps_root .mps_focus_auto {
+    color: #fff;
+    border-color: #18a8ee;
+    background: rgba(24,168,238,0.25);
+}
 /* =========================
    7. TITLE
 ========================= */

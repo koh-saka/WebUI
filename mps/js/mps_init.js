@@ -97,6 +97,16 @@ var MpsApp = (function () {
             ".mps_target_frame_container",
 
             ".mps_manual_control_container",
+            ".mps_manual_frame_adjust_tabs",
+            ".mps_manual_control_line_1",
+            ".mps_manual_control_main",
+            ".mps_manual_ptz_column",
+            ".mps_manual_control",
+            ".mps_lock_part",
+            ".mps_speed_slider",
+            ".mps_zoom_slider",
+            ".mps_focus_slider",
+
             ".mps_limitation_container",
             ".mps_track_adjust_tabs_container",
             ".mps_track_adjust_content_container",

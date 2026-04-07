@@ -43,9 +43,91 @@
 
             <div id="mps_panel_body" class="debug-box debug-label debug-panel" data-name="mps_panel_body">
 
-                <div class="mps_manual_control_container debug-box debug-panel" data-name="mps_manual_control_container"></div>
-                <div class="mps_limitation_container debug-box debug-panel" data-name="mps_limitation_container"></div>
-                <div class="mps_track_adjust_tabs_container debug-box debug-panel" data-name="mps_track_adjust_tabs_container"></div>
+                <div class="mps_manual_control_container debug-box debug-panel" data-name="mps_manual_control_container">
+
+                    <div class="mps_manual_frame_adjust_tabs debug-box debug-panel" data-name="mps_manual_frame_adjust_tabs">
+                        <div class="mps_manual_tab mps_is_active">Manual</div>
+                        <div class="mps_manual_tab mps_is_disabled">Frame Adjust</div>
+                    </div>
+
+                    <div class="mps_manual_control_line_1 debug-box debug-panel" data-name="mps_manual_control_line_1">
+                        <div class="mps_manual_control_line_2"></div>
+                        <div class="mps_manual_control_line_4"></div>
+                        <div class="mps_manual_control_line_5"></div>
+                    </div>
+
+                    <div class="mps_manual_control_main debug-box debug-panel" data-name="mps_manual_control_main">
+
+                        <div class="mps_manual_ptz_column debug-box debug-panel" data-name="mps_manual_ptz_column">
+                            <div class="mps_camera_ptz_ctrl" style="display: none;">
+                                <canvas class="mps_control_ptz" width="212" height="212"></canvas>
+                            </div>
+
+                            <div class="mps_manual_control debug-box debug-panel" data-name="mps_manual_control">
+                                <div class="mps_manual_ctrl_center"></div>
+                                <div class="mps_manual_control_up"></div>
+                                <div class="mps_manual_control_top_right"></div>
+                                <div class="mps_manual_control_right"></div>
+                                <div class="mps_manual_control_bottom_right"></div>
+                                <div class="mps_manual_control_down"></div>
+                                <div class="mps_manual_control_bottom_left"></div>
+                                <div class="mps_manual_control_left"></div>
+                                <div class="mps_manual_control_top_left"></div>
+                            </div>
+
+                            <div class="mps_lock_part debug-box debug-panel" data-name="mps_lock_part">
+                                <div class="mps_ptz_lock">
+                                    <div class="mps_ptz_lock_btn"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mps_view_content mps_speed_slider debug-box debug-panel" data-name="mps_speed_slider">
+                            <div class="mps_slider_view_content">
+                                <div class="mps_slider_title">Speed</div>
+                                <div class="mps_slider_btn mps_slider_btn_top">Fast</div>
+                                <div class="mps_slider_vertical_container">
+                                    <div class="mps_slider_top"></div>
+                                    <div class="mps_slider_handle"></div>
+                                    <div class="mps_slider_bottom mps_slider_bottom_speed"></div>
+                                </div>
+                                <div class="mps_slider_btn mps_slider_btn_bottom">Slow</div>
+                            </div>
+                        </div>
+
+                        <div class="mps_view_content mps_zoom_slider debug-box debug-panel" data-name="mps_zoom_slider">
+                            <div class="mps_slider_view_content">
+                                <div class="mps_slider_title">Zoom</div>
+                                <div class="mps_slider_btn mps_slider_btn_top">Tele</div>
+                                <div class="mps_slider_vertical_container">
+                                    <div class="mps_slider_top"></div>
+                                    <div class="mps_slider_handle"></div>
+                                    <div class="mps_slider_bottom mps_slider_bottom_zoom"></div>
+                                </div>
+                                <div class="mps_slider_btn mps_slider_btn_bottom">Wide</div>
+                            </div>
+                            <div class="mps_auto_btn mps_is_disabled">Auto</div>
+                        </div>
+
+                        <div class="mps_view_content mps_focus_slider debug-box debug-panel" data-name="mps_focus_slider">
+                            <div class="mps_slider_view_content">
+                                <div class="mps_slider_title">Focus</div>
+                                <div class="mps_slider_btn mps_slider_btn_top mps_is_disabled">Far</div>
+                                <div class="mps_slider_vertical_container mps_is_disabled">
+                                    <div class="mps_slider_top"></div>
+                                    <div class="mps_slider_handle"></div>
+                                    <div class="mps_slider_bottom mps_slider_bottom_focus"></div>
+                                </div>
+                                <div class="mps_slider_btn mps_slider_btn_bottom mps_is_disabled">Near</div>
+                            </div>
+                            <div class="mps_auto_btn mps_focus_auto">Auto</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mps_limitation_container debug-box debug-label debug-panel" data-name="mps_limitation_container"></div>
+                <div class="mps_track_adjust_tabs_container debug-box debug-label debug-panel" data-name="mps_track_adjust_tabs_container"></div>
                 <div class="mps_track_adjust_content_container debug-box debug-label debug-panel" data-name="mps_track_adjust_content_container">
                     <div class="mps_auto_framing_container debug-box debug-panel"
                         data-name="mps_auto_framing_container"></div>
