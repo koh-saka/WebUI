@@ -283,11 +283,14 @@ body {
 /* tabs はフレーム上部に重ねる */
 #mps_root .mps_manual_frame_adjust_tabs {
     position: absolute;
-    top: 14px;
-    left: 58px;
+    top: -14px;
+    left: 90px;
+    width: 240px;
+    height: 29px;
     z-index: 2;
     display: inline-flex;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
 }
 
 #mps_root .mps_manual_tab {
@@ -320,10 +323,17 @@ body {
     color: #6a6a6a;
 }
 
+#mps_root .mps_manual_control_line_1,
+#mps_root .mps_manual_control_line_2,
+#mps_root .mps_manual_control_line_4,
+#mps_root .mps_manual_control_line_5 {
+    box-sizing: content-box;
+}
+
 /* 罫線フレーム本体 */
 #mps_root .mps_manual_control_line_1 {
     position: absolute;
-    top: 22px;
+    top: 0;
     left: 0;
     width: 82px;
     height: 267px;
@@ -335,9 +345,9 @@ body {
 #mps_root .mps_manual_control_line_2 {
     position: absolute;
     top: 0;
-    left: 32px;
-    width: 149px;
-    height: 267px;
+    left: 84px;
+    width: 94px;
+    height: 268px;
     border: 2px solid #666;
     border-left: none;
     border-right: none;
@@ -358,8 +368,8 @@ body {
 #mps_root .mps_manual_control_line_5 {
     position: absolute;
     top: 268px;
-    left: 179px;
-    width: 240px;
+    left: 178px;
+    width: 241px;
     height: 84px;
     border: 2px solid #666;
     border-top: none;
@@ -368,14 +378,17 @@ body {
 /* 中身はフレームの前面に置く */
 #mps_root .mps_manual_control_main {
     position: relative;
+    top: 28px;
     z-index: 2;
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: flex-start;
-    gap: 18px;
-    width: 100%;
+    width: 512px;
+    height: 320px;
     min-width: 0;
-    padding-top: 62px;
-    padding-left: 20px;
+    padding: 0;
+    gap: 0;
 }
 
 #mps_root .mps_manual_ptz_column {
