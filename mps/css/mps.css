@@ -234,8 +234,9 @@ body {
 }
 
 #mps_root .mps_manual_control_container {
-    min-height: 0;
-    padding: 8px 0 0;
+    position: relative;
+    min-height: 360px;
+    padding: 0;
     background-color: rgba(233, 30, 99, 0.05);
 }
 
@@ -279,14 +280,18 @@ body {
 /* =========================
    6.x MANUAL CONTROL
 ========================= */
+/* tabs はフレーム上部に重ねる */
 #mps_root .mps_manual_frame_adjust_tabs {
+    position: absolute;
+    top: 14px;
+    left: 58px;
+    z-index: 2;
     display: inline-flex;
     align-items: stretch;
-    margin: 0 0 10px 58px;
 }
 
 #mps_root .mps_manual_tab {
-    min-width: 124px;
+    min-width: 122px;
     height: 28px;
     padding: 0 12px;
     display: inline-flex;
@@ -315,43 +320,62 @@ body {
     color: #6a6a6a;
 }
 
+/* 罫線フレーム本体 */
 #mps_root .mps_manual_control_line_1 {
-    position: relative;
-    height: 12px;
-    margin-bottom: 8px;
-}
-
-#mps_root .mps_manual_control_line_2,
-#mps_root .mps_manual_control_line_4,
-#mps_root .mps_manual_control_line_5 {
     position: absolute;
-    top: 50%;
-    height: 1px;
-    background: #666;
-    transform: translateY(-50%);
+    top: 22px;
+    left: 0;
+    width: 82px;
+    height: 267px;
+    border: 2px solid #666;
+    border-right: none;
+    z-index: 1;
 }
 
 #mps_root .mps_manual_control_line_2 {
-    left: 0;
-    width: 64px;
+    position: absolute;
+    top: 0;
+    left: 32px;
+    width: 149px;
+    height: 267px;
+    border: 2px solid #666;
+    border-left: none;
+    border-right: none;
+    border-top: none;
 }
 
 #mps_root .mps_manual_control_line_4 {
-    left: 300px;
-    width: 14px;
+    position: absolute;
+    top: -2px;
+    left: 339px;
+    width: 82px;
+    height: 270px;
+    border: 2px solid #666;
+    border-bottom: none;
+    border-left: none;
 }
 
 #mps_root .mps_manual_control_line_5 {
-    left: 408px;
-    width: 14px;
+    position: absolute;
+    top: 268px;
+    left: 179px;
+    width: 240px;
+    height: 84px;
+    border: 2px solid #666;
+    border-top: none;
 }
 
+/* 中身はフレームの前面に置く */
 #mps_root .mps_manual_control_main {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: flex-start;
     gap: 18px;
-    min-width: 0;
     width: 100%;
+    min-width: 0;
+    padding-top: 62px;
+    padding-left: 20px;
 }
 
 #mps_root .mps_manual_ptz_column {
