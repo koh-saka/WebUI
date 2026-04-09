@@ -243,7 +243,7 @@ body {
 
 #mps_root .mps_limitation_container {
     position: relative;
-    min-height: 216px;
+    min-height: 52px;
     margin-top: 0;
     margin-bottom: 11px;
     overflow: visible;
@@ -251,8 +251,95 @@ body {
 }
 
 #mps_root .mps_track_adjust_tabs_container {
-    min-height: 40px;
+    display: flex;
+    width: 100%;
+    height: 44px;
+    margin-bottom: 0;
     background-color: rgba(233, 30, 99, 0.11);
+}
+
+#mps_root .mps_track_adjust_tab {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    height: 44px;
+    border-bottom: 2px solid #5a5a5a;
+    box-sizing: border-box;
+}
+
+#mps_root .mps_track_adjust_tab.mps_is_active {
+    border-bottom-color: #18a8ee;
+}
+
+#mps_root .mps_track_adjust_tab_label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+#mps_root .mps_track_adjust_tab_action {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#mps_root .mps_track_adjust_expand_btn {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #2c2c2c 0%, #1c1c1c 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 1px 2px rgba(0,0,0,0.35);
+}
+
+#mps_root .mps_track_adjust_expand_icon,
+#mps_root .mps_track_adjust_expand_icon::before,
+#mps_root .mps_track_adjust_expand_icon::after {
+    box-sizing: border-box;
+}
+
+#mps_root .mps_track_adjust_expand_icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+}
+
+#mps_root .mps_track_adjust_expand_icon::before,
+#mps_root .mps_track_adjust_expand_icon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    transform-origin: center;
+}
+
+#mps_root .mps_track_adjust_expand_icon::before {
+    top: 0;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+#mps_root .mps_track_adjust_expand_icon::after {
+    bottom: 0;
+    transform: translateX(-50%) rotate(135deg);
 }
 
 /* =========================
@@ -412,28 +499,29 @@ body {
 
 #mps_root .mps_track_adjust_content_container {
     position: relative;
-    min-height: 200px;
+    min-height: 0;
+    margin-top: 0;
     background-color: rgba(233, 30, 99, 0.14);
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* 切替対象コンテナ */
 #mps_root .mps_auto_framing_container,
 #mps_root .mps_image_adjust_container {
     width: 100%;
-    height: 100%;
+    height: auto;
     box-sizing: border-box;
 }
 
 #mps_root .mps_auto_framing_container {
     display: block;
-    min-height: 200px;
+    min-height: 0;
     background-color: rgba(233, 30, 99, 0.16);
 }
 
 #mps_root .mps_image_adjust_container {
     display: none;
-    min-height: 200px;
+    min-height: 0;
     background-color: rgba(233, 30, 99, 0.20);
 }
 
