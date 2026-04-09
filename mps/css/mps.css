@@ -387,6 +387,7 @@ body {
 
 #mps_root .mps_tracking_assist_operation {
     width: 480px;
+    height: 259px;
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -423,17 +424,19 @@ body {
 
 #mps_root .mps_tracking_control_box {
     display: flex;
-    width: 100%;
-    padding-top: 16px;
+    width: 462px;
+    height: 196px;
+    padding: 16px 9px 0 9px;
+    box-sizing: content-box;
     justify-content: space-between;
 }
 
-#mps_root .mps_tracking_left_content {
-    width: 230px;
+mps_root .mps_tracking_left_content {
+    width: 258px;
 }
 
 #mps_root .mps_tracking_box_title {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     color: #fff;
     font-size: 14px;
     font-weight: 500;
@@ -441,13 +444,13 @@ body {
 }
 
 #mps_root .mps_tracking_preview_box {
-    width: 224px;
-    height: 132px;
+    width: 258px;
+    height: 147px;
     background: rgba(255,255,255,0.12);
 }
 
 #mps_root .mps_tracking_right_content {
-    width: 160px;
+    width: 161px;
     display: flex;
     flex-direction: column;
     gap: 14px;
