@@ -431,7 +431,7 @@ body {
     justify-content: space-between;
 }
 
-mps_root .mps_tracking_left_content {
+#mps_root .mps_tracking_left_content {
     width: 258px;
 }
 
@@ -500,6 +500,29 @@ mps_root .mps_tracking_left_content {
     color: #5f5f5f;
     font-size: 12px;
     line-height: 1;
+}
+
+/* =========================
+   X.x Image Adjust
+========================= */
+#mps_root .mps_image_adjust_container {
+    display: flex;
+    width: 512px;
+    height: 309px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    justify-content: flex-start;
+    column-gap: 46px;
+}
+
+#mps_root .mps_image_adjust_container > .mps_image_adjust_column {
+    width: 56px;
+    height: 309px;
+}
+
+/* 暫定措置: タブ切替未実装のため初期状態では非表示  */
+#mps_root .mps_image_adjust_container.mps_is_hidden {
+    display: none !important;
 }
 
 /* =========================
@@ -663,26 +686,6 @@ mps_root .mps_tracking_left_content {
     margin-top: 0;
     background-color: rgba(233, 30, 99, 0.14);
     overflow: visible;
-}
-
-/* 切替対象コンテナ */
-#mps_root .mps_auto_framing_container,
-#mps_root .mps_image_adjust_container {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-}
-
-#mps_root .mps_auto_framing_container {
-    display: block;
-    min-height: 0;
-    background-color: rgba(233, 30, 99, 0.16);
-}
-
-#mps_root .mps_image_adjust_container {
-    display: none;
-    min-height: 0;
-    background-color: rgba(233, 30, 99, 0.20);
 }
 
 /* =========================
