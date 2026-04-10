@@ -36,13 +36,44 @@ body {
 #mps_root #mps_header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     height: 48px;
-    min-height: 48px;
-    padding: 0 12px;
-    background-color: #1a1a1a;
-    border-bottom: 1px solid #333;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+/* 左：title + status */
+#mps_root .mps_header_left {
+    display: flex;
+    align-items: center;
+}
+
+/* 右：back */
+#mps_root .mps_header_right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+#mps_root .mps_header_status,
+#mps_root .mps_header_button {
+    display: flex;
+    align-items: center;
+}
+
+/* タイトル */
+#mps_root .mps_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* ステータス */
+#mps_root .mps_status {
+    font-size: 12px;
+    color: #cfd8dc;
+    white-space: nowrap;
 }
 
 /* =========================
@@ -250,6 +281,12 @@ body {
     background-color: rgba(233, 30, 99, 0.08);
 }
 
+/* =========================
+   X.x Track Adjust 
+   - tabs 高さ 44px（Original MPS実測）
+   - content 高さは子要素側で設定
+   - 表示切替は mps_is_hidden の付け外しで
+========================= */
 #mps_root .mps_track_adjust_tabs_container {
     display: flex;
     width: 100%;
@@ -342,8 +379,17 @@ body {
     transform: translateX(-50%) rotate(135deg);
 }
 
+#mps_root .mps_track_adjust_content_container {
+    position: relative;
+    margin-top: 0;
+    background-color: rgba(233, 30, 99, 0.14);
+    overflow: visible;
+}
+
 /* =========================
    X.x Auto Framing
+   - 外枠は子要素で高さを設定
+   - 親 .mps_track_adjust_content_container に高さを持たせない
 ========================= */
 #mps_root .mps_auto_framing_container {
     display: block;
@@ -504,6 +550,12 @@ body {
 
 /* =========================
    X.x Image Adjust
+   Orijinal実測レイアウト:
+   - content width: 512px
+   - content height: 309px (rect 319px, padding-top 10px を含む)
+   - column width: 56px
+   - column gap: 約46px
+   - 初期非表示は HTML 側で .mps_is_hidden を付与して管理する
 ========================= */
 #mps_root .mps_image_adjust_container {
     display: flex;
@@ -523,10 +575,6 @@ body {
 /* =========================
    6.y LIMITATION
 ========================= */
-#mps_root .mps_is_hidden {
-    display: none !important;
-}
-
 #mps_root .mps_limitation_control {
     position: relative;
     display: flex;
@@ -673,13 +721,6 @@ body {
 
 #mps_root .mps_limitation_left {
     left: 0;
-}
-
-#mps_root .mps_track_adjust_content_container {
-    position: relative;
-    margin-top: 0;
-    background-color: rgba(233, 30, 99, 0.14);
-    overflow: visible;
 }
 
 /* =========================
@@ -1063,10 +1104,105 @@ body {
     border-color: #18a8ee;
     background: rgba(24,168,238,0.25);
 }
+
+/* =========================
+   X.x Bottom Content
+   - Original MPS bottom_content 外枠
+   - width: 512px / height: 48px
+   - border は absolute で上端に配置
+========================= */
+#mps_root .mps_bottom_content {
+    position: relative;
+    display: flex;
+    width: 512px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+#mps_root .mps_bottom_content_border {
+    position: absolute;
+    top: 0;
+    left: -24px;
+    width: 560px;
+    height: 1px;
+    background: #4a4a4a;
+}
+
+#mps_root .mps_camera_controller_content {
+    display: flex;
+    align-items: center;
+    width: 270.297px;
+    height: 30px;
+    margin-top: 9px;
+    margin-left: 28px;
+}
+
+#mps_root .mps_common_label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+#mps_root .mps_camera_controller_select {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 156px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    background: #1c1c1c;
+}
+
+#mps_root .mps_camera_controller_select_text {
+    flex: 1;
+    min-width: 0;
+    height: 14px;
+}
+
+#mps_root .mps_camera_controller_select_arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    transform: rotate(45deg) translateY(-2px);
+    flex-shrink: 0;
+}
+
+#mps_root .mps_web_cam_ctrl_content {
+    display: flex;
+    align-items: center;
+    width: 98px;
+    height: 32px;
+    margin-top: 8px;
+    margin-left: 114px;
+}
+
+#mps_root .mps_web_cam_ctrl_button {
+    width: 98px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7d7d7d;
+    border-radius: 4px;
+    color: #fff;
+    background: #1c1c1c;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
 /* =========================
    7. TITLE
 ========================= */
 #mps_root .mps_title {
+    align-items: flex-start;
     color: #00d0ff;
     font-size: 18px;
     font-weight: bold;
@@ -1128,28 +1264,12 @@ body {
 }
 
 /* =========================
-   10. STATUS
+   汎用 hidden ユーティリティ
+   - 表示切替はこの class の付け外しで行う
+   - display:flex / block をこの class で上書きしない
 ========================= */
-#mps_root .mps_status {
-    /* レイアウト安定化 */
-    flex-shrink: 0;
-
-    /* 高さ固定（重要） */
-    min-height: 36px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 6px 10px;
-
-    font-size: 13px;
-    line-height: 1.4;
-    color: #cfd8dc;
-
-    background-color: #1e1e1e;
-
-    /* フッターとして一体化 */
-    border-top: 1px solid #333;
+#mps_root .mps_is_hidden {
+    display: none !important;
 }
 
 /* =========================

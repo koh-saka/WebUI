@@ -32,10 +32,10 @@ var MpsApp = (function () {
     function build() {
         console.log("build");
 
-        ui.title = TextCtrl("mps_header", "mps_title", state.title);
-        ui.backBtn = ButtonCtrl("mps_header", "mps_back_btn", "Back", callbackBack);
+        ui.title = TextCtrl("mps_header_left", "mps_title", state.title);
+        ui.status = TextCtrl("mps_header_status", "mps_status", state.message);
+        ui.backBtn = ButtonCtrl("mps_header_button", "mps_back_btn", "Back", callbackBack);
 
-        ui.status = TextCtrl("mps_panel", "mps_status", state.message);
     }
 
     function bindEvents() {

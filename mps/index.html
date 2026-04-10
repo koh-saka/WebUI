@@ -11,8 +11,14 @@
 <body>
 
     <div id="mps_root" class="debug-box debug-root" data-name="mps_root">
-        <div id="mps_header" class="debug-box debug-label debug-header" data-name="mps_header"></div>
-
+        <div id="mps_header" class="debug-box  debug-header" data-name="mps_header">
+            <div id="mps_header_left" class="mps_header_left"></div>
+            <div id="mps_header_right" class="mps_header_right">
+                <div id="mps_header_status" class="mps_header_status"></div>
+                <div id="mps_header_button" class="mps_header_button"></div>
+            </div>
+        </div>
+        
         <div id="mps_main" class="debug-box debug-main" data-name="mps_main">
             <div id="mps_view" class="debug-box debug-view" data-name="mps_view">
                 <div id="mps_view_top" class=" debug-box debug-live" data-name="mps_view_top">
@@ -41,7 +47,7 @@
             </div>
 
             <div id="mps_panel" class="debug-box debug-panel" data-name="mps_panel">
-                <div id="mps_panel_header" class="debug-box debug-label debug-panel" data-name="mps_panel_header"></div>
+                <div id="mps_panel_header" class="debug-box  debug-panel" data-name="mps_panel_header"></div>
 
                 <div id="mps_panel_body" class="debug-box debug-panel" data-name="mps_panel_body">
 
@@ -242,7 +248,25 @@
                             <div class="mps_image_adjust_column"></div>
                             <div class="mps_image_adjust_column"></div>
                         </div>
+                    </div>
 
+                    <div class="mps_bottom_content debug-box debug-panel" data-name="mps_bottom_content">
+                        <div class="mps_bottom_content_border"></div>
+
+                        <div class="mps_camera_controller_content debug-box debug-panel" data-name="mps_camera_controller_content">
+                            <span class="mps_common_label">Camera Controller</span>
+
+                            <div class="mps_camera_controller_select">
+                                <div class="mps_camera_controller_select_text"></div>
+                                <div class="mps_camera_controller_select_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="mps_web_cam_ctrl_content debug-box debug-panel" data-name="mps_web_cam_ctrl_content">
+                            <div class="mps_web_cam_ctrl_button">Web GUI</div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
