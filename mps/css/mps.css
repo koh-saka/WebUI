@@ -520,11 +520,6 @@ body {
     height: 309px;
 }
 
-/* 暫定措置: タブ切替未実装のため初期状態では非表示  */
-#mps_root .mps_image_adjust_container.mps_is_hidden {
-    display: none !important;
-}
-
 /* =========================
    6.y LIMITATION
 ========================= */
