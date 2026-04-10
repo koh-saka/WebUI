@@ -1,0 +1,33 @@
+/* =========================
+   DEBUG
+========================= */
+#mps_root .debug-box {
+    outline: 1px dashed rgba(255,255,255,0.3);
+}
+
+#mps_root .debug-label {
+    position: relative;
+}
+
+#mps_root .debug-label::before {
+    content: attr(data-name);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #fff;
+    background: rgba(0,0,0,0.75);
+    padding: 2px 4px;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+#mps_root .debug-root   { outline-color: rgba(255,255,255,0.55); }
+#mps_root .debug-header { outline-color: rgba(156,39,176,0.9); }
+#mps_root .debug-main   { outline-color: rgba(96,125,139,0.9); }
+#mps_root .debug-view   { outline-color: rgba(76,175,80,0.9); }
+#mps_root .debug-live   { outline-color: rgba(3,169,244,0.9); }
+#mps_root .debug-preset { outline-color: rgba(255,193,7,0.9); }
+#mps_root .debug-panel  { outline-color: rgba(233,30,99,0.9); }

@@ -1,0 +1,159 @@
+/* =========================
+   6.y LIMITATION
+========================= */
+#mps_root .mps_limitation_container {
+    position: relative;
+    min-height: 52px;
+    margin-top: 0;
+    margin-bottom: 11px;
+    overflow: visible;
+    background-color: rgba(233, 30, 99, 0.08);
+}
+
+#mps_root .mps_limitation_control {
+    position: relative;
+    display: flex;
+    width: 97px;
+    height: 90px;
+    margin-top: -38px;
+    padding-left: 20px;
+    padding-right: 10px;
+    box-sizing: content-box;
+}
+
+#mps_root .mps_limitation_control_left_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 67px;
+    height: 90px;
+    box-sizing: content-box;
+}
+
+#mps_root .mps_limitation_btn {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7d7d7d;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.14);
+    box-sizing: content-box;
+}
+
+#mps_root .mps_limitation_control_icon_box {
+    position: relative;
+    width: 36px;
+    height: 36px;
+}
+
+#mps_root .mps_limitation_control_icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #cfcfcf;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+}
+
+#mps_root .mps_limitation_icon_arrow {
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #cfcfcf;
+    border-right: 2px solid #cfcfcf;
+    box-sizing: border-box;
+}
+
+#mps_root .mps_limitation_icon_arrow_top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+#mps_root .mps_limitation_icon_arrow_right {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+#mps_root .mps_limitation_icon_arrow_bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(135deg);
+}
+
+#mps_root .mps_limitation_icon_arrow_left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+#mps_root .mps_limitation_control_title {
+    margin-top: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    white-space: nowrap;
+}
+
+#mps_root .mps_limitation_control_right_content {
+    position: absolute;
+    top: 6px;
+    left: 134px;
+    width: 208px;
+    height: 208px;
+    box-sizing: content-box;
+}
+
+#mps_root .mps_limitation_control_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.08);
+    transform: translate(-50%, -50%);
+}
+
+#mps_root .mps_limitation_control_updown {
+    position: absolute;
+    left: 50%;
+    width: 56px;
+    height: 24px;
+    transform: translateX(-50%);
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.06);
+}
+
+#mps_root .mps_limitation_control_leftright {
+    position: absolute;
+    top: 50%;
+    width: 24px;
+    height: 56px;
+    transform: translateY(-50%);
+    border: 1px solid #6a6a6a;
+    background: rgba(255,255,255,0.06);
+}
+
+#mps_root .mps_limitation_top {
+    top: 0;
+}
+
+#mps_root .mps_limitation_right {
+    right: 0;
+}
+
+#mps_root .mps_limitation_bottom {
+    bottom: 0;
+}
+
+#mps_root .mps_limitation_left {
+    left: 0;
+}

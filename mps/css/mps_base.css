@@ -1,0 +1,412 @@
+/* =========================
+   0. HTML / BODY
+========================= */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   1. 共通
+========================= */
+#mps_root,
+#mps_root * {
+    box-sizing: border-box;
+}
+
+/* =========================
+   2. ROOT
+========================= */
+#mps_root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+/* =========================
+   3. HEADER
+========================= */
+#mps_root #mps_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+#mps_root .mps_header_left {
+    display: flex;
+    align-items: center;
+}
+
+#mps_root .mps_header_right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+#mps_root .mps_header_status,
+#mps_root .mps_header_button {
+    display: flex;
+    align-items: center;
+}
+
+#mps_root .mps_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+#mps_root .mps_status {
+    font-size: 12px;
+    color: #cfd8dc;
+    white-space: nowrap;
+}
+
+/* =========================
+   4. MAIN
+========================= */
+#mps_root #mps_main {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* =========================
+   5. VIEW
+========================= */
+#mps_root #mps_view {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    background-color: #181818;
+}
+
+#mps_root #mps_view_top {
+    flex: 2;
+    min-height: 0;
+    padding: 12px;
+    background-color: #101010;
+    border-bottom: 1px solid #333;
+}
+
+#mps_root .mps_live_view_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#mps_root .mps_live_view_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 48px;
+    height: 32px;
+    min-height: 32px;
+}
+
+#mps_root .mps_live_view_body {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 48px;
+    bottom: 10px;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#mps_root .mps_live_view_split {
+    position: absolute;
+    left: 0;
+    right: 48px;
+    bottom: 0;
+    height: 10px;
+    min-height: 10px;
+}
+
+#mps_root .mps_live_view_side_controls {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    bottom: 10px;
+    width: 48px;
+    min-width: 48px;
+}
+
+#mps_root #mps_view_bottom {
+    flex: 1;
+    min-height: 0;
+    padding: 8px;
+    background-color: #151515;
+    overflow: auto;
+}
+
+#mps_root .mps_preset_container {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#mps_root .mps_preset_toolbar {
+    height: 36px;
+    min-height: 36px;
+}
+
+#mps_root .mps_preset_body {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+}
+
+#mps_root .mps_preset_list_container {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+}
+
+#mps_root .mps_preset_center_line {
+    width: 8px;
+    min-width: 8px;
+}
+
+#mps_root .mps_target_frame_container {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+}
+
+/* =========================
+   6. PANEL
+========================= */
+#mps_root #mps_panel {
+    display: flex;
+    flex-direction: column;
+
+    width: 560px;
+    flex-shrink: 0;
+
+    height: 100%;
+    min-height: 0;
+
+    padding: 8px 24px 0;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    line-height: 150%;
+    user-select: none;
+    color: white;
+
+    position: relative;
+}
+
+#mps_root #mps_panel_header {
+    height: 40px;
+    min-height: 40px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    background-color: #1a1a1a;
+}
+
+#mps_root #mps_panel_body {
+    flex: 1;
+    min-height: 0;
+    padding: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #202020;
+}
+
+#mps_root .mps_manual_control_container,
+#mps_root .mps_limitation_container,
+#mps_root .mps_track_adjust_tabs_container,
+#mps_root .mps_track_adjust_content_container {
+    width: 100%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+/* =========================
+   X.x Bottom Content
+========================= */
+#mps_root .mps_bottom_content {
+    position: relative;
+    display: flex;
+    width: 512px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+#mps_root .mps_bottom_content_border {
+    position: absolute;
+    top: 0;
+    left: -24px;
+    width: 560px;
+    height: 1px;
+    background: #4a4a4a;
+}
+
+#mps_root .mps_camera_controller_content {
+    display: flex;
+    align-items: center;
+    width: 270.297px;
+    height: 30px;
+    margin-top: 9px;
+    margin-left: 28px;
+}
+
+#mps_root .mps_common_label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+#mps_root .mps_camera_controller_select {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 156px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    background: #1c1c1c;
+}
+
+#mps_root .mps_camera_controller_select_text {
+    flex: 1;
+    min-width: 0;
+    height: 14px;
+}
+
+#mps_root .mps_camera_controller_select_arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    transform: rotate(45deg) translateY(-2px);
+    flex-shrink: 0;
+}
+
+#mps_root .mps_web_cam_ctrl_content {
+    display: flex;
+    align-items: center;
+    width: 98px;
+    height: 32px;
+    margin-top: 8px;
+    margin-left: 114px;
+}
+
+#mps_root .mps_web_cam_ctrl_button {
+    width: 98px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7d7d7d;
+    border-radius: 4px;
+    color: #fff;
+    background: #1c1c1c;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* =========================
+   7. TITLE
+========================= */
+#mps_root .mps_title {
+    align-items: flex-start;
+    color: #00d0ff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* =========================
+   8. BUTTON
+========================= */
+#mps_root .mps_back_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 88px;
+    height: 32px;
+    padding: 0 14px;
+
+    color: #f2f2f2;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+
+    cursor: pointer;
+    user-select: none;
+
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #4a4a4a 0%, #2f2f2f 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.12),
+        0 1px 2px rgba(0,0,0,0.35);
+}
+
+#mps_root .mps_back_btn:hover {
+    color: #ffffff;
+    border-color: #7a7a7a;
+    background: linear-gradient(to bottom, #5a5a5a 0%, #373737 100%);
+}
+
+#mps_root .mps_back_btn:active,
+#mps_root .mps_back_btn.on {
+    color: #ffffff;
+    border-color: #2aa9d9;
+    background: linear-gradient(to bottom, #2e6e86 0%, #1f4d5f 100%);
+    box-shadow:
+        inset 0 1px 3px rgba(0,0,0,0.45),
+        0 0 0 1px rgba(42,169,217,0.20);
+}
+
+#mps_root .mps_back_btn.off,
+#mps_root .mps_back_btn.disabled {
+    color: #8c8c8c;
+    border-color: #444;
+    background: linear-gradient(to bottom, #2b2b2b 0%, #1f1f1f 100%);
+    box-shadow: none;
+    cursor: default;
+    opacity: 0.75;
+}
+
+/* =========================
+   hidden
+========================= */
+#mps_root .mps_is_hidden {
+    display: none !important;
+}
