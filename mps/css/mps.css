@@ -682,7 +682,6 @@ body {
 
 #mps_root .mps_track_adjust_content_container {
     position: relative;
-    min-height: 0;
     margin-top: 0;
     background-color: rgba(233, 30, 99, 0.14);
     overflow: visible;
