@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>MPS Local</title>
-
     <link rel="stylesheet" href="./css/mps_base.css">
+    <link rel="stylesheet" href="./css/mps_common.css">
     <link rel="stylesheet" href="./css/mps_manual_control.css">
     <link rel="stylesheet" href="./css/mps_limitation.css">
     <link rel="stylesheet" href="./css/mps_track_adjust.css">
@@ -164,7 +164,7 @@
                         </div>
                     </div>
 
-                    <div class="mps_track_adjust_tabs_container debug-box debug-panel" data-name="mps_track_adjust_tabs_container">
+                    <div class="mps_track_adjust_tabs_container" data-name="mps_track_adjust_tabs_container">
                         <div class="mps_track_adjust_tab mps_is_active" data-track-adjust-tab="auto_framing">
                             <div class="mps_track_adjust_tab_label">Auto Framing</div>
                             <div class="mps_track_adjust_tab_action">
@@ -184,8 +184,8 @@
                         </div>
                     </div>
 
-                    <div class="mps_track_adjust_content_container debug-box debug-panel" data-name="mps_track_adjust_content_container">
-                        <div class="mps_auto_framing_container debug-box debug-panel" data-name="mps_auto_framing_container">
+                    <div class="mps_track_adjust_content_container" data-name="mps_track_adjust_content_container">
+                        <div class="mps_auto_framing_container" data-name="mps_auto_framing_container">
                             <div class="mps_auto_framing_enable_row">
                                 <div class="mps_auto_framing_enable_label">Enable</div>
                                 <div class="mps_auto_framing_switch">
@@ -194,68 +194,197 @@
                             </div>
 
                             <div class="mps_tracking_assist_operation">
+
                                 <div class="mps_auto_tracking_assist_operation_tab">
                                     <div class="mps_auto_tracking_assist_tab mps_is_active">Tracking Control</div>
                                     <div class="mps_auto_tracking_assist_tab">Face Recognition</div>
                                     <div class="mps_auto_tracking_assist_tab">Settings</div>
                                 </div>
 
-                                <div class="mps_angle_tab_content_part">
-                                    <div class="mps_tracking_control_box">
-                                        <div class="mps_tracking_left_content">
-                                            <div class="mps_tracking_box_title">Current Framing</div>
-                                            <div class="mps_tracking_preview_box"></div>
-                                        </div>
-
-                                        <div class="mps_tracking_right_content">
-                                            <div class="mps_track_slider_block">
-                                                <div class="mps_track_slider_title">Pan/tilt Speed</div>
-                                                <div class="mps_track_slider_bar">
-                                                    <div class="mps_track_slider_fill"></div>
-                                                    <div class="mps_track_slider_handle"></div>
-                                                </div>
-                                                <div class="mps_track_slider_marks">
-                                                    <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
-                                                </div>
+                                <div class="mps_tab_content_inner">
+                                    <div class="mps_tracking_control_tab_content">
+                                        <div class="mps_tracking_control_box">
+                                            <div class="mps_tracking_left_content">
+                                                <div class="mps_tracking_box_title">Current Framing</div>
+                                                <div class="mps_tracking_preview_box"></div>
                                             </div>
 
-                                            <div class="mps_track_slider_block">
-                                                <div class="mps_track_slider_title">AutoZoom Speed</div>
-                                                <div class="mps_track_slider_bar">
-                                                    <div class="mps_track_slider_fill"></div>
-                                                    <div class="mps_track_slider_handle"></div>
-                                                </div>
-                                                <div class="mps_track_slider_marks">
-                                                    <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
-                                                </div>
-                                            </div>
+                                            <div class="mps_tracking_right_content">
 
-                                            <div class="mps_track_slider_block">
-                                                <div class="mps_track_slider_title">Sensitivity</div>
-                                                <div class="mps_track_slider_bar">
-                                                    <div class="mps_track_slider_fill"></div>
-                                                    <div class="mps_track_slider_handle"></div>
+                                                <div class="mps_track_slider_block mps_common_slider_block">
+                                                    <div class="mps_track_slider_title">Pan/tilt Speed</div>
+                                                    <div class="mps_track_slider_bar mps_common_slider_bar js-slider"
+                                                        data-min="-2"
+                                                        data-max="2"
+                                                        data-value="0">
+
+                                                        <div class="mps_track_slider_fill mps_common_slider_fill"></div>
+                                                        <div class="mps_track_slider_handle mps_common_slider_handle"></div>
+                                                    </div>
+                                                    <div class="mps_track_slider_marks mps_common_slider_marks" aria-hidden="true">
+                                                        <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
+                                                    </div>
                                                 </div>
-                                                <div class="mps_track_slider_marks">
-                                                    <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
+
+                                                <div class="mps_track_slider_block mps_common_slider_block">
+                                                    <div class="mps_track_slider_title">AutoZoom Speed</div>
+                                                    <div class="mps_track_slider_bar mps_common_slider_bar js-slider"
+                                                        data-min="-2"
+                                                        data-max="2"
+                                                        data-value="0">
+
+                                                        <div class="mps_track_slider_fill mps_common_slider_fill"></div>
+                                                        <div class="mps_track_slider_handle mps_common_slider_handle"></div>
+                                                    </div>
+                                                    <div class="mps_track_slider_marks mps_common_slider_marks" aria-hidden="true">
+                                                        <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
+                                                    </div>
                                                 </div>
+
+                                                <div class="mps_track_slider_block mps_common_slider_block">
+                                                    <div class="mps_track_slider_title">Sensitivity</div>
+                                                    <div class="mps_track_slider_bar mps_common_slider_bar js-slider"
+                                                        data-min="-2"
+                                                        data-max="2"
+                                                        data-value="0">
+
+                                                        <div class="mps_track_slider_fill mps_common_slider_fill"></div>
+                                                        <div class="mps_track_slider_handle mps_common_slider_handle"></div>
+                                                    </div>
+                                                    <div class="mps_track_slider_marks mps_common_slider_marks" aria-hidden="true">
+                                                        <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="mps_face_recognition_tab_content" style="display:none;">
+                                        <div class="mps_face_recognition_container">
+
+                                            <div class="mps_face_preview"></div>
+
+                                            <div class="mps_face_controls">
+                                                <label class="mps_face_checkbox">
+                                                    <input type="checkbox" />
+                                                    <span>Auto Face Search</span>
+                                                </label>
+
+                                                <div class="mps_face_buttons">
+                                                    <button class="mps_btn mps_common_button">Select</button>
+                                                    <button class="mps_btn mps_common_button">Clear</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mps_settings_tab_content" style="display:none;">
+                                        <div class="mps_settings_container">
+
+                                            <div class="mps_settings_item">
+                                                <div class="mps_settings_icon"></div>
+                                                <div class="mps_settings_label">Auto Start Area</div>
+                                            </div>
+
+                                            <div class="mps_settings_item">
+                                                <div class="mps_settings_icon"></div>
+                                                <div class="mps_settings_label">Mask Area</div>
+                                            </div>
+
+                                            <div class="mps_settings_item">
+                                                <div class="mps_settings_icon"></div>
+                                                <div class="mps_settings_label">Detail Setting</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                                 </div>
+
                             </div>
                         </div>
 
-                        <div class="mps_image_adjust_container mps_is_hidden debug-box debug-panel" data-name="mps_image_adjust_container">
-                            <div class="mps_image_adjust_column"></div>
-                            <div class="mps_image_adjust_column"></div>
-                            <div class="mps_image_adjust_column"></div>
-                            <div class="mps_image_adjust_column"></div>
-                            <div class="mps_image_adjust_column"></div>
+                        <div class="mps_image_adjust_container mps_is_hidden" data-name="mps_image_adjust_container">
+
+                            <div class="mps_image_adjust_item mps_image_adjust_item_iris">
+                                <div class="mps_image_adjust_main">
+                                    <div class="mps_image_adjust_title mps_common_title_text">Iris</div>
+                                    <div class="mps_image_adjust_circle_btn mps_image_adjust_circle_btn_up mps_common_circle_button"></div>
+                                    <div class="mps_image_adjust_iris_slider"></div>
+                                    <div class="mps_image_adjust_circle_btn_down mps_common_circle_button"></div>
+                                </div>
+
+                                <div class="mps_image_adjust_sub">
+                                    <div class="mps_image_adjust_sub_button mps_image_adjust_sub_button_single">Auto</div>
+                                </div>
+                            </div>
+
+                            <div class="mps_image_adjust_item mps_image_adjust_item_picker">
+                                <div class="mps_image_adjust_main">
+                                    <div class="mps_image_adjust_title mps_common_title_text">Gain</div>
+                                    <div class="mps_image_adjust_circle_btn_up mps_common_circle_button"></div>
+                                    <div class="mps_image_adjust_wheel_picker_bg">
+                                        <div class="mps_image_adjust_wheel_picker_wrap">
+                                            <div class="mps_image_adjust_value">0dB</div>
+                                        </div>
+                                    </div>
+                                    <div class="mps_image_adjust_circle_btn_down mps_common_circle_button"></div>
+                                </div>
+                            </div>
+
+                            <div class="mps_image_adjust_item mps_image_adjust_item_picker mps_image_adjust_item_wb">
+                                <div class="mps_image_adjust_main">
+                                    <div class="mps_image_adjust_title mps_common_title_text">WB</div>
+                                    <div class="mps_image_adjust_circle_btn_up mps_common_circle_button"></div>
+                                    <div class="mps_image_adjust_wheel_picker_bg">
+                                        <div class="mps_image_adjust_wheel_picker_wrap">
+                                            <div class="mps_image_adjust_value">AWB A</div>
+                                        </div>
+                                    </div>
+                                    <div class="mps_image_adjust_circle_btn_down mps_common_circle_button"></div>
+                                </div>
+
+                                <div class="mps_image_adjust_sub">
+                                    <div class="mps_image_adjust_sub_buttons">
+                                        <div class="mps_image_adjust_sub_button">AWB</div>
+                                        <div class="mps_image_adjust_sub_button">ABB</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mps_image_adjust_item mps_image_adjust_item_picker">
+                                <div class="mps_image_adjust_main">
+                                    <div class="mps_image_adjust_title mps_common_title_text">Shutter</div>
+                                    <div class="mps_image_adjust_circle_btn_up mps_common_circle_button"></div>
+                                    <div class="mps_image_adjust_wheel_picker_bg">
+                                        <div class="mps_image_adjust_wheel_picker_wrap">
+                                            <div class="mps_image_adjust_value">OFF</div>
+                                        </div>
+                                    </div>
+                                    <div class="mps_image_adjust_circle_btn_down mps_common_circle_button"></div>
+                                </div>
+                            </div>
+
+                            <div class="mps_image_adjust_item mps_image_adjust_item_picker">
+                                <div class="mps_image_adjust_main">
+                                    <div class="mps_image_adjust_title mps_common_title_text">ND</div>
+                                    <div class="mps_image_adjust_circle_btn_up mps_common_circle_button"></div>
+                                    <div class="mps_image_adjust_wheel_picker_bg">
+                                        <div class="mps_image_adjust_wheel_picker_wrap">
+                                            <div class="mps_image_adjust_value">Through</div>
+                                        </div>
+                                    </div>
+                                    <div class="mps_image_adjust_circle_btn_down mps_common_circle_button"></div>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
 
-                    <div class="mps_bottom_content debug-box debug-panel" data-name="mps_bottom_content">
+                    <div class="mps_bottom_content" data-name="mps_bottom_content">
                         <div class="mps_bottom_content_border"></div>
 
                         <div class="mps_camera_controller_content debug-box debug-panel" data-name="mps_camera_controller_content">

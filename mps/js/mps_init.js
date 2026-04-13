@@ -25,6 +25,7 @@ var MpsApp = (function () {
         
         build();
         bindEvents();
+        initSliders();
         state.initialized = true;
         load();
     }
@@ -67,6 +68,27 @@ var MpsApp = (function () {
         if (mouse == Button.MOUSE_DOWN) {
             window.location.href = '/index.html'; // 仮
         }
+    }
+
+    function initSliders() {
+        $('.js-slider').each(function () {
+            setSliderInitialPosition($(this));
+        });
+    }
+
+    function setSliderInitialPosition($slider) {
+        var min = Number($slider.attr('data-min'));
+        var max = Number($slider.attr('data-max'));
+        var value = Number($slider.attr('data-value'));
+
+        if (isNaN(min) || isNaN(max) || isNaN(value) || max <= min) {
+            return;
+        }
+
+        var percent = ((value - min) / (max - min)) * 100;
+
+        $slider.find('.mps_common_slider_fill').css('width', percent + '%');
+        $slider.find('.mps_common_slider_handle').css('left', percent + '%');
     }
 
     function checkLayout() {

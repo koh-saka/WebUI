@@ -49,7 +49,7 @@
     min-height: 320px;
     padding: 0;
     overflow: visible;
-    background-color: rgba(233, 30, 99, 0.05);
+    margin-top: 30px;
 }
 
 #mps_root .mps_manual_control_line_1,
