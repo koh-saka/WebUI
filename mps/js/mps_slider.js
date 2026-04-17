@@ -1,17 +1,22 @@
 var MpsSlider = (function () {
     function init() {
         bindEvents();
-        render();
+        renderAll();
+        renderAllHandleStates();
     }
 
     function bindEvents() {
-        $(document).on('mousedown', '.js-slider[data-key="panTiltSpeed"]', onMouseDown);
-        $(document).on('mousemove', onMouseMove);
-        $(document).on('mouseup', onMouseUp);
-        $(document).on('mouseleave', onMouseUp);
+        $(document).on('mousedown', '.js-slider', onSliderMouseDown);
+        $(document).on('mousemove', onDocumentMouseMove);
+        $(document).on('mouseup', onDocumentMouseUp);
+        $(document).on('mouseleave', onDocumentMouseUp);
+
+        $(document).on('mouseenter', '.js-slider .mps_common_slider_handle', onHandleMouseEnter);
+        $(document).on('mouseleave', '.js-slider .mps_common_slider_handle', onHandleMouseLeave);
+        $(document).on('mousedown', '.js-slider .mps_common_slider_handle', onHandleMouseDown);
     }
 
-    function onMouseDown(e) {
+    function onSliderMouseDown(e) {
         var $slider = $(e.currentTarget);
         var key = $slider.attr('data-key');
 
@@ -25,9 +30,10 @@ var MpsSlider = (function () {
         MpsState.drag.key = key;
 
         updateByPointer($slider, e.clientX);
+        renderHandleState(key);
     }
 
-    function onMouseMove(e) {
+    function onDocumentMouseMove(e) {
         var key;
         var $slider;
 
@@ -43,11 +49,60 @@ var MpsSlider = (function () {
         }
 
         updateByPointer($slider, e.clientX);
+        renderHandleState(key);
     }
 
-    function onMouseUp() {
+    function onDocumentMouseUp() {
+        var key;
+
+        if (!MpsState.drag.active) {
+            return;
+        }
+
+        key = MpsState.drag.key;
+
         MpsState.drag.active = false;
         MpsState.drag.key = null;
+
+        if (key) {
+            renderHandleState(key);
+        }
+    }
+
+    function onHandleMouseEnter(e) {
+        var key = getSliderKeyFromHandle(e.currentTarget);
+        var handleState = ensureHandleState(key);
+
+        if (!key) {
+            return;
+        }
+
+        handleState.hover = true;
+        renderHandleState(key);
+    }
+
+    function onHandleMouseLeave(e) {
+        var key = getSliderKeyFromHandle(e.currentTarget);
+        var handleState = ensureHandleState(key);
+
+        if (!key || MpsState.drag.active) {
+            return;
+        }
+
+        handleState.hover = false;
+        renderHandleState(key);
+    }
+
+    function onHandleMouseDown(e) {
+        var key = getSliderKeyFromHandle(e.currentTarget);
+        var handleState = ensureHandleState(key);
+
+        if (!key) {
+            return;
+        }
+
+        handleState.hover = true;
+        renderHandleState(key);
     }
 
     function updateByPointer($slider, clientX) {
@@ -76,11 +131,17 @@ var MpsSlider = (function () {
 
         state.value = value;
 
-        render();
+        renderSlider(key);
     }
 
-    function render() {
-        var key = 'panTiltSpeed';
+    function renderAll() {
+        $('.js-slider').each(function () {
+            var key = $(this).attr('data-key');
+            renderSlider(key);
+        });
+    }
+
+    function renderSlider(key) {
         var state = MpsState.sliders[key];
         var $slider = $('.js-slider[data-key="' + key + '"]');
         var percent;
@@ -96,7 +157,40 @@ var MpsSlider = (function () {
         $slider.find('.mps_common_slider_fill').css('width', (percent * 100) + '%');
         $slider.find('.mps_common_slider_handle').css('left', (percent * 100) + '%');
 
-        console.log('[panTiltSpeed]', state.value);
+        console.log('[' + key + ']', state.value);
+    }
+
+    function renderAllHandleStates() {
+        $('.js-slider').each(function () {
+            var key = $(this).attr('data-key');
+            renderHandleState(key);
+        });
+    }
+
+    function renderHandleState(key) {
+        var handleState = ensureHandleState(key);
+        var $handle = $('.js-slider[data-key="' + key + '"] .mps_common_slider_handle');
+
+        if (!key || $handle.length === 0) {
+            return;
+        }
+
+        $handle.toggleClass('is-hover', handleState.hover && !(MpsState.drag.active && MpsState.drag.key === key));
+        $handle.toggleClass('is-active', MpsState.drag.active && MpsState.drag.key === key);
+    }
+
+    function getSliderKeyFromHandle(handleEl) {
+        return $(handleEl).closest('.js-slider').attr('data-key');
+    }
+
+    function ensureHandleState(key) {
+        if (!MpsState.handle[key]) {
+            MpsState.handle[key] = {
+                hover: false
+            };
+        }
+
+        return MpsState.handle[key];
     }
 
     function clamp(value, min, max) {
