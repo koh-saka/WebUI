@@ -34,5 +34,8 @@ var MpsState = {
     tabs: {
         trackAdjust: 'autoFraming',
         assist: 'trackingControl'
+    },
+    toggles: {
+        autoFramingEnable: false
     }
 };

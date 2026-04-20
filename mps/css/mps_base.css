@@ -223,7 +223,19 @@ body {
     padding: 0 8px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #333;
+}
+
+#mps_root .mps_panel_header_label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 #mps_root #mps_panel_body {
@@ -251,7 +263,6 @@ body {
     display: flex;
     width: 512px;
     height: 48px;
-    margin-bottom: 8px;
 }
 
 #mps_root .mps_bottom_content_border {

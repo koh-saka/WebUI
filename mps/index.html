@@ -51,12 +51,23 @@
                 </div>
             </div>
 
-            <div id="mps_panel" class="debug-box debug-panel" data-name="mps_panel">
-                <div id="mps_panel_header" class="debug-box  debug-panel" data-name="mps_panel_header"></div>
+            <div id="mps_panel">
+                <div id="mps_panel_header">
 
-                <div id="mps_panel_body" class="debug-box debug-panel" data-name="mps_panel_body">
+                    <div class="mps_track_adjust_tabs_container">
+                        <div class="mps_track_adjust_tab ">
+                            <div class="mps_panel_header_label">PTZ</div>
+                            <div class="mps_track_adjust_tab_action">
+                                <div class="mps_track_adjust_expand_btn" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <div class="mps_manual_control_container debug-box debug-panel" data-name="mps_manual_control_container">
+                </div>
+
+                <div id="mps_panel_body">
+
+                    <div class="mps_manual_control_container">
 
                         <div class="mps_manual_frame_adjust_tabs debug-box debug-panel" data-name="mps_manual_frame_adjust_tabs">
                             <div class="mps_manual_tab mps_is_active">Manual</div>
@@ -188,7 +199,7 @@
                         <div class="mps_auto_framing_container js-tab-content" data-name="mps_auto_framing_container" data-key="autoFraming">
                             <div class="mps_auto_framing_enable_row">
                                 <div class="mps_auto_framing_enable_label">Enable</div>
-                                <div class="mps_auto_framing_switch">
+                                <div class="mps_auto_framing_switch js-toggle" data-key="autoFramingEnable">
                                     <div class="mps_auto_framing_switch_knob"></div>
                                 </div>
                             </div>
@@ -423,6 +434,7 @@
     <script src="./js/mps_state.js"></script>
     <script src="./js/mps_slider.js"></script>
     <script src="./js/mps_tab.js"></script>
+    <script src="./js/mps_toggle.js"></script>
     <script src="./js/mps_init.js"></script>
 </body>
 

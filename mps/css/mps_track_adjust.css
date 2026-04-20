@@ -12,13 +12,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
+    width: 100%;
     height: 44px;
     border-bottom: 4px solid #5a5a5a;
     box-sizing: border-box;
 }
 
 #mps_root .mps_track_adjust_tab.mps_is_active {
+    border-bottom-color: #18a8ee;
+}
+
+#mps_root .mps_track_adjust_tab:hover {
+    background-color: #4d4d4d;
+    border-bottom-color: #666;
+}
+
+#mps_root .mps_track_adjust_tab.mps_is_active:hover {
+    background-color: #4d4d4d;
     border-bottom-color: #18a8ee;
 }
 
@@ -40,61 +50,24 @@
 }
 
 #mps_root .mps_track_adjust_tab_action {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-shrink: 0;
+    border: 1px solid gray;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
 }
 
 #mps_root .mps_track_adjust_expand_btn {
     position: relative;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #5f5f5f;
-    border-radius: 4px;
-    background: linear-gradient(to bottom, #2c2c2c 0%, #1c1c1c 100%);
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.08),
-        0 1px 2px rgba(0,0,0,0.35);
-}
-
-#mps_root .mps_track_adjust_expand_icon,
-#mps_root .mps_track_adjust_expand_icon::before,
-#mps_root .mps_track_adjust_expand_icon::after {
-    box-sizing: border-box;
-}
-
-#mps_root .mps_track_adjust_expand_icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    transform: translate(-50%, -50%);
-}
-
-#mps_root .mps_track_adjust_expand_icon::before,
-#mps_root .mps_track_adjust_expand_icon::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    border-top: 1px solid #e0e0e0;
-    border-right: 1px solid #e0e0e0;
-    transform-origin: center;
-}
-
-#mps_root .mps_track_adjust_expand_icon::before {
-    top: 0;
-    transform: translateX(-50%) rotate(-45deg);
-}
-
-#mps_root .mps_track_adjust_expand_icon::after {
-    bottom: 0;
-    transform: translateX(-50%) rotate(135deg);
+    background-size: 100% 100%;
+    width: 24px;
+    height: 24px;
+    background-image: url("parts/btn_expand_normal.png ");
 }
 
 #mps_root .mps_track_adjust_content_container {
@@ -113,34 +86,39 @@
 #mps_root .mps_auto_framing_enable_row {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 32px;
     height: 64px;
     padding: 0 16px;
 }
 
 #mps_root .mps_auto_framing_enable_label {
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1;
 }
 
+/* スイッチ本体：位置固定 */
 #mps_root .mps_auto_framing_switch {
     position: relative;
-    width: 32px;
+    width: 36px;
     height: 18px;
-    border-radius: 999px;
-    background: #6a6a6a;
+
+    background: none;
+    background-image: url("parts/switch_off.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
+/* ON */
+#mps_root .mps_auto_framing_switch.mps_is_active {
+    background-image: url("parts/switch_on.png");
+}
+
+/* knobは非表示 */
 #mps_root .mps_auto_framing_switch_knob {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #111;
+    display: none;
 }
 
 #mps_root .mps_tracking_assist_operation {
@@ -174,6 +152,18 @@
     font-weight: 600;
 }
 
+#mps_root .mps_auto_tracking_assist_tab:hover {
+    background-color: #4d4d4d;
+    border-bottom-color: #666;
+}
+
+
+#mps_root .mps_auto_tracking_assist_tab.mps_is_active:hover {
+    background-color: #4d4d4d;
+    border-bottom-color: #18a8ee;
+    font-weight: 600;
+}
+
 /* =========================
    Tab Content 共通
 ========================= */
@@ -183,7 +173,7 @@
     display: flex;
     justify-content: center;   /* 横中央 */
     align-items: center;   /* 中央揃え */
-    min-height: 225px;         /* 高さ統一 */
+    min-height: 212px;         /* 高さ統一 */
 }
 
 /* 内側ラッパー */
@@ -196,7 +186,6 @@
 #mps_root .mps_tracking_control_tab_content  {
     display: flex;
     width: 100%;
-    min-height: 225px;
 }
 
 #mps_root .mps_tracking_control_box {

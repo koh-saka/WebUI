@@ -27,6 +27,7 @@ var MpsApp = (function () {
         bindEvents();
         MpsSlider.init();
         MpsTab.init();
+        MpsToggle.init();
         state.initialized = true;
         load();
     }
