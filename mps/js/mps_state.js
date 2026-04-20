@@ -30,5 +30,9 @@ var MpsState = {
         sensitivity: {
             hover: false
         }
+    },
+    tabs: {
+        trackAdjust: 'autoFraming',
+        assist: 'trackingControl'
     }
 };

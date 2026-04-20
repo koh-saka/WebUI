@@ -165,7 +165,7 @@
                     </div>
 
                     <div class="mps_track_adjust_tabs_container" data-name="mps_track_adjust_tabs_container">
-                        <div class="mps_track_adjust_tab mps_is_active" data-track-adjust-tab="auto_framing">
+                        <div class="mps_track_adjust_tab mps_is_active js-tab" data-track-adjust-tab="auto_framing" data-key="autoFraming">
                             <div class="mps_track_adjust_tab_label">Auto Framing</div>
                             <div class="mps_track_adjust_tab_action">
                                 <div class="mps_track_adjust_expand_btn" aria-hidden="true">
@@ -174,7 +174,7 @@
                             </div>
                         </div>
 
-                        <div class="mps_track_adjust_tab" data-track-adjust-tab="image_adjust">
+                        <div class="mps_track_adjust_tab js-tab" data-track-adjust-tab="image_adjust" data-key="imageAdjust">
                             <div class="mps_track_adjust_tab_label">Image Adjust</div>
                             <div class="mps_track_adjust_tab_action">
                                 <div class="mps_track_adjust_expand_btn" aria-hidden="true">
@@ -185,7 +185,7 @@
                     </div>
 
                     <div class="mps_track_adjust_content_container" data-name="mps_track_adjust_content_container">
-                        <div class="mps_auto_framing_container" data-name="mps_auto_framing_container">
+                        <div class="mps_auto_framing_container js-tab-content" data-name="mps_auto_framing_container" data-key="autoFraming">
                             <div class="mps_auto_framing_enable_row">
                                 <div class="mps_auto_framing_enable_label">Enable</div>
                                 <div class="mps_auto_framing_switch">
@@ -196,13 +196,13 @@
                             <div class="mps_tracking_assist_operation">
 
                                 <div class="mps_auto_tracking_assist_operation_tab">
-                                    <div class="mps_auto_tracking_assist_tab mps_is_active">Tracking Control</div>
-                                    <div class="mps_auto_tracking_assist_tab">Face Recognition</div>
-                                    <div class="mps_auto_tracking_assist_tab">Settings</div>
+                                    <div class="mps_auto_tracking_assist_tab mps_is_active js-assist-tab" data-key="trackingControl">Tracking Control</div>
+                                    <div class="mps_auto_tracking_assist_tab js-assist-tab" data-key="faceRecognition">Face Recognition</div>
+                                    <div class="mps_auto_tracking_assist_tab js-assist-tab" data-key="settings">settings</div>
                                 </div>
 
                                 <div class="mps_tab_content_inner">
-                                    <div class="mps_tracking_control_tab_content">
+                                    <div class="mps_tracking_control_tab_content js-assist-content" data-key="trackingControl">
                                         <div class="mps_tracking_control_box">
                                             <div class="mps_tracking_left_content">
                                                 <div class="mps_tracking_box_title">Current Framing</div>
@@ -263,7 +263,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="mps_face_recognition_tab_content" style="display:none;">
+                                    <div class="mps_face_recognition_tab_content js-assist-content mps_is_hidden" data-key="faceRecognition">
                                         <div class="mps_face_recognition_container">
 
                                             <div class="mps_face_preview"></div>
@@ -283,7 +283,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="mps_settings_tab_content" style="display:none;">
+                                    <div class="mps_settings_tab_content js-assist-content mps_is_hidden" data-key="settings">
                                         <div class="mps_settings_container">
 
                                             <div class="mps_settings_item">
@@ -309,7 +309,7 @@
                             </div>
                         </div>
 
-                        <div class="mps_image_adjust_container mps_is_hidden" data-name="mps_image_adjust_container">
+                        <div class="mps_image_adjust_container js-tab-content mps_is_hidden" data-name="mps_image_adjust_container" data-key="imageAdjust">
 
                             <div class="mps_image_adjust_item mps_image_adjust_item_iris">
                                 <div class="mps_image_adjust_main">
@@ -422,6 +422,7 @@
 
     <script src="./js/mps_state.js"></script>
     <script src="./js/mps_slider.js"></script>
+    <script src="./js/mps_tab.js"></script>
     <script src="./js/mps_init.js"></script>
 </body>
 
