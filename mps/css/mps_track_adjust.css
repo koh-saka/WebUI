@@ -1,5 +1,5 @@
-/* =========================
-   Track Adjust
+/* ========================================
+   Track Adjust Tabs
 ========================= */
 #mps_root .mps_track_adjust_tabs_container {
     display: flex;
@@ -9,65 +9,105 @@
 }
 
 #mps_root .mps_track_adjust_tab {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    position: relative;
+    flex: 1;
     height: 44px;
     border-bottom: 4px solid #5a5a5a;
     box-sizing: border-box;
-}
-
-#mps_root .mps_track_adjust_tab.mps_is_active {
-    border-bottom-color: #18a8ee;
+    cursor: pointer;
 }
 
 #mps_root .mps_track_adjust_tab:hover {
-    background-color: #4d4d4d;
     border-bottom-color: #666;
 }
 
+#mps_root .mps_track_adjust_tab.mps_is_active,
 #mps_root .mps_track_adjust_tab.mps_is_active:hover {
-    background-color: #4d4d4d;
     border-bottom-color: #18a8ee;
 }
 
-#mps_root .mps_track_adjust_tab.mps_is_active .mps_track_adjust_tab_label {
-    font-weight: 600;
-}
-
 #mps_root .mps_track_adjust_tab_label {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 34px;
-    color: #ffffff;
+    height: 100%;
+    color: #fff;
     font-size: 15px;
     font-weight: 400;
     line-height: 1;
     white-space: nowrap;
 }
 
+#mps_root .mps_track_adjust_tab_label:hover {
+    background-color: #4d4d4d;
+}
+
+#mps_root .mps_track_adjust_tab.mps_is_active .mps_track_adjust_tab_label {
+    font-weight: 700;
+}
+
 #mps_root .mps_track_adjust_tab_action {
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    border: 1px solid gray;
-    border-radius: 4px;
     align-items: center;
     justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #1a1a1a;
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+#mps_root .mps_track_adjust_tab_action:hover {
+    background-color: #4d4d4d;
 }
 
 #mps_root .mps_track_adjust_expand_btn {
-    position: relative;
-    background-size: 100% 100%;
     width: 24px;
     height: 24px;
-    background-image: url("parts/btn_expand_normal.png ");
+    background-size: 100% 100%;
+    background-image: url("parts/btn_expand_normal.png");
+    cursor: pointer;
+}
+
+/* ========================================
+   Auto Tracking Assist Tab
+======================================== */
+#mps_root .mps_auto_tracking_assist_operation_tab {
+    display: flex;
+    flex: 1;
+    height: 34px;
+}
+
+#mps_root .mps_auto_tracking_assist_tab {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-bottom: 4px solid #5a5a5a;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#mps_root .mps_auto_tracking_assist_tab:hover {
+    background-color: #4d4d4d;
+    border-bottom-color: #666;
+}
+
+#mps_root .mps_auto_tracking_assist_tab.mps_is_active,
+#mps_root .mps_auto_tracking_assist_tab.mps_is_active:hover {
+    border-bottom-color: #18a8ee;
+    font-weight: 700;
 }
 
 #mps_root .mps_track_adjust_content_container {
@@ -129,44 +169,7 @@
     margin-right: auto;
 }
 
-#mps_root .mps_auto_tracking_assist_operation_tab {
-    display: flex;
-    width: 100%;
-    height: 34px;
-}
-
-#mps_root .mps_auto_tracking_assist_tab {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 4px solid #5a5a5a;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 400;
-    white-space: nowrap;
-}
-
-#mps_root .mps_auto_tracking_assist_tab.mps_is_active {
-    border-bottom-color: #18a8ee;
-    font-weight: 600;
-}
-
-#mps_root .mps_auto_tracking_assist_tab:hover {
-    background-color: #4d4d4d;
-    border-bottom-color: #666;
-}
-
-
-#mps_root .mps_auto_tracking_assist_tab.mps_is_active:hover {
-    background-color: #4d4d4d;
-    border-bottom-color: #18a8ee;
-    font-weight: 600;
-}
-
-/* =========================
-   Tab Content 共通
-========================= */
+/* Auto Framing 内 content 共通 */
 #mps_root .mps_tracking_control_tab_content,
 #mps_root .mps_face_recognition_tab_content,
 #mps_root .mps_settings_tab_content {
