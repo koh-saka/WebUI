@@ -171,7 +171,6 @@
 
 /* Auto Framing 内 content 共通 */
 #mps_root .mps_tracking_control_tab_content,
-#mps_root .mps_face_recognition_tab_content,
 #mps_root .mps_settings_tab_content {
     display: flex;
     justify-content: center;   /* 横中央 */
@@ -237,56 +236,6 @@
     margin-bottom: 10px;
     font-weight: 400;
     line-height: 1.2;
-}
-
-/* =========================
-   Face Recognition
-========================= */
-#mps_root .mps_face_recognition_container {
-    display: flex;
-    align-items: flex-start;
-    gap: 56px;
-    padding: 0 0 0 0;
-    box-sizing: border-box;
-}
-
-#mps_root .mps_face_preview {
-    width: 106px;
-    height: 106px;
-    background: linear-gradient(135deg, #003366, #0099cc);
-    flex-shrink: 0;
-}
-
-#mps_root .mps_face_controls {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    padding-top: 20px;
-}
-
-#mps_root .mps_face_checkbox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 1;
-}
-
-#mps_root .mps_face_buttons {
-    display: flex;
-    gap: 22px;
-}
-
-#mps_root .mps_btn {
-    min-width: 78px;
-    height: 36px;
-    padding: 0 16px;
-    background: #2e2e2e;
-    border: 1px solid #5a5a5a;
-    color: #ffffff;
-    box-sizing: border-box;
 }
 
 /* =========================
