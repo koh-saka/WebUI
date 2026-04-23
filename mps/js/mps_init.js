@@ -28,6 +28,7 @@ var MpsApp = (function () {
         MpsSlider.init();
         MpsTab.init();
         MpsToggle.init();
+        MpsPanelExpandMode.init();
         state.initialized = true;
         load();
     }
@@ -104,7 +105,8 @@ var MpsApp = (function () {
             "#mps_view_top",
             "#mps_view_bottom",
             "#mps_panel",
-            "#mps_panel_header",
+            "#mps_panel_normal_header",
+            "#mps_panel_expanded_header",
             "#mps_panel_body",
 
             ".mps_live_view_container",

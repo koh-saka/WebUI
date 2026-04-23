@@ -217,7 +217,8 @@ body {
     position: relative;
 }
 
-#mps_root #mps_panel_header {
+#mps_root #mps_panel_normal_header,
+#mps_root #mps_panel_expanded_header {
     height: 40px;
     min-height: 40px;
     padding: 0 8px;
