@@ -543,7 +543,6 @@
 
 #mps_root .mps_expanded_image_adjust_content {
     display: flex;
-    justify-content: space-around;
     align-items: flex-start;
     width: 440px;
     height: 697px;
@@ -551,6 +550,8 @@
     padding: 20px 0 0;
     box-sizing: content-box;
     overflow: visible;
+    gap: 80px;
+    justify-content: center;
 }
 
 #mps_root .mps_expanded_view_content {
@@ -569,13 +570,15 @@
     flex-direction: column;
     align-items: center;
     width: 72px;
+    height: 697px;
     box-sizing: content-box;
 }
 
 #mps_root .mps_expanded_image_adjust_iris_slider {
-    width: 4px;
-    height: 444px; /* (仮) */
-    margin: 10px 0 10px 0;
+    flex: 1;
+    display: flex;
+    width: 4px
+    margin: 10px 0;s
     background: #3a3a3a;
     border-radius: 2px;
     align-items: center;
