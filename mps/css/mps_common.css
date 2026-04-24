@@ -101,11 +101,10 @@
 
 /* 共通円ボタン */
 #mps_root .mps_common_circle_button {
-    width: 56px;
-    height: 56px;
-    border: 1px solid #6a6a6a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    background: #3a3a3a;
     box-sizing: border-box;
     flex-shrink: 0;
 }
