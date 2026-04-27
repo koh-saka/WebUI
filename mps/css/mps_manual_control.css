@@ -384,4 +384,12 @@
     color: #fff;
     border-color: #18a8ee;
     background: rgba(24,168,238,0.25);
+}/* file: mps_track_adjust.css */
+
+/* PTZ 共通縦スライダー */
+#mps_root .mps_ptz_vertical_slider {
+    width: 4px;
+    height: 96px;
+    margin: 16px 0;
 }
+

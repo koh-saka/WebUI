@@ -112,10 +112,11 @@
                                     <div class="mps_slider_view_content">
                                         <div class="mps_slider_title">Speed</div>
                                         <div class="mps_slider_btn mps_slider_btn_top">Fast</div>
-                                        <div class="mps_slider_vertical_container">
-                                            <div class="mps_slider_top"></div>
-                                            <div class="mps_slider_handle"></div>
-                                            <div class="mps_slider_bottom mps_slider_bottom_speed"></div>
+                                        <div class="mps_common_vertical_slider js-slider mps_vertical_slider mps_ptz_vertical_slider" data-key="ptzSpeed">
+                                            <div class="mps_common_slider_bar">
+                                                <div class="mps_common_slider_fill"></div>
+                                            </div>
+                                            <div class="mps_common_slider_handle"></div>
                                         </div>
                                         <div class="mps_slider_btn mps_slider_btn_bottom">Slow</div>
                                     </div>
@@ -125,10 +126,11 @@
                                     <div class="mps_slider_view_content">
                                         <div class="mps_slider_title">Zoom</div>
                                         <div class="mps_slider_btn mps_slider_btn_top">Tele</div>
-                                        <div class="mps_slider_vertical_container">
-                                            <div class="mps_slider_top"></div>
-                                            <div class="mps_slider_handle"></div>
-                                            <div class="mps_slider_bottom mps_slider_bottom_zoom"></div>
+                                        <div class="mps_common_vertical_slider js-slider mps_vertical_slider mps_ptz_vertical_slider" data-key="ptzZoom">
+                                            <div class="mps_common_slider_bar">
+                                                <div class="mps_common_slider_fill"></div>
+                                            </div>
+                                            <div class="mps_common_slider_handle"></div>
                                         </div>
                                         <div class="mps_slider_btn mps_slider_btn_bottom">Wide</div>
                                     </div>
@@ -139,10 +141,11 @@
                                     <div class="mps_slider_view_content">
                                         <div class="mps_slider_title">Focus</div>
                                         <div class="mps_slider_btn mps_slider_btn_top mps_is_disabled">Far</div>
-                                        <div class="mps_slider_vertical_container mps_is_disabled">
-                                            <div class="mps_slider_top"></div>
-                                            <div class="mps_slider_handle"></div>
-                                            <div class="mps_slider_bottom mps_slider_bottom_focus"></div>
+                                        <div class="mps_common_vertical_slider js-slider mps_vertical_slider mps_ptz_vertical_slider" data-key="ptzFocus">
+                                            <div class="mps_common_slider_bar">
+                                                <div class="mps_common_slider_fill"></div>
+                                            </div>
+                                            <div class="mps_common_slider_handle"></div>
                                         </div>
                                         <div class="mps_slider_btn mps_slider_btn_bottom mps_is_disabled">Near</div>
                                     </div>
@@ -221,14 +224,14 @@
 
                                                     <div class="mps_track_slider_block mps_common_slider_block">
                                                         <div class="mps_track_slider_title">Pan/tilt Speed</div>
-                                                        <div class="mps_track_slider_bar mps_common_slider_bar js-slider"
+                                                        <div class="mps_common_slider_bar js-slider"
                                                             data-key="panTiltSpeed"
                                                             data-min="-2"
                                                             data-max="2"
                                                             data-value="0">
 
-                                                            <div class="mps_track_slider_fill mps_common_slider_fill"></div>
-                                                            <div class="mps_track_slider_handle mps_common_slider_handle"></div>
+                                                            <div class="mps_common_slider_fill"></div>
+                                                            <div class="mps_common_slider_handle"></div>
                                                         </div>
                                                         <div class="mps_track_slider_marks mps_common_slider_marks" aria-hidden="true">
                                                             <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
@@ -237,14 +240,14 @@
 
                                                     <div class="mps_track_slider_block mps_common_slider_block">
                                                         <div class="mps_track_slider_title">AutoZoom Speed</div>
-                                                        <div class="mps_track_slider_bar mps_common_slider_bar js-slider"
+                                                        <div class="mps_common_slider_bar js-slider"
                                                             data-key="autoZoomSpeed"
                                                             data-min="-2"
                                                             data-max="2"
                                                             data-value="0">
 
-                                                            <div class="mps_track_slider_fill mps_common_slider_fill"></div>
-                                                            <div class="mps_track_slider_handle mps_common_slider_handle"></div>
+                                                            <div class="mps_common_slider_fill"></div>
+                                                            <div class="mps_common_slider_handle"></div>
                                                         </div>
                                                         <div class="mps_track_slider_marks mps_common_slider_marks" aria-hidden="true">
                                                             <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
@@ -253,14 +256,14 @@
 
                                                     <div class="mps_track_slider_block mps_common_slider_block">
                                                         <div class="mps_track_slider_title">Sensitivity</div>
-                                                        <div class="mps_track_slider_bar mps_common_slider_bar js-slider"
+                                                        <div class="mps_common_slider_bar js-slider"
                                                             data-key="sensitivity"
                                                             data-min="-2"
                                                             data-max="2"
                                                             data-value="0">
 
-                                                            <div class="mps_track_slider_fill mps_common_slider_fill"></div>
-                                                            <div class="mps_track_slider_handle mps_common_slider_handle"></div>
+                                                            <div class="mps_common_slider_fill"></div>
+                                                            <div class="mps_common_slider_handle"></div>
                                                         </div>
                                                         <div class="mps_track_slider_marks mps_common_slider_marks" aria-hidden="true">
                                                             <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
@@ -303,7 +306,12 @@
                                     <div class="mps_image_adjust_main">
                                         <div class="mps_image_adjust_title mps_common_title_text">Iris</div>
                                         <div class="mps_image_adjust_circle_btn mps_image_adjust_circle_btn_up mps_common_circle_button"></div>
-                                        <div class="mps_image_adjust_iris_slider"></div>
+                                        <div class="mps_common_vertical_slider js-slider mps_vertical_slider" data-key="iris">
+                                            <div class="mps_common_slider_bar">
+                                                <div class="mps_common_slider_fill"></div>
+                                            </div>
+                                            <div class="mps_common_slider_handle"></div>
+                                        </div>
                                         <div class="mps_image_adjust_circle_btn_down mps_common_circle_button"></div>
                                     </div>
 
@@ -411,7 +419,7 @@
 
                                 <div class="mps_expanded_auto_framing_enable_row">
                                     <div class="mps_expanded_auto_framing_enable_label">Enable</div>
-                                    <div class="mps_auto_framing_switch js-toggle" data-key="autoFramingEnableExpanded">
+                                    <div class="mps_auto_framing_switch js-toggle" data-key="autoFramingEnable">
                                         <div class="mps_auto_framing_switch_knob"></div>
                                     </div>
                                 </div>
@@ -431,13 +439,13 @@
 
                                                 <div class="mps_track_slider_block mps_common_slider_block">
                                                     <div class="mps_track_slider_title">Pan/tilt Speed</div>
-                                                    <div class="mps_track_slider_bar mps_common_slider_bar js-slider"
-                                                        data-key="panTiltSpeedExpanded"
+                                                    <div class="mps_common_slider_bar js-slider"
+                                                        data-key="panTiltSpeed"
                                                         data-min="-2"
                                                         data-max="2"
                                                         data-value="0">
-                                                        <div class="mps_track_slider_fill mps_common_slider_fill"></div>
-                                                        <div class="mps_track_slider_handle mps_common_slider_handle"></div>
+                                                        <div class="mps_common_slider_fill"></div>
+                                                        <div class="mps_common_slider_handle"></div>
                                                     </div>
                                                     <div class="mps_track_slider_marks mps_common_slider_marks" aria-hidden="true">
                                                         <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
@@ -446,13 +454,13 @@
 
                                                 <div class="mps_track_slider_block mps_common_slider_block">
                                                     <div class="mps_track_slider_title">AutoZoom Speed</div>
-                                                    <div class="mps_track_slider_bar mps_common_slider_bar js-slider"
-                                                        data-key="autoZoomSpeedExpanded"
+                                                    <div class="mps_common_slider_bar js-slider"
+                                                        data-key="autoZoomSpeed"
                                                         data-min="-2"
                                                         data-max="2"
                                                         data-value="0">
-                                                        <div class="mps_track_slider_fill mps_common_slider_fill"></div>
-                                                        <div class="mps_track_slider_handle mps_common_slider_handle"></div>
+                                                        <div class="mps_common_slider_fill"></div>
+                                                        <div class="mps_common_slider_handle"></div>
                                                     </div>
                                                     <div class="mps_track_slider_marks mps_common_slider_marks" aria-hidden="true">
                                                         <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
@@ -461,13 +469,13 @@
 
                                                 <div class="mps_track_slider_block mps_common_slider_block">
                                                     <div class="mps_track_slider_title">Sensitivity</div>
-                                                    <div class="mps_track_slider_bar mps_common_slider_bar js-slider"
-                                                        data-key="sensitivityExpanded"
+                                                    <div class="mps_common_slider_bar js-slider"
+                                                        data-key="sensitivity"
                                                         data-min="-2"
                                                         data-max="2"
                                                         data-value="0">
-                                                        <div class="mps_track_slider_fill mps_common_slider_fill"></div>
-                                                        <div class="mps_track_slider_handle mps_common_slider_handle"></div>
+                                                        <div class="mps_common_slider_fill"></div>
+                                                        <div class="mps_common_slider_handle"></div>
                                                     </div>
                                                     <div class="mps_track_slider_marks mps_common_slider_marks" aria-hidden="true">
                                                         <span>-2</span><span>-1</span><span>0</span><span>1</span><span>2</span>
@@ -511,7 +519,15 @@
                                 <div class="mps_expanded_slider_view_content">
                                     <div class="mps_expanded_slider_title">Iris</div>
                                     <div class="mps_common_circle_button mps_expanded_circle_button mps_expanded_slider_top_btn"></div>
-                                    <div class="mps_expanded_image_adjust_iris_slider"></div>
+
+                                    <div class="mps_common_vertical_slider js-slider mps_vertical_slider" data-key="iris">
+                                        <div class="mps_common_slider_bar">
+                                           <div class="mps_common_slider_fill"></div>
+                                        </div>
+                                        <div class="mps_common_slider_handle"></div>
+                                    </div>
+
+
                                     <div class="mps_common_circle_button mps_expanded_circle_button mps_expanded_slider_bottom_btn"></div>
                                     <div class="mps_expanded_sub_button mps_expanded_auto_btn">Auto</div>
                                 </div>

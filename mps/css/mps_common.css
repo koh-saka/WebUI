@@ -1,7 +1,7 @@
 /* =========================
    Common Parts in Track Adjust
 ========================= */
-/* 共通スライダブロック */
+/* Tracking Control 共通スライダブロック */
 #mps_root .mps_common_slider_block {
     width: 100%;
     margin-bottom: 14px;
@@ -30,25 +30,84 @@
     background: #0bb7f0;
 }
 
+/* 共通縦スライダー本体 */
+#mps_root .mps_common_vertical_slider {
+    position: relative;
+}
+
 /* 共通スライダハンドル */
 #mps_root .mps_common_slider_handle {
-    background-image: url("parts/Slider_handle_normal.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
+    background-size: 100% 100%;
     position: absolute;
     top: 50%;
+    cursor: pointer;
     width: 20px;
     height: 20px;
     transform: translate(-50%, -50%);
 }
 
+/* 横スライダー default */
+#mps_root .mps_common_slider_handle {
+    background-image: url("parts/Slider_handle_shrink.png");
+}
+
+/* 縦normal */
+#mps_root .mps_common_vertical_slider .mps_common_slider_handle {
+    background-image: url("parts/Slider_handle_normal.png");
+}
+
+/* 縦expanded */
+#mps_root .mps_expanded_slider_view_content .mps_common_vertical_slider .mps_common_slider_handle {
+    background-image: url("parts/Slider_handle_expand.png");
+}
+
+/* 縦スライダーバー override */
+#mps_root .mps_vertical_slider .mps_common_slider_bar {
+    width: 100%;
+    height: 100%;
+}
+
+/* 縦スライダーフィル override */
+#mps_root .mps_vertical_slider .mps_common_slider_fill {
+    top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+}
+
+/* 縦スライダーハンドル override */
+#mps_root .mps_vertical_slider .mps_common_slider_handle {
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    transform: translate(-50%, -50%);
+}
+
 #mps_root .mps_common_slider_handle.is-hover {
-    background-image: url("parts/Slider_handle_onmouse.png") !important;
+    background-image: url("parts/Slider_handle_onmouse_shrink.png");
+}
+
+#mps_root .mps_common_vertical_slider .mps_common_slider_handle.is-hover {
+    background-image: url("parts/Slider_handle_onmouse.png");
+}
+
+#mps_root .mps_expanded_slider_view_content .mps_common_vertical_slider .mps_common_slider_handle.is-hover {
+    background-image: url("parts/Slider_handle_onmouse_expand.png");
 }
 
 #mps_root .mps_common_slider_handle.is-active {
-    background-image: url("parts/Slider_handle_pressed.png") !important;
+    background-image: url("parts/Slider_handle_pressed_shrink.png");
+}
+
+#mps_root .mps_common_vertical_slider .mps_common_slider_handle.is-active {
+    background-image: url("parts/Slider_handle_pressed.png");
+}
+
+#mps_root .mps_expanded_slider_view_content .mps_common_vertical_slider .mps_common_slider_handle.is-active {
+    background-image: url("parts/Slider_handle_pressed_expand.png");
 }
 
 /* 共通スライダ目盛 */

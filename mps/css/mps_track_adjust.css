@@ -413,12 +413,24 @@
     border-radius: 30px;
 }
 
-#mps_root .mps_image_adjust_item_iris .mps_image_adjust_iris_slider {
+/* normal Iris vertical slider */
+#mps_root .mps_image_adjust_main .mps_common_vertical_slider {
     width: 4px;
-    height: 80%;
+    height: 70%;
     margin-bottom: 0;
-    background: #3a3a3a;
-    border-radius: 2px;
+}
+
+/* expanded Iris vertical slider */
+#mps_root .mps_expanded_slider_view_content .mps_common_vertical_slider {
+    flex: 1;
+    margin: 25px 0;
+    width: 6px;
+}
+
+/* expanded Iris handle */
+#mps_root .mps_expanded_slider_view_content .mps_common_vertical_slider .mps_common_slider_handle {
+    width: 40px;
+    height: 40px;
 }
 
 /* Expandded panel */
@@ -572,16 +584,6 @@
     width: 72px;
     height: 697px;
     box-sizing: content-box;
-}
-
-#mps_root .mps_expanded_image_adjust_iris_slider {
-    flex: 1;
-    display: flex;
-    width: 4px
-    margin: 10px 0;s
-    background: #3a3a3a;
-    border-radius: 2px;
-    align-items: center;
 }
 
 #mps_root .mps_expanded_wheel_picker_group {

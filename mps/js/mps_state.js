@@ -1,5 +1,25 @@
 var MpsState = {
     sliders: {
+        iris: {
+            min: 0,
+            max: 100,
+            value: 50
+        },
+        ptzSpeed: {
+            min: 0,
+            max: 100,
+            value: 50
+        },
+        ptzZoom: {
+            min: 0,
+            max: 100,
+            value: 50
+        },
+        ptzFocus: {
+            min: 0,
+            max: 100,
+            value: 50
+        },
         panTiltSpeed: {
             min: -2,
             max: 2,
@@ -19,17 +39,6 @@ var MpsState = {
     drag: {
         active: false,
         key: null
-    },
-    handle: {
-        panTiltSpeed: {
-            hover: false
-        },
-        autoZoomSpeed: {
-            hover: false
-        },
-        sensitivity: {
-            hover: false
-        }
     },
     tabs: {
         trackAdjust: 'autoFraming',

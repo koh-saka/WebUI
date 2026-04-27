@@ -1,4 +1,7 @@
+// file: mps_slider.js
+
 var MpsSlider = (function () {
+
     function init() {
         bindEvents();
         renderAll();
@@ -13,116 +16,76 @@ var MpsSlider = (function () {
 
         $(document).on('mouseenter', '.js-slider .mps_common_slider_handle', onHandleMouseEnter);
         $(document).on('mouseleave', '.js-slider .mps_common_slider_handle', onHandleMouseLeave);
-        $(document).on('mousedown', '.js-slider .mps_common_slider_handle', onHandleMouseDown);
     }
 
     function onSliderMouseDown(e) {
         var $slider = $(e.currentTarget);
         var key = $slider.attr('data-key');
 
-        if (!key || !MpsState.sliders[key]) {
-            return;
-        }
+        if (!key || !MpsState.sliders[key]) return;
 
         e.preventDefault();
 
         MpsState.drag.active = true;
         MpsState.drag.key = key;
 
-        updateByPointer($slider, e.clientX);
+        updateByPointer($slider, e);
         renderHandleState(key);
     }
 
     function onDocumentMouseMove(e) {
-        var key;
-        var $slider;
+        if (!MpsState.drag.active || !MpsState.drag.key) return;
 
-        if (!MpsState.drag.active || !MpsState.drag.key) {
-            return;
-        }
+        var key = MpsState.drag.key;
+        var $slider = $('.js-slider[data-key="' + key + '"]:visible');
 
-        key = MpsState.drag.key;
-        $slider = $('.js-slider[data-key="' + key + '"]');
+        if ($slider.length === 0) return;
 
-        if ($slider.length === 0) {
-            return;
-        }
-
-        updateByPointer($slider, e.clientX);
+        updateByPointer($slider, e);
         renderHandleState(key);
     }
 
     function onDocumentMouseUp() {
-        var key;
+        if (!MpsState.drag.active) return;
 
-        if (!MpsState.drag.active) {
-            return;
-        }
-
-        key = MpsState.drag.key;
+        var key = MpsState.drag.key;
 
         MpsState.drag.active = false;
         MpsState.drag.key = null;
 
-        if (key) {
-            renderHandleState(key);
-        }
+        if (key) renderHandleState(key);
     }
 
-    function onHandleMouseEnter(e) {
-        var key = getSliderKeyFromHandle(e.currentTarget);
-        var handleState = ensureHandleState(key);
-
-        if (!key) {
-            return;
-        }
-
-        handleState.hover = true;
-        renderHandleState(key);
+    // =========================
+    // 縦横判定
+    // =========================
+    function isVertical($slider) {
+        return $slider.hasClass('mps_vertical_slider');
     }
 
-    function onHandleMouseLeave(e) {
-        var key = getSliderKeyFromHandle(e.currentTarget);
-        var handleState = ensureHandleState(key);
-
-        if (!key || MpsState.drag.active) {
-            return;
-        }
-
-        handleState.hover = false;
-        renderHandleState(key);
-    }
-
-    function onHandleMouseDown(e) {
-        var key = getSliderKeyFromHandle(e.currentTarget);
-        var handleState = ensureHandleState(key);
-
-        if (!key) {
-            return;
-        }
-
-        handleState.hover = true;
-        renderHandleState(key);
-    }
-
-    function updateByPointer($slider, clientX) {
+    // =========================
+    // 値更新（共通）
+    // =========================
+    function updateByPointer($slider, e) {
         var key = $slider.attr('data-key');
         var state = MpsState.sliders[key];
-        var rect;
-        var percent;
-        var value;
+        var rect, percent, value;
 
-        if (!state) {
-            return;
-        }
+        if (!state) return;
 
         rect = $slider[0].getBoundingClientRect();
 
-        if (rect.width <= 0) {
-            return;
+        if (isVertical($slider)) {
+            if (rect.height <= 0) return;
+
+            percent = (e.clientY - rect.top) / rect.height;
+            percent = 1 - percent; // 下→上に変換
+        } else {
+            if (rect.width <= 0) return;
+
+            percent = (e.clientX - rect.left) / rect.width;
         }
 
-        percent = (clientX - rect.left) / rect.width;
         percent = clamp(percent, 0, 1);
 
         value = state.min + ((state.max - state.min) * percent);
@@ -134,32 +97,52 @@ var MpsSlider = (function () {
         renderSlider(key);
     }
 
+    // =========================
+    // 初期描画
+    // =========================
     function renderAll() {
         $('.js-slider').each(function () {
             var key = $(this).attr('data-key');
+
+            // 未定義はエラー
+            if (!MpsState.sliders[key]) {
+                console.error('Undefined slider state:', key);
+                return;
+            }
             renderSlider(key);
         });
     }
 
+    // =========================
+    // 描画
+    // =========================
     function renderSlider(key) {
         var state = MpsState.sliders[key];
-        var $slider = $('.js-slider[data-key="' + key + '"]');
-        var percent;
+        var $sliders = $('.js-slider[data-key="' + key + '"]');
 
-        if (!state || $slider.length === 0) {
+        if (!state || $sliders.length === 0) {
             return;
         }
 
-        percent = (state.value - state.min) / (state.max - state.min);
-        percent = clamp(percent, 0, 1);
+        $sliders.each(function () {
+            var $slider = $(this);
+            var percent = (state.value - state.min) / (state.max - state.min);
+            percent = clamp(percent, 0, 1);
 
-        $slider.attr('data-value', state.value);
-        $slider.find('.mps_common_slider_fill').css('width', (percent * 100) + '%');
-        $slider.find('.mps_common_slider_handle').css('left', (percent * 100) + '%');
+            $slider.attr('data-value', state.value);
 
-        console.log('[' + key + ']', state.value);
+            if ($slider.hasClass('mps_vertical_slider')) {
+                $slider.find('.mps_common_slider_fill').css('height', (percent * 100) + '%');
+                $slider.find('.mps_common_slider_handle').css('top', ((1 - percent) * 100) + '%');
+            } else {
+                $slider.find('.mps_common_slider_fill').css('width', (percent * 100) + '%');
+                $slider.find('.mps_common_slider_handle').css('left', (percent * 100) + '%');
+            }
+        });
     }
-
+    // =========================
+    // handle状態
+    // =========================
     function renderAllHandleStates() {
         $('.js-slider').each(function () {
             var key = $(this).attr('data-key');
@@ -168,29 +151,23 @@ var MpsSlider = (function () {
     }
 
     function renderHandleState(key) {
-        var handleState = ensureHandleState(key);
         var $handle = $('.js-slider[data-key="' + key + '"] .mps_common_slider_handle');
 
-        if (!key || $handle.length === 0) {
-            return;
-        }
+        if ($handle.length === 0) return;
 
-        $handle.toggleClass('is-hover', handleState.hover && !(MpsState.drag.active && MpsState.drag.key === key));
-        $handle.toggleClass('is-active', MpsState.drag.active && MpsState.drag.key === key);
+        var active = MpsState.drag.active && MpsState.drag.key === key;
+
+        $handle.toggleClass('is-active', active);
     }
 
-    function getSliderKeyFromHandle(handleEl) {
-        return $(handleEl).closest('.js-slider').attr('data-key');
+    function onHandleMouseEnter(e) {
+        $(e.currentTarget).addClass('is-hover');
     }
 
-    function ensureHandleState(key) {
-        if (!MpsState.handle[key]) {
-            MpsState.handle[key] = {
-                hover: false
-            };
+    function onHandleMouseLeave(e) {
+        if (!MpsState.drag.active) {
+            $(e.currentTarget).removeClass('is-hover');
         }
-
-        return MpsState.handle[key];
     }
 
     function clamp(value, min, max) {
@@ -200,4 +177,5 @@ var MpsSlider = (function () {
     return {
         init: init
     };
+
 })();
