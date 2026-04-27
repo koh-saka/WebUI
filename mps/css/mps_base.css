@@ -217,6 +217,14 @@ body {
     position: relative;
 }
 
+#mps_root #mps_panel_normal,
+#mps_root #mps_panel_expanded {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+}
+
 #mps_root #mps_panel_normal_header,
 #mps_root #mps_panel_expanded_header {
     height: 40px;
@@ -239,7 +247,8 @@ body {
     cursor: default;
 }
 
-#mps_root #mps_panel_body {
+#mps_root #mps_panel_body,
+#mps_root #mps_panel_expanded_body {
     flex: 1;
     min-height: 0;
     padding: 0;
