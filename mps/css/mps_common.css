@@ -148,6 +148,27 @@
     left: 100%;
 }
 
+/* =========================
+   Slider disabled
+========================= */
+
+/* bar / fill / handle を暗くする */
+#mps_root .js-slider.mps_is_disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* disabled時は hover / active 表示を抑止 */
+#mps_root .js-slider.mps_is_disabled .mps_common_slider_handle {
+    cursor: default;
+}
+
+/* marks を暗くする */
+/* DOM上、slider bar の直後に marks がある前提 */
+#mps_root .js-slider.mps_is_disabled + .mps_common_slider_marks {
+    opacity: 0.3;
+}
+
 /* 共通ボタン */
 #mps_root .mps_common_button {
     min-width: 78px;

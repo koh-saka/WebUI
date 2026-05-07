@@ -2,6 +2,7 @@ var MpsToggle = (function () {
     function init() {
         bindEvents();
         renderAll();
+        syncAllToggleRelatedControls();
     }
 
     function bindEvents() {
@@ -17,6 +18,8 @@ var MpsToggle = (function () {
 
         MpsState.toggles[key] = !MpsState.toggles[key];
         render(key);
+
+        syncToggleRelatedControls(key);
     }
 
     function renderAll() {
@@ -36,6 +39,24 @@ var MpsToggle = (function () {
 
         isActive = !!MpsState.toggles[key];
         $toggle.toggleClass('mps_is_active', isActive);
+    }
+
+    function syncToggleRelatedControls(key) {
+        if (key === 'autoFramingEnable') {
+            syncTrackingControlSliders();
+        }
+    }
+
+    function syncAllToggleRelatedControls() {
+        syncTrackingControlSliders();
+    }
+
+    function syncTrackingControlSliders() {
+        var disabled = !MpsState.toggles.autoFramingEnable;
+
+        MpsSlider.setSliderDisabled('panTiltSpeed', disabled);
+        MpsSlider.setSliderDisabled('autoZoomSpeed', disabled);
+        MpsSlider.setSliderDisabled('sensitivity', disabled);
     }
 
     return {

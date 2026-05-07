@@ -20,6 +20,11 @@ var MpsSlider = (function () {
 
     function onSliderMouseDown(e) {
         var $slider = $(e.currentTarget);
+
+        if (isSliderDisabled($slider)) {
+            e.preventDefault();
+            return;
+        }
         var key = $slider.attr('data-key');
 
         if (!key || !MpsState.sliders[key]) return;
@@ -56,6 +61,14 @@ var MpsSlider = (function () {
         if (key) renderHandleState(key);
     }
 
+    // =========================
+    // disabled判定
+    // =========================
+    function isSliderDisabled($slider) {
+        return $slider.hasClass('mps_is_disabled') ||
+            $slider.attr('aria-disabled') === 'true';
+    }
+    
     // =========================
     // 縦横判定
     // =========================
@@ -160,8 +173,36 @@ var MpsSlider = (function () {
         $handle.toggleClass('is-active', active);
     }
 
+    function setSliderDisabled(key, disabled) {
+        var $sliders = $('.js-slider[data-key="' + key + '"]');
+
+        $sliders.each(function () {
+            var $slider = $(this);
+
+            $slider.toggleClass('mps_is_disabled', disabled);
+            $slider.attr('aria-disabled', disabled ? 'true' : 'false');
+
+            if (disabled) {
+                $slider.find('.mps_common_slider_handle')
+                    .removeClass('is-hover is-active');
+            }
+        });
+
+        if (MpsState.drag.key === key) {
+            MpsState.drag.active = false;
+            MpsState.drag.key = null;
+        }
+    }
+
     function onHandleMouseEnter(e) {
-        $(e.currentTarget).addClass('is-hover');
+        var $handle = $(e.currentTarget);
+        var $slider = $handle.closest('.js-slider');
+
+        if (isSliderDisabled($slider)) {
+            return;
+        }
+
+        $handle.addClass('is-hover');
     }
 
     function onHandleMouseLeave(e) {
@@ -175,7 +216,8 @@ var MpsSlider = (function () {
     }
 
     return {
-        init: init
+        init: init,
+        setSliderDisabled: setSliderDisabled
     };
 
 })();
