@@ -44,6 +44,7 @@ var MpsToggle = (function () {
     function syncToggleRelatedControls(key) {
         if (key === 'autoFramingEnable') {
             syncTrackingControlSliders();
+            syncFrameAdjustTab();
         }
     }
 
@@ -58,6 +59,24 @@ var MpsToggle = (function () {
         MpsSlider.setSliderDisabled('autoZoomSpeed', disabled);
         MpsSlider.setSliderDisabled('sensitivity', disabled);
     }
+
+    function syncFrameAdjustTab() {
+        var disabled = !MpsState.toggles.autoFramingEnable;
+
+        $('.mps_manual_tab')
+            .filter(function () {
+                return $(this).text().trim() === 'Frame Adjust';
+            })
+            .toggleClass('mps_is_disabled', disabled);
+
+        if (disabled) {
+            // OFF時は Manual に戻す
+            $('.mps_manual_tab').removeClass('mps_is_active');
+            $('.mps_manual_tab').first().addClass('mps_is_active');
+
+            // 将来 Frame Adjust content を作ったらここで非表示化
+        }
+    }    
 
     return {
         init: init
