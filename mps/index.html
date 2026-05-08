@@ -108,7 +108,7 @@
                                     </div>
                                 </div>
 
-                                <div class="mps_view_content mps_speed_slider debug-box debug-panel" data-name="mps_speed_slider">
+                                <div class="mps_view_content mps_speed_slider" data-name="mps_speed_slider">
                                     <div class="mps_slider_view_content">
                                         <div class="mps_slider_title">Speed</div>
                                         <div class="mps_slider_btn mps_slider_btn_top mps_common_circle_button">Fast</div>
@@ -122,7 +122,7 @@
                                     </div>
                                 </div>
 
-                                <div class="mps_view_content mps_zoom_slider debug-box debug-panel" data-name="mps_zoom_slider">
+                                <div class="mps_view_content mps_zoom_slider" data-name="mps_zoom_slider">
                                     <div class="mps_slider_view_content">
                                         <div class="mps_slider_title">Zoom</div>
                                         <div class="mps_slider_btn mps_slider_btn_top mps_common_circle_button">Tele</div>
@@ -134,22 +134,37 @@
                                         </div>
                                         <div class="mps_slider_btn mps_slider_btn_bottom mps_common_circle_button">Wide</div>
                                     </div>
-                                    <div class="mps_auto_btn mps_is_disabled">Auto</div>
+                                    <div class="mps_auto_btn mps_zoom_auto mps_auto_button mps_is_disabled js-auto-button"
+                                        data-auto-target="zoom"
+                                        data-auto-scope="normal">Auto</div>
                                 </div>
 
-                                <div class="mps_view_content mps_focus_slider debug-box debug-panel" data-name="mps_focus_slider">
+                                <div class="mps_view_content mps_focus_slider" data-name="mps_focus_slider">
                                     <div class="mps_slider_view_content">
                                         <div class="mps_slider_title">Focus</div>
-                                        <div class="mps_slider_btn mps_slider_btn_top mps_common_circle_button">Far</div>
-                                        <div class="mps_common_vertical_slider js-slider mps_vertical_slider mps_ptz_vertical_slider" data-key="ptzFocus">
+
+                                        <div class="mps_slider_btn mps_slider_btn_top mps_common_circle_button"
+                                            data-auto-controlled-target="focus"
+                                            data-auto-scope="normal">Far</div>
+
+                                        <div class="mps_common_vertical_slider js-slider mps_vertical_slider mps_ptz_vertical_slider"
+                                            data-key="ptzFocus"
+                                            data-auto-controlled-target="focus"
+                                            data-auto-scope="normal">
                                             <div class="mps_common_slider_bar">
                                                 <div class="mps_common_slider_fill"></div>
                                             </div>
                                             <div class="mps_common_slider_handle"></div>
                                         </div>
-                                        <div class="mps_slider_btn mps_slider_btn_bottom mps_common_circle_button">Near</div>
+
+                                        <div class="mps_slider_btn mps_slider_btn_bottom mps_common_circle_button"
+                                            data-auto-controlled-target="focus"
+                                            data-auto-scope="normal">Near</div>
                                     </div>
-                                    <div class="mps_auto_btn mps_focus_auto">Auto</div>
+
+                                    <div class="mps_auto_btn mps_focus_auto mps_auto_button js-auto-button"
+                                        data-auto-target="focus"
+                                        data-auto-scope="normal">Auto</div>
                                 </div>
 
                             </div>
@@ -305,18 +320,30 @@
                                 <div class="mps_image_adjust_item mps_image_adjust_item_iris">
                                     <div class="mps_image_adjust_main">
                                         <div class="mps_image_adjust_title mps_common_title_text">Iris</div>
-                                        <div class="mps_image_adjust_circle_btn_up mps_common_circle_button"></div>
-                                        <div class="mps_common_vertical_slider js-slider mps_vertical_slider" data-key="iris">
+
+                                        <div class="mps_image_adjust_circle_btn_up mps_common_circle_button"
+                                            data-auto-controlled-target="iris"
+                                            data-auto-scope="normal"></div>
+
+                                        <div class="mps_common_vertical_slider js-slider mps_vertical_slider"
+                                            data-key="iris"
+                                            data-auto-controlled-target="iris"
+                                            data-auto-scope="normal">
                                             <div class="mps_common_slider_bar">
                                                 <div class="mps_common_slider_fill"></div>
                                             </div>
                                             <div class="mps_common_slider_handle"></div>
                                         </div>
-                                        <div class="mps_image_adjust_circle_btn_down mps_common_circle_button"></div>
+
+                                        <div class="mps_image_adjust_circle_btn_down mps_common_circle_button"
+                                            data-auto-controlled-target="iris"
+                                            data-auto-scope="normal"></div>
                                     </div>
 
                                     <div class="mps_image_adjust_sub">
-                                        <div class="mps_image_adjust_sub_button mps_image_adjust_sub_button_single">Auto</div>
+                                        <div class="mps_auto_button mps_image_adjust_auto_btn js-auto-button"
+                                            data-auto-target="iris"
+                                            data-auto-scope="normal">Auto</div>
                                     </div>
                                 </div>
 
@@ -518,18 +545,28 @@
 
                                 <div class="mps_expanded_slider_view_content">
                                     <div class="mps_expanded_slider_title">Iris</div>
-                                    <div class="mps_common_circle_button mps_expanded_circle_button mps_expanded_slider_top_btn"></div>
 
-                                    <div class="mps_common_vertical_slider js-slider mps_vertical_slider" data-key="iris">
+                                    <div class="mps_common_circle_button mps_expanded_circle_button mps_expanded_slider_top_btn"
+                                        data-auto-controlled-target="iris"
+                                        data-auto-scope="expanded"></div>
+
+                                    <div class="mps_common_vertical_slider js-slider mps_vertical_slider"
+                                        data-key="iris"
+                                        data-auto-controlled-target="iris"
+                                        data-auto-scope="expanded">
                                         <div class="mps_common_slider_bar">
-                                           <div class="mps_common_slider_fill"></div>
+                                            <div class="mps_common_slider_fill"></div>
                                         </div>
                                         <div class="mps_common_slider_handle"></div>
                                     </div>
 
+                                    <div class="mps_common_circle_button mps_expanded_circle_button mps_expanded_slider_bottom_btn"
+                                        data-auto-controlled-target="iris"
+                                        data-auto-scope="expanded"></div>
 
-                                    <div class="mps_common_circle_button mps_expanded_circle_button mps_expanded_slider_bottom_btn"></div>
-                                    <div class="mps_expanded_sub_button mps_expanded_auto_btn">Auto</div>
+                                    <div class="mps_auto_button mps_expanded_auto_btn js-auto-button"
+                                        data-auto-target="iris"
+                                        data-auto-scope="expanded">Auto</div>
                                 </div>
 
                                 <div class="mps_expanded_wheel_picker_group">
@@ -605,6 +642,7 @@
     <script src="./js/mps_toggle.js"></script>
     <script src="./js/mps_panel_expand_mode.js"></script>
     <script src="./js/mps_circle_button.js"></script>
+    <script src="./js/mps_auto_button_control.js"></script>
     <script src="./js/mps_init.js"></script>
 </body>
 

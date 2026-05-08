@@ -358,29 +358,8 @@
 }
 
 #mps_root .mps_auto_btn {
-    width: 55px;
-    min-height: 30px;
     margin: 10px auto 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #7d7d7d;
-    border-radius: 16px;
-    color: #7d7d7d;
-    background: transparent;
-    font-size: 14px;
-    font-weight: 600;
 }
-
-#mps_root .mps_auto_btn.mps_is_disabled {
-    opacity: 0.35;
-}
-
-#mps_root .mps_focus_auto {
-    color: #fff;
-    border-color: #18a8ee;
-    background: rgba(24,168,238,0.25);
-}/* file: mps_track_adjust.css */
 
 /* PTZ 共通縦スライダー */
 #mps_root .mps_ptz_vertical_slider {

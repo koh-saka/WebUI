@@ -30,6 +30,7 @@ var MpsApp = (function () {
         MpsToggle.init();
         MpsPanelExpandMode.init();
         MpsCircleButton.init();
+        MpsAutoButtonControl.init();
         state.initialized = true;
         load();
     }

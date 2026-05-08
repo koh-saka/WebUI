@@ -405,9 +405,13 @@
     white-space: nowrap;
 }
 
+/* normal Iris Auto 配置 */
+#mps_root .mps_image_adjust_auto_btn {
+    margin-top: 0;
+}
+
 #mps_root .mps_image_adjust_sub_button_single {
     margin-top: 0;
-    border-radius: 30px;
 }
 
 /* normal Iris vertical slider */
@@ -632,6 +636,7 @@
     height: 96px;
 }
 
+/* expanded sub button: AWB / ABB */
 #mps_root .mps_expanded_sub_button {
     display: flex;
     align-items: center;
@@ -649,6 +654,9 @@
 }
 
 #mps_root .mps_expanded_auto_btn {
+    min-width: 54px;
+    height: 38px;
+    padding: 0 8px;
     margin-top: 10px;
-    border-radius: 30px;
+    font-size: 20px;
 }

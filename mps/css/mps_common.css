@@ -154,7 +154,7 @@
 
 /* bar / fill / handle を暗くする */
 #mps_root .js-slider.mps_is_disabled {
-    opacity: 0.3;
+    opacity: 0.7;
     cursor: default;
 }
 
@@ -167,6 +167,20 @@
 /* DOM上、slider bar の直後に marks がある前提 */
 #mps_root .js-slider.mps_is_disabled + .mps_common_slider_marks {
     opacity: 0.3;
+}
+
+/* ========================================
+   disabled handle : normal vertical
+======================================== */
+
+#mps_root .js-slider.mps_is_disabled.mps_common_vertical_slider .mps_common_slider_handle {
+    background-image: url("parts/Slider_handle_disable.png");
+}
+
+#mps_root .mps_expanded_slider_view_content 
+.js-slider.mps_is_disabled.mps_common_vertical_slider 
+.mps_common_slider_handle {
+    background-image: url("parts/Slider_handle_disable_expand.png");
 }
 
 /* 共通ボタン */
@@ -224,3 +238,64 @@
     margin-bottom: 8px;
 }
 
+/* =========================
+   Auto Button
+========================= */
+
+/* Autoボタン共通 */
+#mps_root .mps_auto_button {
+    min-width: 54px;
+    height: 30px;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 30px;
+    background: #1a1a1a;
+    color: #d9d9d9;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 非active hover */
+#mps_root .mps_auto_button.is-hover:not(.mps_is_active) {
+    background: #4d4d4d;
+    color: #ffffff;
+}
+
+/* 非active pressed */
+#mps_root .mps_auto_button.is-active:not(.mps_is_active) {
+    background: #666666;
+    color: #ffffff;
+}
+
+/* active */
+#mps_root .mps_auto_button.mps_is_active {
+    background: #176082;
+    border-color: #00b7f1;
+    color: #d9d9d9;
+}
+
+/* active hover/pressed */
+#mps_root .mps_auto_button.mps_is_active.is-hover,
+#mps_root .mps_auto_button.mps_is_active.is-active {
+    color: #ffffff;
+}
+
+/* disabled */
+#mps_root .mps_auto_button.mps_is_disabled,
+#mps_root .mps_auto_button.mps_is_disabled.is-hover,
+#mps_root .mps_auto_button.mps_is_disabled.is-active,
+#mps_root .mps_auto_button.mps_is_disabled.mps_is_active {
+    opacity: 0.3;
+    background: #1a1a1a;
+    border-color: gray;
+    color: #ffffff;
+    cursor: default;
+}
