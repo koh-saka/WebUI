@@ -275,15 +275,11 @@
     text-align: center;
 }
 
+/* file: css/mps_manual_control.css */
+
 #mps_root .mps_slider_btn {
     width: 56px;
     height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #7d7d7d;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.14);
     color: #fff;
     font-size: 14px;
     font-weight: 600;
@@ -292,7 +288,7 @@
 }
 
 #mps_root .mps_slider_btn.mps_is_disabled {
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 #mps_root .mps_slider_vertical_container {

@@ -187,6 +187,32 @@
     border-radius: 50%;
     box-sizing: border-box;
     flex-shrink: 0;
+    border: 1px solid gray;
+    background: #4d4d4d;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* mouseenter */
+#mps_root .mps_common_circle_button.is-hover {
+    border-color: #00b7f1;
+    background: #1f3a47;
+}
+
+/* mousedown */
+#mps_root .mps_common_circle_button.is-active {
+    border-color: #00b7f1;
+    background: #176082;
+}
+
+/* disabled （hover/activeより優先）*/
+#mps_root .mps_common_circle_button.mps_is_disabled,
+#mps_root .mps_common_circle_button.mps_is_disabled.is-hover,
+#mps_root .mps_common_circle_button.mps_is_disabled.is-active {
+    opacity: 0.3;
+    cursor: default;
+    border-color: gray;
+    background: #4d4d4d;
 }
 
 /* 共通タイトル文字 */

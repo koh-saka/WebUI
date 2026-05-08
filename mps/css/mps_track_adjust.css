@@ -344,13 +344,10 @@
     white-space: nowrap;
 }
 
-#mps_root .mps_image_adjust_circle_btn,
 #mps_root .mps_image_adjust_circle_btn_up,
 #mps_root .mps_image_adjust_circle_btn_down {
     width: 56px;
     height: 56px;
-    border: 1px solid #6a6a6a;
-    background: #3a3a3a;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -545,8 +542,8 @@
 #mps_root .mps_expanded_circle_button {
     width: 72px;
     height: 72px;
-    border: 1px solid #6a6a6a;
-    background: #3a3a3a;
+    border: 1px solid gray;
+    background: #4d4d4d;
 }
 
 /* =========================
