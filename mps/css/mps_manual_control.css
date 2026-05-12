@@ -23,11 +23,25 @@
     justify-content: center;
     border: 1px solid gray;
     color: #d9d9d9;
+    border-radius: 4px;
     background: #1a1a1a;
     font-size: 12px;
     font-weight: 400;
     line-height: 1;
     white-space: nowrap;
+    cursor: pointer;
+}
+
+#mps_root .mps_manual_frame_adjust_tabs .mps_manual_tab:first-child {
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    border-top-right-radius: 0;
+}
+
+#mps_root .mps_manual_frame_adjust_tabs .mps_manual_tab:nth-child(2) {
+    border-bottom-left-radius: 0;
+    border-left: 0;
+    border-top-left-radius: 0;
 }
 
 #mps_root .mps_manual_tab + .mps_manual_tab {
@@ -38,12 +52,14 @@
     color: #000;
     background: #18a8ee;
     border-color: #18a8ee;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #mps_root .mps_manual_tab.mps_is_disabled {
     opacity: 0.3;
     color: #ffffff;
+    pointer-events: none;
+    cursor: default;
 }
 
 #mps_root .mps_manual_control_container {
