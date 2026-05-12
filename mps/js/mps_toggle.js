@@ -45,6 +45,10 @@ var MpsToggle = (function () {
         if (key === 'autoFramingEnable') {
             syncTrackingControlSliders();
             syncFrameAdjustTab();
+
+            if (window.MpsPtzMode) {
+                MpsPtzMode.syncAvailability();
+            }
         }
     }
 

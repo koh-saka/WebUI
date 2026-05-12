@@ -69,11 +69,11 @@
 
                     <div id="mps_panel_body">
 
-                        <div class="mps_manual_control_container">
+                        <div class="mps_manual_control_container mps_mode_manual mps_ptz_ui_normal mps_view_normal">
 
                             <div class="mps_manual_frame_adjust_tabs" data-name="mps_manual_frame_adjust_tabs">
-                                <div class="mps_manual_tab mps_is_active">Manual</div>
-                                <div class="mps_manual_tab mps_is_disabled">Frame Adjust</div>
+                                <div class="mps_manual_tab mps_is_active" data-ptz-mode="manual">Manual</div>
+                                <div class="mps_manual_tab mps_is_disabled" data-ptz-mode="frameAdjust">Frame Adjust</div>
                             </div>
 
                             <div class="mps_manual_control_line_1">
@@ -215,9 +215,7 @@
                             <div class="mps_auto_framing_container js-tab-content" data-name="mps_auto_framing_container" data-key="autoFraming">
                                 <div class="mps_auto_framing_enable_row">
                                     <div class="mps_auto_framing_enable_label">Enable</div>
-                                    <div class="mps_auto_framing_switch js-toggle" data-key="autoFramingEnable">
-                                        <div class="mps_auto_framing_switch_knob"></div>
-                                    </div>
+                                    <div class="mps_auto_framing_switch js-toggle" data-key="autoFramingEnable"></div>
                                 </div>
 
                                 <div class="mps_tracking_assist_operation">
@@ -446,9 +444,7 @@
 
                                 <div class="mps_expanded_auto_framing_enable_row">
                                     <div class="mps_expanded_auto_framing_enable_label">Enable</div>
-                                    <div class="mps_auto_framing_switch js-toggle" data-key="autoFramingEnable">
-                                        <div class="mps_auto_framing_switch_knob"></div>
-                                    </div>
+                                    <div class="mps_auto_framing_switch js-toggle" data-key="autoFramingEnable"></div>
                                 </div>
 
                                 <div class="mps_expanded_auto_framing_body">
@@ -643,6 +639,7 @@
     <script src="./js/mps_panel_expand_mode.js"></script>
     <script src="./js/mps_circle_button.js"></script>
     <script src="./js/mps_auto_button_control.js"></script>
+    <script src="./js/mps_ptz_mode.js"></script>
     <script src="./js/mps_init.js"></script>
 </body>
 

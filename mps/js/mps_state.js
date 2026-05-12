@@ -44,6 +44,9 @@ var MpsState = {
         trackAdjust: 'autoFraming',
         assist: 'trackingControl'
     },
+    ptz: {
+        mode: 'manual'
+    },
     toggles: {
         autoFramingEnable: false
     }
