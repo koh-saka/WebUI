@@ -23,14 +23,7 @@
 }
 
 /* 8方向共通 */
-#mps_root .mps_manual_control_up,
-#mps_root .mps_manual_control_top_right,
-#mps_root .mps_manual_control_right,
-#mps_root .mps_manual_control_bottom_right,
-#mps_root .mps_manual_control_down,
-#mps_root .mps_manual_control_bottom_left,
-#mps_root .mps_manual_control_left,
-#mps_root .mps_manual_control_top_left {
+#mps_root .mps_ptz_direction_button {
     position: absolute;
     cursor: pointer;
     background-size: 100% 100%;

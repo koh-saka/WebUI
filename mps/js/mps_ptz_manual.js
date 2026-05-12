@@ -4,7 +4,7 @@ var MpsPtzManual = (function () {
 
     var CENTER_BUTTON_CLASS = 'mps_manual_ctrl_center';
 
-    var centerButtonImage = {
+    var centerButtonConfig = {
         manual: 'cc_ptz_joystick_base.png',
         frameAdjust: 'cc_ptz_joystick_base_frame_adjust.png'
     };
@@ -109,12 +109,26 @@ var MpsPtzManual = (function () {
         return null;
     }
 
-    function getNormalImage(config) {
+    function getButtonImage(config, state) {
+        if (state === 'disabled') {
+            return config.disabled;
+        }
+
+        if (state === 'hover') {
+            return config.hover;
+        }
+
+        if (state === 'active') {
+            return config.active;
+        }
+
         var mode = MpsState.ptz && MpsState.ptz.mode;
 
-        return mode === 'frameAdjust'
-            ? config.frameAdjust
-            : config.manual;
+        if (mode === 'frameAdjust') {
+            return config.frameAdjust;
+        }
+
+        return config.manual;
     }
 
     function setImage($button, fileName) {
@@ -129,7 +143,7 @@ var MpsPtzManual = (function () {
             return;
         }
 
-        setImage($button, config.hover);
+        setImage($button, getButtonImage(config, 'hover'));
     }
 
     function onMouseLeave() {
@@ -144,7 +158,7 @@ var MpsPtzManual = (function () {
             return;
         }
 
-        setImage($button, getNormalImage(config));
+        setImage($button, getButtonImage(config, 'normal'));
     }
 
     function onMouseDown(event) {
@@ -158,7 +172,7 @@ var MpsPtzManual = (function () {
         }
 
         currentDirection = config.direction;
-        setImage($button, config.active);
+        setImage($button, getButtonImage(config, 'active'));
 
         startPtzMove(config.direction);
     }
@@ -176,13 +190,11 @@ var MpsPtzManual = (function () {
 
     function resetCenterButton() {
         var $button = $('.' + CENTER_BUTTON_CLASS);
-        var mode = MpsState.ptz && MpsState.ptz.mode;
 
-        var fileName = mode === 'frameAdjust'
-            ? centerButtonImage.frameAdjust
-            : centerButtonImage.manual;
-
-        setImage($button, fileName);
+        setImage(
+            $button,
+            getButtonImage(centerButtonConfig, 'normal')
+        );
     }
 
     function resetAllButtons() {
@@ -190,9 +202,9 @@ var MpsPtzManual = (function () {
             var $button = $('.' + className);
 
             if ($button.hasClass('mps_is_disabled')) {
-                setImage($button, config.disabled);
+                setImage($button, getButtonImage(config, 'disabled'));
             } else {
-                setImage($button, getNormalImage(config));
+                setImage($button, getButtonImage(config, 'normal'));
             }
         });
 
@@ -204,7 +216,7 @@ var MpsPtzManual = (function () {
             var $button = $('.' + className);
 
             $button.toggleClass('mps_is_disabled', disabled);
-            setImage($button, disabled ? config.disabled : getNormalImage(config));
+            setImage($button, getButtonImage(config, disabled ? 'disabled' : 'normal'));
         });
 
         if (disabled) {
