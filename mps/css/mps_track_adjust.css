@@ -166,16 +166,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    cursor: pointer;
 }
 
 /* ON */
 #mps_root .mps_auto_framing_switch.mps_is_active {
     background-image: url("parts/switch_on.png");
-}
-
-/* knobは非表示 */
-#mps_root .mps_auto_framing_switch_knob {
-    display: none;
 }
 
 #mps_root .mps_tracking_assist_operation {
