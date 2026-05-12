@@ -32,6 +32,7 @@ var MpsApp = (function () {
         MpsCircleButton.init();
         MpsAutoButtonControl.init();
         MpsPtzMode.init();
+        MpsPtzManual.init();
         state.initialized = true;
         load();
     }

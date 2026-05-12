@@ -49,5 +49,17 @@ var MpsState = {
     },
     toggles: {
         autoFramingEnable: false
+    },
+    autoButtons: {
+        focus: {
+            normal: false
+        },
+        zoom: {
+            normal: true
+        },
+        iris: {
+            normal: false,
+            expanded: false
+        }
     }
 };

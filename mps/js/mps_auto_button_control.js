@@ -74,9 +74,12 @@ var MpsAutoButtonControl = (function () {
 
         $button.toggleClass(CLASS_ACTIVE_STATE);
 
+        var active = $button.hasClass(CLASS_ACTIVE_STATE);
+        saveAutoButtonState(target, scope, active);
+
         clearPressedAll();
         renderByTarget(target, scope);
-        notifyChanged(target, scope, isActive(target, scope), $button);
+        notifyChanged(target, scope, active, $button);
     }
 
     function onDocumentMouseUp() {
@@ -113,6 +116,18 @@ var MpsAutoButtonControl = (function () {
             '[data-auto-target="' + target + '"]' +
             '[data-auto-scope="' + scope + '"]'
         ).hasClass(CLASS_ACTIVE_STATE);
+    }
+
+    function saveAutoButtonState(target, scope, active) {
+        if (!MpsState.autoButtons) {
+            MpsState.autoButtons = {};
+        }
+
+        if (!MpsState.autoButtons[target]) {
+            MpsState.autoButtons[target] = {};
+        }
+
+        MpsState.autoButtons[target][scope] = !!active;
     }
 
     function isDisabled($button) {
@@ -153,6 +168,8 @@ var MpsAutoButtonControl = (function () {
         );
 
         $button.toggleClass(CLASS_ACTIVE_STATE, !!isAuto);
+        saveAutoButtonState(target, scope, !!isAuto);
+
         renderByTarget(target, scope);
     }
 

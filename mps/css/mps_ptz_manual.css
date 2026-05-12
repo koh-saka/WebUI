@@ -1,0 +1,119 @@
+/* mps_ptz_manual.css */
+
+#mps_root .mps_manual_control {
+    position: relative;
+    width: 212px;
+    height: 212px;
+    margin-top: 14px;
+    touch-action: none;
+    user-select: none;
+}
+
+/* 中央ベース */
+#mps_root .mps_manual_ctrl_center {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 76px;
+    height: 76px;
+    z-index: 1;
+    cursor: pointer;
+    background-image: url("parts/cc_ptz_joystick_base.png");
+    background-size: 100% 100%;
+}
+
+/* 8方向共通 */
+#mps_root .mps_manual_control_up,
+#mps_root .mps_manual_control_top_right,
+#mps_root .mps_manual_control_right,
+#mps_root .mps_manual_control_bottom_right,
+#mps_root .mps_manual_control_down,
+#mps_root .mps_manual_control_bottom_left,
+#mps_root .mps_manual_control_left,
+#mps_root .mps_manual_control_top_left {
+    position: absolute;
+    cursor: pointer;
+    background-size: 100% 100%;
+    touch-action: none;
+}
+
+/* 上 */
+#mps_root .mps_manual_control_up {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 74px;
+    height: 64px;
+    background-image: url("parts/btn_cameraController_ptz_up_normal.png");
+}
+
+/* 右上 */
+#mps_root .mps_manual_control_top_right {
+    top: 9px;
+    right: 9px;
+    width: 77px;
+    height: 77px;
+    background-image: url("parts/btn_cameraController_ptz_upperRight_normal.png");
+}
+
+/* 右 */
+#mps_root .mps_manual_control_right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 64px;
+    height: 74px;
+    background-image: url("parts/btn_cameraController_ptz_right_normal.png");
+}
+
+/* 右下 */
+#mps_root .mps_manual_control_bottom_right {
+    right: 9px;
+    bottom: 9px;
+    width: 77px;
+    height: 77px;
+    background-image: url("parts/btn_cameraController_ptz_lowerRight_normal.png");
+}
+
+/* 下 */
+#mps_root .mps_manual_control_down {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 74px;
+    height: 64px;
+    background-image: url("parts/btn_cameraController_ptz_down_normal.png");
+}
+
+/* 左下 */
+#mps_root .mps_manual_control_bottom_left {
+    left: 9px;
+    bottom: 9px;
+    width: 77px;
+    height: 77px;
+    background-image: url("parts/btn_cameraController_ptz_lowerLeft_normal.png");
+}
+
+/* 左 */
+#mps_root .mps_manual_control_left {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 64px;
+    height: 74px;
+    background-image: url("parts/btn_cameraController_ptz_left_normal.png");
+}
+
+/* 左上 */
+#mps_root .mps_manual_control_top_left {
+    top: 9px;
+    left: 9px;
+    width: 77px;
+    height: 77px;
+    background-image: url("parts/btn_cameraController_ptz_upperLeft_normal.png");
+}

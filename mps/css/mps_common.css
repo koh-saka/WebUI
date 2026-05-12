@@ -207,6 +207,11 @@
     user-select: none;
 }
 
+/* Frame Adjust normal */
+#mps_root .mps_common_circle_button.mps_ptz_mode_frame_adjust_button {
+    background: #2a5f80;
+}
+
 /* mouseenter */
 #mps_root .mps_common_circle_button.is-hover {
     border-color: #00b7f1;
