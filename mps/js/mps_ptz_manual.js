@@ -2,6 +2,13 @@
 
 var MpsPtzManual = (function () {
 
+    var UI_MODE_NORMAL_CONTROL = 'normalControl';
+    var UI_MODE_CANVAS_CONTROL = 'canvasControl';
+
+    var SELECTOR_MANUAL_CONTROL = '.mps_manual_control';
+    var SELECTOR_CANVAS_CONTROL = '.mps_camera_ptz_ctrl';
+    var SELECTOR_CANVAS = '.mps_control_ptz';
+
     var CENTER_BUTTON_CLASS = 'mps_manual_ctrl_center';
 
     var centerButtonConfig = {
@@ -9,7 +16,16 @@ var MpsPtzManual = (function () {
         frameAdjust: 'cc_ptz_joystick_base_frame_adjust.png'
     };
 
+    var CANVAS_SIZE = 212;
+    var KNOB_SIZE = 50;
+
+    var canvasKnobConfig = {
+        manual: 'cc_ptz_joystick_knob_normal.png',
+        frameAdjust: 'cc_ptz_joystick_knob_frame_adjust_normal.png'
+    };
+
     var currentDirection = null;
+    var isCanvasDragging = false;
 
     var buttonMap = {
         mps_manual_control_up: {
@@ -80,6 +96,8 @@ var MpsPtzManual = (function () {
 
     function init() {
         bindEvents();
+        resetAllButtons();
+        applyUiMode();
     }
 
     function bindEvents() {
@@ -88,7 +106,15 @@ var MpsPtzManual = (function () {
             .on('mouseleave', getSelector(), onMouseLeave)
             .on('mousedown', getSelector(), onMouseDown)
             .on('mouseup', onDocumentMouseUp)
-            .on('mouseleave', onDocumentMouseUp);
+            .on('mouseleave', onDocumentMouseUp)
+
+            // center button: press中だけ canvasControl 表示
+            .on('mousedown', '.mps_manual_ctrl_center', startCanvasDrag)
+            .on('mousemove', SELECTOR_CANVAS, updateCanvasDrag)
+            .on('mouseup', endCanvasDrag)
+            .on('mouseleave', endCanvasDrag);
+
+        $(window).on('blur', endCanvasDrag);
     }
 
     function getSelector() {
@@ -188,6 +214,72 @@ var MpsPtzManual = (function () {
         currentDirection = null;
     }
 
+    function startCanvasDrag(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        isCanvasDragging = true;
+
+        setUiMode(UI_MODE_CANVAS_CONTROL);
+        drawCanvasBase();
+
+        console.log('[PTZ canvas] drag start');
+    }
+
+    function updateCanvasDrag(e) {
+        if (!isCanvasDragging ||
+            !MpsState.ptz ||
+            MpsState.ptz.uiMode !== UI_MODE_CANVAS_CONTROL) {
+            return;
+        }
+
+        var pos = getCanvasKnobPosition(e);
+
+        drawCanvas(pos.x, pos.y);
+
+        var vector = getCanvasVector(pos.x, pos.y);
+
+        console.log('[PTZ canvas] vector:', vector);
+    }
+
+    function endCanvasDrag() {
+        if (!isCanvasDragging) {
+            return;
+        }
+
+        isCanvasDragging = false;
+
+        drawCanvasBase();
+        setUiMode(UI_MODE_NORMAL_CONTROL);
+
+        console.log('[PTZ canvas] drag end');
+    }
+
+    function setUiMode(uiMode) {
+        if (uiMode !== UI_MODE_NORMAL_CONTROL &&
+            uiMode !== UI_MODE_CANVAS_CONTROL) {
+            return;
+        }
+
+        MpsState.ptz.uiMode = uiMode;
+        applyUiMode();
+    }
+
+    function applyUiMode() {
+        var isCanvas = MpsState.ptz.uiMode === UI_MODE_CANVAS_CONTROL;
+
+        $('.mps_manual_control_container')
+            .toggleClass('mps_ptz_ui_normal', !isCanvas)
+            .toggleClass('mps_ptz_ui_canvas', isCanvas);
+
+        $(SELECTOR_MANUAL_CONTROL).css('visibility', isCanvas ? 'hidden' : 'visible');
+        $(SELECTOR_CANVAS_CONTROL).toggle(isCanvas);
+
+        if (isCanvas) {
+            drawCanvasBase();
+        }
+    }
+
     function resetCenterButton() {
         var $button = $('.' + CENTER_BUTTON_CLASS);
 
@@ -235,10 +327,177 @@ var MpsPtzManual = (function () {
         // TODO: CGI command stop
     }
 
+    function getCanvasBaseImagePath() {
+        var mode = MpsState.ptz && MpsState.ptz.mode;
+
+        var fileName = mode === 'frameAdjust'
+            ? 'cc_ptz_joystick_base_1_frame_adjust.png'
+            : 'cc_ptz_joystick_base_1.png';
+
+        return './css/parts/' + fileName;
+    }    
+
+    function getCanvasKnobImagePath() {
+        var mode = MpsState.ptz && MpsState.ptz.mode;
+
+        var fileName = mode === 'frameAdjust'
+            ? canvasKnobConfig.frameAdjust
+            : canvasKnobConfig.manual;
+
+        return './css/parts/' + fileName;
+    }
+
+    function getCanvasKnobPosition(e) {
+        var canvas = $(SELECTOR_CANVAS).get(0);
+
+        if (!canvas) {
+            return {
+                x: CANVAS_SIZE / 2,
+                y: CANVAS_SIZE / 2
+            };
+        }
+
+        var rect = canvas.getBoundingClientRect();
+
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+
+        return clampKnobToCircle(
+            x,
+            y,
+            canvas.width,
+            KNOB_SIZE
+        );
+    }
+
+    function clampKnobToCircle(x, y, canvasSize, knobSize) {
+        var center = canvasSize / 2;
+        var maxDistance = (canvasSize - knobSize) / 2;
+
+        var dx = x - center;
+        var dy = y - center;
+        var distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance <= maxDistance) {
+            return { x: x, y: y };
+        }
+
+        var scale = maxDistance / distance;
+
+        return {
+            x: center + dx * scale,
+            y: center + dy * scale
+        };
+    }    
+
+    function drawCanvasBase() {
+        drawCanvas(CANVAS_SIZE / 2, CANVAS_SIZE / 2);
+    }
+
+    function drawCanvas(knobCenterX, knobCenterY) {
+        var canvas = $(SELECTOR_CANVAS).get(0);
+
+        if (!canvas || !canvas.getContext) {
+            return;
+        }
+
+        var ctx = canvas.getContext('2d');
+
+        var baseImage = new Image();
+        var knobImage = new Image();
+
+        baseImage.onload = function () {
+            knobImage.onload = function () {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
+
+                ctx.drawImage(
+                    knobImage,
+                    knobCenterX - KNOB_SIZE / 2,
+                    knobCenterY - KNOB_SIZE / 2,
+                    KNOB_SIZE,
+                    KNOB_SIZE
+                );
+            };
+
+            knobImage.src = getCanvasKnobImagePath();
+        };
+
+        baseImage.src = getCanvasBaseImagePath();
+    }
+
+    function getCanvasVector(x, y) {
+        var center = CANVAS_SIZE / 2;
+
+        var dx = x - center;
+        var dy = y - center;
+
+        var maxDistance = (CANVAS_SIZE - KNOB_SIZE) / 2;
+        var distance = Math.sqrt(dx * dx + dy * dy);
+
+        var power = maxDistance === 0
+            ? 0
+            : Math.min(distance / maxDistance, 1);
+
+        return {
+            mode: MpsState.ptz.mode,
+            dx: Math.round(dx),
+            dy: Math.round(dy),
+            power: Number(power.toFixed(2)),
+            direction: getDirectionFromVector(dx, dy)
+        };
+    }
+
+    function getDirectionFromVector(dx, dy) {
+        var threshold = 8;
+
+        if (Math.abs(dx) < threshold &&
+            Math.abs(dy) < threshold) {
+            return 'center';
+        }
+
+        var angle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+        if (angle >= -22.5 && angle < 22.5) {
+            return 'right';
+        }
+
+        if (angle >= 22.5 && angle < 67.5) {
+            return 'downRight';
+        }
+
+        if (angle >= 67.5 && angle < 112.5) {
+            return 'down';
+        }
+
+        if (angle >= 112.5 && angle < 157.5) {
+            return 'downLeft';
+        }
+
+        if (angle >= 157.5 || angle < -157.5) {
+            return 'left';
+        }
+
+        if (angle >= -157.5 && angle < -112.5) {
+            return 'upLeft';
+        }
+
+        if (angle >= -112.5 && angle < -67.5) {
+            return 'up';
+        }
+
+        return 'upRight';
+    }    
+    
     return {
         init: init,
         setDisabled: setDisabled,
         resetAllButtons: resetAllButtons,
-        resetCenterButton: resetCenterButton
+        resetCenterButton: resetCenterButton,
+        setUiMode: setUiMode,
+        applyUiMode: applyUiMode,
+        startCanvasDrag: startCanvasDrag,
+        updateCanvasDrag: updateCanvasDrag,
+        endCanvasDrag: endCanvasDrag
     };
 })();

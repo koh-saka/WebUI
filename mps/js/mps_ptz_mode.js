@@ -65,6 +65,7 @@ var MpsPtzMode = (function () {
 
         if (window.MpsPtzManual) {
             MpsPtzManual.resetAllButtons();
+            MpsPtzManual.applyUiMode();
         }
     }
 

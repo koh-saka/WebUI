@@ -45,7 +45,9 @@ var MpsState = {
         assist: 'trackingControl'
     },
     ptz: {
-        mode: 'manual'
+        mode: 'manual',             // manusl / frameAdjust
+        uiMode: 'normalControl',    // normalControl / canvasControl
+        viewMode: 'normal'          // normal /expanded
     },
     toggles: {
         autoFramingEnable: false
