@@ -70,6 +70,10 @@
     margin-top: 30px;
 }
 
+/* =========================================================
+   Manual Control Frame Lines
+========================================================= */
+
 #mps_root .mps_manual_control_line_1,
 #mps_root .mps_manual_control_line_2,
 #mps_root .mps_manual_control_line_4,
@@ -77,46 +81,77 @@
     box-sizing: content-box;
 }
 
+/*
+ * line_1:
+ * 左上L字枠
+ * 右端接続位置: left 0 + border-left 2 + width 82 = 84px
+ */
 #mps_root .mps_manual_control_line_1 {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 82px;
-    height: 267px;
+    height: 268px;
+
     border: 2px solid #666;
     border-right: none;
+
     z-index: 1;
 }
 
+/*
+ * line_2:
+ * line_1右端 x=84 から line_5左端 x=179 へ接続
+ * 179 - 84 = 95px
+ */
 #mps_root .mps_manual_control_line_2 {
     position: absolute;
     top: 0;
-    left: 84px;
-    width: 94px;
+    left: 82px;
+
+    width: 98px;
     height: 268px;
+
     border: 2px solid #666;
+    border-top: none;
     border-left: none;
     border-right: none;
-    border-top: none;
 }
 
+/*
+ * line_4:
+ * 右上L字枠
+ * 右端接続位置:
+ * left 339 + width 82 + border-right 2 = 423px
+ */
 #mps_root .mps_manual_control_line_4 {
     position: absolute;
-    top: -2px;
+    top: 0;
     left: 339px;
+
     width: 82px;
-    height: 270px;
+    height: 268px;
+
     border: 2px solid #666;
-    border-bottom: none;
     border-left: none;
+    border-bottom: none;
 }
 
+/*
+ * line_5:
+ * 下枠
+ * 左端 x=179
+ * 右端 x=179 + border-left 2 + width 240 + border-right 2 = 423px
+ */
 #mps_root .mps_manual_control_line_5 {
     position: absolute;
     top: 268px;
-    left: 178px;
-    width: 241px;
+    left: 179px;
+
+    width: 240px;
     height: 84px;
+
     border: 2px solid #666;
     border-top: none;
 }
