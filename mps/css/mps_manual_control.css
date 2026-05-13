@@ -169,7 +169,7 @@
 
 #mps_root .mps_lock_part {
     position: relative;
-    top: 28px;
+    top: 0;
     width: 100%;
     margin-top: 12px;
     display: flex;
@@ -181,14 +181,6 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-}
-
-#mps_root .mps_ptz_lock_btn {
-    width: 28px;
-    height: 28px;
-    border: 1px solid #8a8a8a;
-    border-radius: 4px;
-    background: transparent;
 }
 
 #mps_root .mps_view_content {
@@ -304,3 +296,70 @@
     margin: 16px 0;
 }
 
+/* =========================================================
+   PTZ Lock
+========================================================= */
+
+#mps_root .mps_ptz_lock_btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #8a8a8a;
+    border-radius: 4px;
+
+    background-color: transparent;
+    background-image: url("parts/unlock_normal.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 24px;
+
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#mps_root .mps_ptz_lock_btn.mps_is_locked {
+    background-image: url("parts/lock_normal.png");
+}
+
+/* mouseenter */
+#mps_root .mps_ptz_lock_btn.is-hover {
+    background-color: #4d4d4d;
+}
+
+/* mousedown */
+#mps_root .mps_ptz_lock_btn.is-active {
+    background-color: #666666;
+}
+
+/*
+ * lock中 disabled対象
+ * - Lockボタン自体は対象外
+ * - title は対象外
+ */
+#mps_root .mps_manual_control_container.mps_ptz_locked .mps_manual_control,
+#mps_root .mps_manual_control_container.mps_ptz_locked .mps_speed_slider .mps_slider_btn,
+#mps_root .mps_manual_control_container.mps_ptz_locked .mps_speed_slider .js-slider,
+#mps_root .mps_manual_control_container.mps_ptz_locked .mps_zoom_slider .mps_slider_btn,
+#mps_root .mps_manual_control_container.mps_ptz_locked .mps_zoom_slider .js-slider,
+#mps_root .mps_manual_control_container.mps_ptz_locked .mps_zoom_auto {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/*
+ * Frame Adjust中にlockされた場合でも、
+ * Fast / Slow / Tele / Wide の通常背景色は Frame Adjust 色を維持する。
+ */
+#mps_root .mps_manual_control_container.mps_mode_frame_adjust.mps_ptz_locked
+.mps_common_circle_button.mps_ptz_mode_frame_adjust_button {
+    background: #2a5f80;
+}
+
+/*
+ * Zoom Auto も Frame Adjust中は Frame Adjust側の見た目を維持する。
+ * lock中は opacity: 0.3 + pointer-events:none で操作禁止にするため、
+ * disabled用の背景色には寄せない。
+ */
+#mps_root .mps_manual_control_container.mps_mode_frame_adjust.mps_ptz_locked
+.mps_zoom_auto {
+    background: #2a5f80;
+}

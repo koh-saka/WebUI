@@ -8,8 +8,15 @@ var MpsPtzManual = (function () {
     var SELECTOR_MANUAL_CONTROL = '.mps_manual_control';
     var SELECTOR_CANVAS_CONTROL = '.mps_camera_ptz_ctrl';
     var SELECTOR_CANVAS = '.mps_control_ptz';
+    var SELECTOR_LOCK_BUTTON = '.js-ptz-lock-button';
 
-    var CENTER_BUTTON_CLASS = 'mps_manual_ctrl_center';
+    var CLASS_LOCKED_CONTAINER = 'mps_ptz_locked';
+    var CLASS_LOCKED_BUTTON = 'mps_is_locked';
+    var CLASS_DISABLED = 'mps_is_disabled';
+    var CLASS_HOVER = 'is-hover';
+    var CLASS_PRESSED = 'is-active';
+
+    var CLASS_CENTER_BUTTON = 'mps_manual_ctrl_center';
 
     var centerButtonConfig = {
         manual: 'cc_ptz_joystick_base.png',
@@ -95,9 +102,11 @@ var MpsPtzManual = (function () {
     };
 
     function init() {
+        ensurePtzState();
         bindEvents();
         resetAllButtons();
         applyUiMode();
+        renderLockState();
     }
 
     function bindEvents() {
@@ -112,9 +121,18 @@ var MpsPtzManual = (function () {
             .on('mousedown', '.mps_manual_ctrl_center', startCanvasDrag)
             .on('mousemove', SELECTOR_CANVAS, updateCanvasDrag)
             .on('mouseup', endCanvasDrag)
-            .on('mouseleave', endCanvasDrag);
+            .on('mouseleave', endCanvasDrag)
 
-        $(window).on('blur', endCanvasDrag);
+            .on('mouseenter', SELECTOR_LOCK_BUTTON, onLockMouseEnter)
+            .on('mouseleave', SELECTOR_LOCK_BUTTON, onLockMouseLeave)
+            .on('mousedown', SELECTOR_LOCK_BUTTON, onLockMouseDown)
+            .on('click', SELECTOR_LOCK_BUTTON, onLockClick);
+
+        $(window).on('blur', function () {
+            onDocumentMouseUp();
+            endCanvasDrag();
+            clearLockPressedState();
+        });
     }
 
     function getSelector() {
@@ -162,10 +180,14 @@ var MpsPtzManual = (function () {
     }
 
     function onMouseEnter() {
+        if (isLocked()) {
+            return;
+        }
+
         var $button = $(this);
         var config = getButtonConfig($button);
 
-        if (!config || $button.hasClass('mps_is_disabled')) {
+        if (!config || $button.hasClass(CLASS_DISABLED)) {
             return;
         }
 
@@ -176,7 +198,7 @@ var MpsPtzManual = (function () {
         var $button = $(this);
         var config = getButtonConfig($button);
 
-        if (!config || $button.hasClass('mps_is_disabled')) {
+        if (!config || $button.hasClass(CLASS_DISABLED)) {
             return;
         }
 
@@ -187,13 +209,19 @@ var MpsPtzManual = (function () {
         setImage($button, getButtonImage(config, 'normal'));
     }
 
-    function onMouseDown(event) {
-        event.preventDefault();
+    function onMouseDown(e) {
+        if (isLocked()) {
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+        }
 
         var $button = $(this);
         var config = getButtonConfig($button);
 
-        if (!config || $button.hasClass('mps_is_disabled')) {
+        if (!config || $button.hasClass(CLASS_DISABLED)) {
+            e.preventDefault();
+            e.stopPropagation();
             return;
         }
 
@@ -218,6 +246,10 @@ var MpsPtzManual = (function () {
         e.preventDefault();
         e.stopPropagation();
 
+        if (isLocked()) {
+            return;
+        }
+
         isCanvasDragging = true;
 
         setUiMode(UI_MODE_CANVAS_CONTROL);
@@ -227,6 +259,10 @@ var MpsPtzManual = (function () {
     }
 
     function updateCanvasDrag(e) {
+        if (isLocked()) {
+            return;
+        }
+
         if (!isCanvasDragging ||
             !MpsState.ptz ||
             MpsState.ptz.uiMode !== UI_MODE_CANVAS_CONTROL) {
@@ -256,6 +292,10 @@ var MpsPtzManual = (function () {
     }
 
     function setUiMode(uiMode) {
+        if (isLocked() && uiMode === UI_MODE_CANVAS_CONTROL) {
+            return;
+        }
+
         if (uiMode !== UI_MODE_NORMAL_CONTROL &&
             uiMode !== UI_MODE_CANVAS_CONTROL) {
             return;
@@ -281,7 +321,7 @@ var MpsPtzManual = (function () {
     }
 
     function resetCenterButton() {
-        var $button = $('.' + CENTER_BUTTON_CLASS);
+        var $button = $('.' + CLASS_CENTER_BUTTON);
 
         setImage(
             $button,
@@ -293,7 +333,7 @@ var MpsPtzManual = (function () {
         $.each(buttonMap, function (className, config) {
             var $button = $('.' + className);
 
-            if ($button.hasClass('mps_is_disabled')) {
+            if ($button.hasClass(CLASS_DISABLED)) {
                 setImage($button, getButtonImage(config, 'disabled'));
             } else {
                 setImage($button, getButtonImage(config, 'normal'));
@@ -307,7 +347,7 @@ var MpsPtzManual = (function () {
         $.each(buttonMap, function (className, config) {
             var $button = $('.' + className);
 
-            $button.toggleClass('mps_is_disabled', disabled);
+            $button.toggleClass(CLASS_DISABLED, disabled);
             setImage($button, getButtonImage(config, disabled ? 'disabled' : 'normal'));
         });
 
@@ -487,8 +527,104 @@ var MpsPtzManual = (function () {
         }
 
         return 'upRight';
-    }    
-    
+    }
+
+    function ensurePtzState() {
+        if (!MpsState.ptz) {
+            MpsState.ptz = {};
+        }
+
+        if (typeof MpsState.ptz.locked !== 'boolean') {
+            MpsState.ptz.locked = false;
+        }
+
+        if (!MpsState.ptz.uiMode) {
+            MpsState.ptz.uiMode = UI_MODE_NORMAL_CONTROL;
+        }
+    }
+
+    function isLocked() {
+        return !!(MpsState.ptz && MpsState.ptz.locked);
+    }
+
+    function setLocked(locked) {
+        ensurePtzState();
+
+        MpsState.ptz.locked = !!locked;
+
+        if (MpsState.ptz.locked) {
+            /*
+            * 念のため:
+            * 仕様上 lock中に canvas表示されることはないが、
+            * 将来変更や異常系に備えて normalControl へ戻す。
+            */
+            isCanvasDragging = false;
+            setUiMode(UI_MODE_NORMAL_CONTROL);
+        }
+
+        renderLockState();
+    }
+
+    function renderLockState() {
+        ensurePtzState();
+
+        var locked = MpsState.ptz.locked;
+
+        $('.mps_manual_control_container')
+            .toggleClass(CLASS_LOCKED_CONTAINER, locked);
+
+        $(SELECTOR_LOCK_BUTTON)
+            .toggleClass(CLASS_LOCKED_BUTTON, locked)
+            .removeClass(CLASS_HOVER + ' ' + CLASS_PRESSED);
+
+        syncLockDisabledClass(locked);
+    }
+
+    function syncLockDisabledClass(locked) {
+        var $targets = $(
+            '.mps_manual_control,' +
+            '.mps_speed_slider .mps_slider_btn,' +
+            '.mps_speed_slider .js-slider,' +
+            '.mps_zoom_slider .mps_slider_btn,' +
+            '.mps_zoom_slider .js-slider,' +
+            '.mps_zoom_auto'
+        );
+
+        $targets.toggleClass(CLASS_DISABLED, locked);
+    }
+
+    function onLockMouseEnter() {
+        var $button = $(this);
+
+        $button.addClass(CLASS_HOVER);
+    }
+
+    function onLockMouseLeave() {
+        clearLockVisualState($(this));
+    }
+
+    function onLockMouseDown(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $(this).addClass(CLASS_PRESSED);
+    }
+
+    function onLockClick(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        setLocked(!isLocked());
+    }
+
+    function clearLockVisualState($button) {
+        $button.removeClass(CLASS_HOVER + ' ' + CLASS_PRESSED);
+    }
+
+    function clearLockPressedState() {
+        $(SELECTOR_LOCK_BUTTON).removeClass(CLASS_PRESSED);
+    }
+
     return {
         init: init,
         setDisabled: setDisabled,
@@ -498,6 +634,9 @@ var MpsPtzManual = (function () {
         applyUiMode: applyUiMode,
         startCanvasDrag: startCanvasDrag,
         updateCanvasDrag: updateCanvasDrag,
-        endCanvasDrag: endCanvasDrag
+        endCanvasDrag: endCanvasDrag,
+        setLocked: setLocked,
+        renderLockState: renderLockState,
+        isLocked: isLocked
     };
 })();

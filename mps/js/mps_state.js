@@ -47,7 +47,8 @@ var MpsState = {
     ptz: {
         mode: 'manual',             // manusl / frameAdjust
         uiMode: 'normalControl',    // normalControl / canvasControl
-        viewMode: 'normal'          // normal /expanded
+        viewMode: 'normal',         // normal /expanded
+        locked: false
     },
     toggles: {
         autoFramingEnable: false
