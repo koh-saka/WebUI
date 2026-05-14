@@ -174,24 +174,24 @@
                         <div class="mps_limitation_container debug-box debug-panel" data-name="mps_limitation_container">
                             <div class="mps_limitation_control">
                                 <div class="mps_limitation_control_left_content">
-                                    <div class="mps_limitation_btn">
+                                    <div class="mps_common_circle_button mps_limitation_common_btn off js-limitation-toggle">
                                         <div class="mps_limitation_control_icon_box">
                                             <div class="mps_limitation_control_icon"></div>
-                                            <i class="mps_limitation_icon_arrow mps_limitation_icon_arrow_top"></i>
-                                            <i class="mps_limitation_icon_arrow mps_limitation_icon_arrow_right"></i>
-                                            <i class="mps_limitation_icon_arrow mps_limitation_icon_arrow_bottom"></i>
-                                            <i class="mps_limitation_icon_arrow mps_limitation_icon_arrow_left"></i>
+                                            <i class="mps_limitation_icon_arrow js-limitation-arrow-up"></i>
+                                            <i class="mps_limitation_icon_arrow js-limitation-arrow-right"></i>
+                                            <i class="mps_limitation_icon_arrow js-limitation-arrow-down"></i>
+                                            <i class="mps_limitation_icon_arrow js-limitation-arrow-left"></i>
                                         </div>
                                     </div>
                                     <div class="mps_limitation_control_title">Limitation</div>
                                 </div>
 
-                                <div class="mps_limitation_control_right_content mps_is_hidden">
+                                <div class="mps_limitation_control_right_content">
                                     <div class="mps_limitation_control_center"></div>
-                                    <div class="mps_limitation_control_updown mps_limitation_top"></div>
-                                    <div class="mps_limitation_control_leftright mps_limitation_right"></div>
-                                    <div class="mps_limitation_control_updown mps_limitation_bottom"></div>
-                                    <div class="mps_limitation_control_leftright mps_limitation_left"></div>
+                                    <div class="mps_limitation_control_updown top js-limitation-button" data-limit-direction="up"></div>
+                                    <div class="mps_limitation_control_leftright right js-limitation-button" data-limit-direction="right"></div>
+                                    <div class="mps_limitation_control_updown bottom js-limitation-button" data-limit-direction="down"></div>
+                                    <div class="mps_limitation_control_leftright left js-limitation-button" data-limit-direction="left"></div>
                                 </div>
                             </div>
                         </div>
@@ -642,6 +642,7 @@
     <script src="./js/mps_auto_button_control.js"></script>
     <script src="./js/mps_ptz_mode.js"></script>
     <script src="./js/mps_ptz_manual.js"></script>
+    <script src="./js/mps_limitation.js"></script>
     <script src="./js/mps_init.js"></script>
 </body>
 

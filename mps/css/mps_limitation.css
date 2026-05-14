@@ -9,150 +9,218 @@
     overflow: visible;
 }
 
+/* =========================================================
+   Limitation Control
+========================================================= */
 #mps_root .mps_limitation_control {
-    position: relative;
     display: flex;
-    width: 97px;
-    height: 90px;
     margin-top: -38px;
     padding-left: 20px;
     padding-right: 10px;
-    box-sizing: content-box;
+    position: relative;
+    width: min-content;
 }
 
 #mps_root .mps_limitation_control_left_content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 67px;
-    height: 90px;
-    box-sizing: content-box;
+    align-items: center;
+    z-index: 2;
 }
 
-#mps_root .mps_limitation_btn {
+#mps_root .mps_limitation_common_btn {
     width: 62px;
     height: 62px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #7d7d7d;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.14);
-    box-sizing: content-box;
+    border-radius: 62px;
+    cursor: pointer;
 }
 
-#mps_root .mps_limitation_control_icon_box {
-    position: relative;
-    width: 36px;
-    height: 36px;
+#mps_root .mps_limitation_common_btn.off {
+    background-color: #4d4d4d;
 }
 
-#mps_root .mps_limitation_control_icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #cfcfcf;
-    transform: translate(-50%, -50%);
-    opacity: 0.9;
+#mps_root .mps_limitation_common_btn.is-hover {
+    background: #1f3a47;
+    border: 1px solid #00b7f1;
 }
 
-#mps_root .mps_limitation_icon_arrow {
-    position: absolute;
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid #cfcfcf;
-    border-right: 2px solid #cfcfcf;
-    box-sizing: border-box;
-}
-
-#mps_root .mps_limitation_icon_arrow_top {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(-45deg);
-}
-
-#mps_root .mps_limitation_icon_arrow_right {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%) rotate(45deg);
-}
-
-#mps_root .mps_limitation_icon_arrow_bottom {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(135deg);
-}
-
-#mps_root .mps_limitation_icon_arrow_left {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%) rotate(-135deg);
+#mps_root .mps_limitation_common_btn.is-active,
+#mps_root .mps_limitation_common_btn.mps_is_active {
+    background: #176082;
+    border: 1px solid #00b7f1;
 }
 
 #mps_root .mps_limitation_control_title {
     margin-top: 5px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 21px;
-    white-space: nowrap;
 }
 
+#mps_root .mps_limitation_control_icon_box {
+    position: relative;
+}
+
+#mps_root .mps_limitation_control_icon {
+    width: 40px;
+    height: 38px;
+    background-image: url("parts/btn_pt_limitation_normal.png");
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+#mps_root .mps_limitation_icon_arrow {
+    display: none;
+    background: #00b7f1;
+    position: absolute;
+}
+
+#mps_root .mps_limitation_icon_arrow.up {
+    display: block;
+    width: 15px;
+    height: 3px;
+    top: 0;
+    left: 12px;
+}
+
+#mps_root .mps_limitation_icon_arrow.down {
+    display: block;
+    width: 15px;
+    height: 3px;
+    bottom: 0;
+    left: 12px;
+}
+
+#mps_root .mps_limitation_icon_arrow.left {
+    display: block;
+    width: 3px;
+    height: 15px;
+    top: 12px;
+    left: 0;
+}
+
+#mps_root .mps_limitation_icon_arrow.right {
+    display: block;
+    width: 3px;
+    height: 15px;
+    right: 0;
+    top: 12px;
+}
+
+/* Popup */
 #mps_root .mps_limitation_control_right_content {
+    width: 208px;
+    height: 208px;
+    background: #333333;
+    border: 2px solid #4d4d4d;
+
     position: absolute;
     top: 6px;
     left: 134px;
-    width: 208px;
-    height: 208px;
+
+    z-index: 3;
+    touch-action: none;
+    display: none;
     box-sizing: content-box;
 }
 
+#mps_root .mps_limitation_control_right_content.mps_is_visible {
+    display: block;
+}
+
 #mps_root .mps_limitation_control_center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 56px;
     height: 56px;
-    border: 1px solid #6a6a6a;
-    background: rgba(255,255,255,0.08);
-    transform: translate(-50%, -50%);
+    background-image: url("parts/btn_pt_limitation_cross_arrow_normal.png");
+    background-size: 100% 100%;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    cursor: pointer;
 }
 
 #mps_root .mps_limitation_control_updown {
-    position: absolute;
-    left: 50%;
     width: 56px;
     height: 24px;
-    transform: translateX(-50%);
-    border: 1px solid #6a6a6a;
-    background: rgba(255,255,255,0.06);
+    background-image: url("parts/btn_pt_limitation_updown_normal.png");
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+#mps_root .mps_limitation_control_updown.top {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#mps_root .mps_limitation_control_updown.bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#mps_root .mps_limitation_control_updown.mouse_hover {
+    background-image: url("parts/btn_pt_limitation_updown_onMouse.png");
+}
+
+#mps_root .mps_limitation_control_updown.on {
+    background-image: url("parts/btn_pt_limitation_updown_selected.png");
+}
+
+#mps_root .mps_limitation_control_updown.disable {
+    background-image: url("parts/btn_pt_limitation_updown_disable.png");
+    pointer-events: none;
 }
 
 #mps_root .mps_limitation_control_leftright {
-    position: absolute;
-    top: 50%;
     width: 24px;
     height: 56px;
-    transform: translateY(-50%);
-    border: 1px solid #6a6a6a;
-    background: rgba(255,255,255,0.06);
+    background-image: url("parts/btn_pt_limitation_leftright_normal.png");
+    background-size: 100% 100%;
+    cursor: pointer;
 }
 
-#mps_root .mps_limitation_top {
+#mps_root .mps_limitation_control_leftright.right {
+    position: absolute;
     top: 0;
-}
-
-#mps_root .mps_limitation_right {
-    right: 0;
-}
-
-#mps_root .mps_limitation_bottom {
+    right: 30px;
     bottom: 0;
+    margin: auto 0;
 }
 
-#mps_root .mps_limitation_left {
-    left: 0;
+#mps_root .mps_limitation_control_leftright.left {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    bottom: 0;
+    margin: auto 0;
+}
+
+#mps_root .mps_limitation_control_leftright.mouse_hover {
+    background-image: url("parts/btn_pt_limitation_leftright_onMouse.png");
+}
+
+#mps_root .mps_limitation_control_leftright.on {
+    background-image: url("parts/btn_pt_limitation_leftright_selected.png");
+}
+
+#mps_root .mps_limitation_control_leftright.disable {
+    background-image: url("parts/btn_pt_limitation_leftright_disable.png");
+    pointer-events: none;
+}
+
+/* Limitation popup draggable */
+#mps_root .mps_limitation_control_right_content {
+    cursor: move;
+    user-select: none;
+}
+
+#mps_root .mps_limitation_control_right_content .js-limitation-button {
+    cursor: pointer;
+}
+
+#mps_root .mps_limitation_control_right_content.is-dragging {
+    cursor: grabbing;
 }

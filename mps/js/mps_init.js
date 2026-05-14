@@ -33,6 +33,7 @@ var MpsApp = (function () {
         MpsAutoButtonControl.init();
         MpsPtzMode.init();
         MpsPtzManual.init();
+        MpsLimitation.init();
         state.initialized = true;
         load();
     }
