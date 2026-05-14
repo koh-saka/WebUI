@@ -23,7 +23,8 @@ var MpsPtzManual = (function () {
         frameAdjust: 'cc_ptz_joystick_base_frame_adjust.png'
     };
 
-    var CANVAS_SIZE = 212;
+    var CANVAS_SIZE_NORMAL = 212;
+    var CANVAS_SIZE_EXPANDED = 272;
     var KNOB_SIZE = 50;
 
     var canvasKnobConfig = {
@@ -139,6 +140,37 @@ var MpsPtzManual = (function () {
         return Object.keys(buttonMap).map(function (className) {
             return '.' + className;
         }).join(',');
+    }
+
+    function getViewMode() {
+        return MpsState.ptz && MpsState.ptz.viewMode === 'expanded'
+            ? 'expanded'
+            : 'normal';
+    }
+
+    function isExpandedView() {
+        return getViewMode() === 'expanded';
+    }
+
+    function getActivePtzContainer() {
+        if (isExpandedView()) {
+            return $('.mps_ptz_expanded_control');
+        }
+
+        return $('.mps_manual_control_container')
+            .not('.mps_ptz_expanded_control');
+    }
+
+    function getCanvasSize() {
+        return isExpandedView()
+            ? CANVAS_SIZE_EXPANDED
+            : CANVAS_SIZE_NORMAL;
+    }
+
+    function getCanvas() {
+        return getActivePtzContainer()
+            .find(SELECTOR_CANVAS)
+            .get(0);
     }
 
     function getButtonConfig($button) {
@@ -307,13 +339,24 @@ var MpsPtzManual = (function () {
 
     function applyUiMode() {
         var isCanvas = MpsState.ptz.uiMode === UI_MODE_CANVAS_CONTROL;
+        var $container = getActivePtzContainer();
 
-        $('.mps_manual_control_container')
+        /*
+        * expanded DOM は Step 3 以降で追加する。
+        * まだ存在しない場合は normal 側へフォールバックする。
+        */
+        if (!$container.length) {
+            $container = $('.mps_manual_control_container')
+                .not('.mps_ptz_expanded_control');
+        }
+
+        $container
             .toggleClass('mps_ptz_ui_normal', !isCanvas)
             .toggleClass('mps_ptz_ui_canvas', isCanvas);
 
-        $(SELECTOR_MANUAL_CONTROL).css('visibility', isCanvas ? 'hidden' : 'visible');
-        $(SELECTOR_CANVAS_CONTROL).toggle(isCanvas);
+        $container.find(SELECTOR_MANUAL_CONTROL).css('visibility', isCanvas ? 'hidden' : 'visible');
+
+        $container.find(SELECTOR_CANVAS_CONTROL).toggle(isCanvas);
 
         if (isCanvas) {
             drawCanvasBase();
@@ -388,12 +431,13 @@ var MpsPtzManual = (function () {
     }
 
     function getCanvasKnobPosition(e) {
-        var canvas = $(SELECTOR_CANVAS).get(0);
+        var canvas = getCanvas();
+        var canvasSize = getCanvasSize();
 
         if (!canvas) {
             return {
-                x: CANVAS_SIZE / 2,
-                y: CANVAS_SIZE / 2
+                x: canvasSize / 2,
+                y: canvasSize / 2
             };
         }
 
@@ -405,7 +449,7 @@ var MpsPtzManual = (function () {
         return clampKnobToCircle(
             x,
             y,
-            canvas.width,
+            canvas.width || canvasSize,
             KNOB_SIZE
         );
     }
@@ -431,14 +475,30 @@ var MpsPtzManual = (function () {
     }    
 
     function drawCanvasBase() {
-        drawCanvas(CANVAS_SIZE / 2, CANVAS_SIZE / 2);
+        var canvasSize = getCanvasSize();
+
+        drawCanvas(canvasSize / 2, canvasSize / 2);
     }
 
     function drawCanvas(knobCenterX, knobCenterY) {
-        var canvas = $(SELECTOR_CANVAS).get(0);
+        var canvas = getCanvas();
 
         if (!canvas || !canvas.getContext) {
             return;
+        }
+
+        var canvasSize = getCanvasSize();
+
+        /*
+        * canvas DOM の width/height 属性が未設定・不一致の場合に備える。
+        * normal は 212、expanded は 272。
+        */
+        if (canvas.width !== canvasSize) {
+            canvas.width = canvasSize;
+        }
+
+        if (canvas.height !== canvasSize) {
+            canvas.height = canvasSize;
         }
 
         var ctx = canvas.getContext('2d');
@@ -467,12 +527,13 @@ var MpsPtzManual = (function () {
     }
 
     function getCanvasVector(x, y) {
-        var center = CANVAS_SIZE / 2;
+        var canvasSize = getCanvasSize();
+        var center = canvasSize / 2;
 
         var dx = x - center;
         var dy = y - center;
 
-        var maxDistance = (CANVAS_SIZE - KNOB_SIZE) / 2;
+        var maxDistance = (canvasSize - KNOB_SIZE) / 2;
         var distance = Math.sqrt(dx * dx + dy * dy);
 
         var power = maxDistance === 0
@@ -481,6 +542,7 @@ var MpsPtzManual = (function () {
 
         return {
             mode: MpsState.ptz.mode,
+            viewMode: getViewMode(),
             dx: Math.round(dx),
             dy: Math.round(dy),
             power: Number(power.toFixed(2)),
@@ -532,6 +594,14 @@ var MpsPtzManual = (function () {
     function ensurePtzState() {
         if (!MpsState.ptz) {
             MpsState.ptz = {};
+        }
+
+        if (!MpsState.ptz.mode) {
+            MpsState.ptz.mode = 'manual';
+        }
+
+        if (!MpsState.ptz.viewMode) {
+            MpsState.ptz.viewMode = 'normal';
         }
 
         if (typeof MpsState.ptz.locked !== 'boolean') {
