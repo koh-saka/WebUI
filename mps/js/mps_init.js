@@ -53,8 +53,8 @@ var MpsApp = (function () {
 
     function load() {
         updateView();
-        checkLayout();
-        updateDebugInfo();
+        // checkLayout();
+        // updateDebugInfo();
     }
 
     function updateView() {
