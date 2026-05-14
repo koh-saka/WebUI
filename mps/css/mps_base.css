@@ -74,13 +74,20 @@ body {
 
 /* =========================
    4. MAIN
+    TODO: 
+      Limitation popup の構造検証を優先するため、
+      #mps_main overflow: hidden --> scroll、
+      #mps_panel_body overflow-y: auto   --> visible
+                      overflow-x: hidden --> visible
+      に変更。
+      mps_view 自動リサイズ・panel内スクロール設計を再検討する。
 ========================= */
 #mps_root #mps_main {
     display: flex;
     flex: 1;
     width: 100%;
     min-height: 0;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 /* =========================
@@ -247,13 +254,22 @@ body {
     cursor: default;
 }
 
+/* 
+    TODO: 
+      Limitation popup の構造検証を優先するため、
+      #mps_main overflow: hidden --> scroll、
+      #mps_panel_body overflow-y: auto   --> visible
+                      overflow-x: hidden --> visible
+      に変更。
+      mps_view 自動リサイズ・panel内スクロール設計を再検討する。
+*/
 #mps_root #mps_panel_body,
 #mps_root #mps_panel_expanded_body {
     flex: 1;
     min-height: 0;
     padding: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-y: visible;
+    overflow-x: visible;
 }
 
 #mps_root .mps_manual_control_container,
