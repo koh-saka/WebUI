@@ -651,14 +651,19 @@ var MpsPtzManual = (function () {
     }
 
     function syncLockDisabledClass(locked) {
+        var mode = MpsState.ptz && MpsState.ptz.mode;
+
         var $targets = $(
             '.mps_manual_control,' +
             '.mps_speed_slider .mps_slider_btn,' +
             '.mps_speed_slider .js-slider,' +
             '.mps_zoom_slider .mps_slider_btn,' +
-            '.mps_zoom_slider .js-slider,' +
-            '.mps_zoom_auto'
+            '.mps_zoom_slider .js-slider'
         );
+
+        if (mode === 'frameAdjust') {
+            $targets = $targets.add('.mps_zoom_auto');
+        }
 
         $targets.toggleClass(CLASS_DISABLED, locked);
     }
